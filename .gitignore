@@ -32,3 +32,4 @@ dist-ssr
 # Data-pipeline intermediates (regenerable; only output/ + scripts/ are committed)
 /data-pipeline/cache/
 /data-pipeline/raw/
+.vercel
