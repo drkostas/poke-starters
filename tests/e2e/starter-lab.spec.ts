@@ -119,6 +119,21 @@ test('clicking a revealed team member opens the detail dialog; Escape closes it'
   await expect(page.locator('#dback')).not.toHaveClass(/open/);
 });
 
+test('immune matchups show an explicit ×0 chip in the matrix and detail dialog', async ({ page }) => {
+  await openAdvanced(page);
+  await page.locator('#types .chip[data-type="ghost"]').click();
+  await reveal(page);
+
+  const matrixChip = page.locator('#dmx .dmc.immune .imchip').first();
+  await expect(matrixChip).toBeVisible();
+  await expect(matrixChip).toHaveText('×0');
+
+  await page.getByRole('button', { name: /Browse full dex/i }).click();
+  await page.getByRole('button', { name: 'Gastly', exact: true }).click();
+  const immuneRow = page.locator('.effrow').filter({ hasText: 'Immune' });
+  await expect(immuneRow).toContainText('×0');
+});
+
 test('Browse full dex opens the species grid', async ({ page }) => {
   await page.getByRole('button', { name: /Browse full dex/i }).click();
   await expect(page.locator('#dback')).toHaveClass(/open/);

@@ -285,10 +285,11 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
 .dmc.weak{background:rgba(244,193,58,.6);color:#4a3600;}
 .dmc.shared{background:#c6102a;color:#fff0ec;box-shadow:0 0 0 1px #7c0d1b inset;}
 .dmc .ct{position:absolute;top:-4px;right:-3px;font-size:7px;font-weight:700;background:#7c0d1b;color:#fff;border-radius:6px;min-width:10px;padding:0 1px;line-height:1.35;}
-/* forced-colors / Windows high-contrast: backgrounds are stripped, so carry weak/resist/immune state on a visible border + a text glyph */
+.dmc .imchip{display:inline-block;margin-left:2px;padding:0 2px;border:1px solid currentColor;border-radius:2px;font-size:6.5px;line-height:1.25;vertical-align:1px;}
+/* forced-colors / Windows high-contrast: backgrounds are stripped, so carry weak/resist state on a visible border + text glyph */
 @media (forced-colors: active){
   .dmc{border:1px solid GrayText;}
-  .dmc.weak::before{content:"! ";} .dmc.shared::before{content:"!! ";} .dmc.resist::before{content:"- ";} .dmc.immune::before{content:"0 ";}
+  .dmc.weak::before{content:"! ";} .dmc.shared::before{content:"!! ";} .dmc.resist::before{content:"- ";}
   .dmc.weak,.dmc.shared{border-color:Highlight;} .dmc.immune{border-style:double;}
 }
 .dmleg{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-family:var(--mono);font-size:7.5px;color:#3a4a2a;opacity:.8;}
@@ -980,7 +981,8 @@ function renderDefense(c){
     const wm=weakMembers(t);
     // tooltip + hover both name WHICH members are weak, so a red cell explains itself
     const title=`vs ${t.toUpperCase()} attacks: ${w?wm.map(m=>memberBase(m).name).join(' & ')+' weak':'no member weak'}${r?` · ${r} resist`:''}${im?` · ${im} immune`:''}`;
-    return `<div class="${cls}" title="${title}" data-weak="${wm.map(m=>m.baseDex).join(',')}">${TABBR[t]}${ct}</div>`; }).join('');
+    const imChip=im?'<span class="imchip">×0</span>':'';
+    return `<div class="${cls}" title="${title}" data-weak="${wm.map(m=>m.baseDex).join(',')}">${TABBR[t]}${imChip}${ct}</div>`; }).join('');
   const swTxt = shared.length
     ? `<span class="sw-list bad">! ${shared.map(t=>TABBR[t]).join(' ')}</span>`
     : `<span class="sw-list ok">none — balanced</span>`;
