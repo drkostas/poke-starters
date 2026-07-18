@@ -1,0 +1,1244 @@
+[
+  {
+    "name": "Articuno",
+    "dexNumber": 144,
+    "location": "Seafoam Islands B4F",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 50,
+    "notes": "Static legendary bird. object_event SPRITE_BIRD ... ARTICUNO, 50 (objects/SeafoamIslandsB4F.asm)."
+  },
+  {
+    "name": "Zapdos",
+    "dexNumber": 145,
+    "location": "Power Plant",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 50,
+    "notes": "Static legendary bird. object_event SPRITE_BIRD ... ZAPDOS, 50 (objects/PowerPlant.asm)."
+  },
+  {
+    "name": "Moltres",
+    "dexNumber": 146,
+    "location": "Victory Road 2F",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 50,
+    "notes": "Static legendary bird. object_event SPRITE_BIRD ... MOLTRES, 50 (objects/VictoryRoad2F.asm)."
+  },
+  {
+    "name": "Mewtwo",
+    "dexNumber": 150,
+    "location": "Cerulean Cave B1F",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 70,
+    "notes": "Static legendary. object_event SPRITE_MONSTER ... MEWTWO, 70 (objects/CeruleanCaveB1F.asm). Requires all badges to enter cave."
+  },
+  {
+    "name": "Snorlax",
+    "dexNumber": 143,
+    "location": "Route 12",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Blocks the road; wake with Poke Flute. scripts/Route12.asm sets SNORLAX, wCurEnemyLevel=30."
+  },
+  {
+    "name": "Snorlax",
+    "dexNumber": 143,
+    "location": "Route 16",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Blocks the road; wake with Poke Flute. scripts/Route16.asm sets SNORLAX, wCurEnemyLevel=30."
+  },
+  {
+    "name": "Marowak",
+    "dexNumber": 105,
+    "location": "Pokemon Tower 6F",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Ghost Marowak. Fought as opponent RESTLESS_SOUL at level 30 (scripts/PokemonTower6F.asm); only identifiable/battleable with the Silph Scope. NOT catchable - it departs when defeated (no capture). dexNumber is Marowak (105) since that is the species the ghost represents."
+  },
+  {
+    "name": "Voltorb",
+    "dexNumber": 100,
+    "location": "Power Plant",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 40,
+    "notes": "6 static Voltorb disguised as item balls (SPRITE_POKE_BALL). object_event ... VOLTORB, 40 x6 (objects/PowerPlant.asm)."
+  },
+  {
+    "name": "Electrode",
+    "dexNumber": 101,
+    "location": "Power Plant",
+    "method": "static",
+    "version": "Red/Blue",
+    "level": 43,
+    "notes": "2 static Electrode disguised as item balls (SPRITE_POKE_BALL). object_event ... ELECTRODE, 43 x2 (objects/PowerPlant.asm)."
+  },
+  {
+    "name": "Bulbasaur",
+    "dexNumber": 1,
+    "location": "Pallet Town - Prof. Oak's Lab",
+    "method": "starter",
+    "version": "Red/Blue",
+    "level": 5,
+    "notes": "Choose-one starter. scripts/OaksLab.asm sets wCurEnemyLevel=5. Rival takes the type-advantaged starter."
+  },
+  {
+    "name": "Charmander",
+    "dexNumber": 4,
+    "location": "Pallet Town - Prof. Oak's Lab",
+    "method": "starter",
+    "version": "Red/Blue",
+    "level": 5,
+    "notes": "Choose-one starter. scripts/OaksLab.asm sets wCurEnemyLevel=5. Rival takes the type-advantaged starter."
+  },
+  {
+    "name": "Squirtle",
+    "dexNumber": 7,
+    "location": "Pallet Town - Prof. Oak's Lab",
+    "method": "starter",
+    "version": "Red/Blue",
+    "level": 5,
+    "notes": "Choose-one starter. scripts/OaksLab.asm sets wCurEnemyLevel=5. Rival takes the type-advantaged starter."
+  },
+  {
+    "name": "Eevee",
+    "dexNumber": 133,
+    "location": "Celadon City - Celadon Mansion (roof-access room, near Dept. Store)",
+    "method": "gift",
+    "version": "Red/Blue",
+    "level": 25,
+    "notes": "Gift Poke Ball. scripts/CeladonMansionRoofHouse.asm: lb bc, EEVEE, 25."
+  },
+  {
+    "name": "Hitmonlee",
+    "dexNumber": 106,
+    "location": "Saffron City - Fighting Dojo",
+    "method": "gift",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Choose one of Hitmonlee/Hitmonchan after beating the Dojo. scripts/FightingDojo.asm: ld c, 30; GivePokemon."
+  },
+  {
+    "name": "Hitmonchan",
+    "dexNumber": 107,
+    "location": "Saffron City - Fighting Dojo",
+    "method": "gift",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Choose one of Hitmonlee/Hitmonchan after beating the Dojo. scripts/FightingDojo.asm: ld c, 30; GivePokemon."
+  },
+  {
+    "name": "Lapras",
+    "dexNumber": 131,
+    "location": "Saffron City - Silph Co. 7F",
+    "method": "gift",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Gift from a Silph employee after clearing Team Rocket. scripts/SilphCo7F.asm: lb bc, LAPRAS, 15."
+  },
+  {
+    "name": "Magikarp",
+    "dexNumber": 129,
+    "location": "Route 4 - Pokemon Center (Mt. Moon side)",
+    "method": "gift",
+    "version": "Red/Blue",
+    "level": 5,
+    "notes": "Magikarp salesman. Costs ¥500. scripts/MtMoonPokecenter.asm: lb bc, MAGIKARP, 5; price 500 (hMoney+1=$05). Technically a purchase, not free; classed as gift-style scripted acquisition."
+  },
+  {
+    "name": "Omanyte",
+    "dexNumber": 138,
+    "location": "Cinnabar Island - Pokemon Lab (Fossil revival)",
+    "method": "fossil",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Revived from the Helix Fossil (Mt. Moon reward). engine/events/cinnabar_lab.asm HELIX_FOSSIL->OMANYTE; scripts/CinnabarLabFossilRoom.asm ld c, 30; GivePokemon."
+  },
+  {
+    "name": "Kabuto",
+    "dexNumber": 140,
+    "location": "Cinnabar Island - Pokemon Lab (Fossil revival)",
+    "method": "fossil",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Revived from the Dome Fossil (Mt. Moon reward). engine/events/cinnabar_lab.asm DOME_FOSSIL->KABUTO; scripts/CinnabarLabFossilRoom.asm ld c, 30; GivePokemon."
+  },
+  {
+    "name": "Aerodactyl",
+    "dexNumber": 142,
+    "location": "Cinnabar Island - Pokemon Lab (Fossil revival)",
+    "method": "fossil",
+    "version": "Red/Blue",
+    "level": 30,
+    "notes": "Revived from the Old Amber (Pewter Museum). engine/events/cinnabar_lab.asm OLD_AMBER->AERODACTYL (else branch); scripts/CinnabarLabFossilRoom.asm ld c, 30; GivePokemon."
+  },
+  {
+    "name": "Abra",
+    "dexNumber": 63,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 9,
+    "notes": "Prize exchange; 180 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Clefairy",
+    "dexNumber": 35,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 8,
+    "notes": "Prize exchange; 500 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 17,
+    "notes": "Prize exchange; 1200 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 18,
+    "notes": "Prize exchange; 2800 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Scyther",
+    "dexNumber": 123,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 25,
+    "notes": "Prize exchange; 5500 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Porygon",
+    "dexNumber": 137,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Red",
+    "level": 26,
+    "notes": "Prize exchange; 9999 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Red)."
+  },
+  {
+    "name": "Abra",
+    "dexNumber": 63,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 6,
+    "notes": "Prize exchange; 120 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Clefairy",
+    "dexNumber": 35,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 12,
+    "notes": "Prize exchange; 750 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 17,
+    "notes": "Prize exchange; 1200 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Pinsir",
+    "dexNumber": 127,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 20,
+    "notes": "Prize exchange; 2500 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 24,
+    "notes": "Prize exchange; 4600 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Porygon",
+    "dexNumber": 137,
+    "location": "Celadon City - Game Corner Prize Corner",
+    "method": "game_corner",
+    "version": "Blue",
+    "level": 18,
+    "notes": "Prize exchange; 6500 Game Corner coins (not money). Levels/costs from data/events/prize_mon_levels.asm + prizes.asm (Blue)."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Route 11 - Gate 2F",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Nidorino, RECEIVES Nidorina (nicknamed TERRY). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Mr. Mime",
+    "dexNumber": 122,
+    "location": "Route 2 - Trade House",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Abra, RECEIVES Mr. Mime (nicknamed MARCEL). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Seel",
+    "dexNumber": 86,
+    "location": "Cinnabar Island - Pokemon Lab (Fossil Room)",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Ponyta, RECEIVES Seel (nicknamed SAILOR). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Farfetch'd",
+    "dexNumber": 83,
+    "location": "Vermilion City - Trade House",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Spearow, RECEIVES Farfetch'd (nicknamed DUX). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Lickitung",
+    "dexNumber": 108,
+    "location": "Route 18 - Gate 2F",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Slowbro, RECEIVES Lickitung (nicknamed MARC). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Jynx",
+    "dexNumber": 124,
+    "location": "Cerulean City - Trade House",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Poliwhirl, RECEIVES Jynx (nicknamed LOLA). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Electrode",
+    "dexNumber": 101,
+    "location": "Cinnabar Island - Pokemon Lab (Trade Room)",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Raichu, RECEIVES Electrode (nicknamed DORIS). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Tangela",
+    "dexNumber": 114,
+    "location": "Cinnabar Island - Pokemon Lab (Trade Room)",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Venonat, RECEIVES Tangela (nicknamed CRINKLES). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Underground Path (Route 5 north entrance house)",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "Player GIVES Nidoran♂, RECEIVES Nidoran♀ (nicknamed SPOT). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Beedrill",
+    "dexNumber": 15,
+    "location": "(unused - data leftover, not accessible in-game)",
+    "method": "trade",
+    "version": "Red/Blue",
+    "level": null,
+    "notes": "UNUSED trade left in the data (Japanese-version leftover); not reachable in English Red/Blue. Player GIVES Butterfree, RECEIVES Beedrill (nicknamed CHIKUCHIKU). Received mon's level = the level of the Pokemon you trade in (variable), so 'level' is null. Source: data/events/trades.asm; map from scripts/*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Rhyhorn",
+    "dexNumber": 111,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venonat",
+    "dexNumber": 48,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Parasect",
+    "dexNumber": 47,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Scyther",
+    "dexNumber": 123,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Chansey",
+    "dexNumber": 113,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Rhyhorn",
+    "dexNumber": 111,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venonat",
+    "dexNumber": 48,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Parasect",
+    "dexNumber": 47,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Pinsir",
+    "dexNumber": 127,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Chansey",
+    "dexNumber": 113,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Doduo",
+    "dexNumber": 84,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Paras",
+    "dexNumber": 46,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 33,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Parasect",
+    "dexNumber": 47,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Kangaskhan",
+    "dexNumber": 115,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Scyther",
+    "dexNumber": 123,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Doduo",
+    "dexNumber": 84,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Paras",
+    "dexNumber": 46,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 33,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Parasect",
+    "dexNumber": 47,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Kangaskhan",
+    "dexNumber": 115,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Pinsir",
+    "dexNumber": 127,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Rhyhorn",
+    "dexNumber": 111,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Paras",
+    "dexNumber": 46,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 27,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venomoth",
+    "dexNumber": 49,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 32,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Chansey",
+    "dexNumber": 113,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Tauros",
+    "dexNumber": 128,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 22,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Rhyhorn",
+    "dexNumber": 111,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Paras",
+    "dexNumber": 46,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 27,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 30,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venomoth",
+    "dexNumber": 49,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 32,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Chansey",
+    "dexNumber": 113,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Tauros",
+    "dexNumber": 128,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Doduo",
+    "dexNumber": 84,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venonat",
+    "dexNumber": 48,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorino",
+    "dexNumber": 33,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 33,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venomoth",
+    "dexNumber": 49,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Tauros",
+    "dexNumber": 128,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Kangaskhan",
+    "dexNumber": 115,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♀",
+    "dexNumber": 29,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Doduo",
+    "dexNumber": 84,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venonat",
+    "dexNumber": 48,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 23,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 24,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidorina",
+    "dexNumber": 30,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 33,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Exeggcute",
+    "dexNumber": 102,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Nidoran♂",
+    "dexNumber": 32,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 25,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Venomoth",
+    "dexNumber": 49,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 31,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Tauros",
+    "dexNumber": 128,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 26,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Kangaskhan",
+    "dexNumber": 115,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Blue",
+    "level": 28,
+    "notes": "Safari Zone grass encounter (walk-in). Safari mechanics: bait/rock/flee, no catch-rate roll. Source: data/wild/maps/SafariZone*.asm."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Krabby",
+    "dexNumber": 98,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Psyduck",
+    "dexNumber": 54,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Slowpoke",
+    "dexNumber": 79,
+    "location": "Safari Zone (Center)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Krabby",
+    "dexNumber": 98,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Psyduck",
+    "dexNumber": 54,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Slowpoke",
+    "dexNumber": 79,
+    "location": "Safari Zone (East)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Krabby",
+    "dexNumber": 98,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Psyduck",
+    "dexNumber": 54,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Slowpoke",
+    "dexNumber": 79,
+    "location": "Safari Zone (North)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Dratini",
+    "dexNumber": 147,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Krabby",
+    "dexNumber": 98,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Psyduck",
+    "dexNumber": 54,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  },
+  {
+    "name": "Slowpoke",
+    "dexNumber": 79,
+    "location": "Safari Zone (West)",
+    "method": "safari",
+    "version": "Red/Blue",
+    "level": 15,
+    "notes": "Safari Zone Super Rod fishing encounter (data/wild/super_rod.asm .Group6). Safari mechanics apply. Same table for all four Safari sub-areas."
+  }
+]

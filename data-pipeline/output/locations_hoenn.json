@@ -1,0 +1,5427 @@
+{
+ "route101": {
+  "name": "Route 101",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 265,
+    "name": "Wurmple",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 263,
+    "name": "Zigzagoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route102": {
+  "name": "Route 102",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 263,
+    "name": "Zigzagoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 265,
+    "name": "Wurmple",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 270,
+    "name": "Lotad",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 341,
+    "name": "Corphish",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 205,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 20,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 273,
+    "name": "Seedot",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 280,
+    "name": "Ralts",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 235,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route103": {
+  "name": "Route 103",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 263,
+    "name": "Zigzagoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 4,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route104": {
+  "name": "Route 104",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 45,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 265,
+    "name": "Wurmple",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 276,
+    "name": "Taillow",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 4,
+    "maxLevel": 5,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 3,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route105": {
+  "name": "Route 105",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route110": {
+  "name": "Route 110",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 309,
+    "name": "Electrike",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 13,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 312,
+    "name": "Minun",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 316,
+    "name": "Gulpin",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 13,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 311,
+    "name": "Plusle",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 12,
+    "maxLevel": 13,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route111": {
+  "name": "Route 111",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 27,
+    "name": "Sandshrew",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 19,
+    "maxLevel": 21,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 328,
+    "name": "Trapinch",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 19,
+    "maxLevel": 21,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 339,
+    "name": "Barboach",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 343,
+    "name": "Baltoy",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 19,
+    "maxLevel": 21,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 331,
+    "name": "Cacnea",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 20,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route112": {
+  "name": "Route 112",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 322,
+    "name": "Numel",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route113": {
+  "name": "Route 113",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 218,
+    "name": "Slugma",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 327,
+    "name": "Spinda",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 227,
+    "name": "Skarmory",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 25,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route114": {
+  "name": "Route 114",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 270,
+    "name": "Lotad",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 271,
+    "name": "Lombre",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 18,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 333,
+    "name": "Swablu",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 17,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 339,
+    "name": "Barboach",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 336,
+    "name": "Seviper",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 17,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 20,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 274,
+    "name": "Nuzleaf",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route116": {
+  "name": "Route 116",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 8,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 276,
+    "name": "Taillow",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 8,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 290,
+    "name": "Nincada",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 293,
+    "name": "Whismur",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 63,
+    "name": "Abra",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 300,
+    "name": "Skitty",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 7,
+    "maxLevel": 8,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route117": {
+  "name": "Route 117",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 314,
+    "name": "Illumise",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 14,
+    "catchRate": 150,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 341,
+    "name": "Corphish",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 205,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 20,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 273,
+    "name": "Seedot",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 313,
+    "name": "Volbeat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 150,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route118": {
+  "name": "Route 118",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 263,
+    "name": "Zigzagoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 24,
+    "maxLevel": 26,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 309,
+    "name": "Electrike",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 24,
+    "maxLevel": 26,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 318,
+    "name": "Carvanha",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 264,
+    "name": "Linoone",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 310,
+    "name": "Manectric",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 352,
+    "name": "Kecleon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route124": {
+  "name": "Route 124",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "petalburg_woods": {
+  "name": "Petalburg Woods",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 265,
+    "name": "Wurmple",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 285,
+    "name": "Shroomish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 266,
+    "name": "Silcoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 268,
+    "name": "Cascoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 276,
+    "name": "Taillow",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 6,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 287,
+    "name": "Slakoth",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "rusturf_tunnel": {
+  "name": "Rusturf Tunnel",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 293,
+    "name": "Whismur",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 8,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "granite_cave": {
+  "name": "Granite Cave",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 7,
+    "maxLevel": 11,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 296,
+    "name": "Makuhita",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 11,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 299,
+    "name": "Nosepass",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 302,
+    "name": "Sableye",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 9,
+    "maxLevel": 12,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 304,
+    "name": "Aron",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 7,
+    "maxLevel": 12,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 63,
+    "name": "Abra",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 8,
+    "maxLevel": 10,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 6,
+    "maxLevel": 9,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "mt_pyre": {
+  "name": "Mt. Pyre",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 37,
+    "name": "Vulpix",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 29,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 353,
+    "name": "Shuppet",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 355,
+    "name": "Duskull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 358,
+    "name": "Chimecho",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 28,
+    "maxLevel": 28,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "victory_road": {
+  "name": "Victory Road",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 38,
+    "maxLevel": 44,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 40,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 40,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 75,
+    "name": "Graveler",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 40,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 297,
+    "name": "Hariyama",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 38,
+    "maxLevel": 42,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 302,
+    "name": "Sableye",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 40,
+    "maxLevel": 44,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 305,
+    "name": "Lairon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 40,
+    "maxLevel": 44,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 339,
+    "name": "Barboach",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 340,
+    "name": "Whiscash",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 45,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 36,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 293,
+    "name": "Whismur",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 36,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 294,
+    "name": "Loudred",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 40,
+    "maxLevel": 40,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 296,
+    "name": "Makuhita",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 36,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 303,
+    "name": "Mawile",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 38,
+    "maxLevel": 44,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 304,
+    "name": "Aron",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 36,
+    "catchRate": 180,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "safari_zone": {
+  "name": "Safari Zone",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 29,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 44,
+    "name": "Gloom",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 31,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 84,
+    "name": "Doduo",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 29,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 111,
+    "name": "Rhyhorn",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 27,
+    "maxLevel": 29,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 119,
+    "name": "Seaking",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 40,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 177,
+    "name": "Natu",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 29,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 179,
+    "name": "Mareep",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 34,
+    "maxLevel": 36,
+    "catchRate": 235,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 190,
+    "name": "Aipom",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 33,
+    "maxLevel": 35,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 191,
+    "name": "Sunkern",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 33,
+    "maxLevel": 35,
+    "catchRate": 235,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 203,
+    "name": "Girafarig",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 213,
+    "name": "Shuckle",
+    "method": "rock_smash",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 40,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 216,
+    "name": "Teddiursa",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 34,
+    "maxLevel": 36,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 223,
+    "name": "Remoraid",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 231,
+    "name": "Phanpy",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 27,
+    "maxLevel": 29,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 25,
+    "name": "Pikachu",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 55,
+    "name": "Golduck",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 40,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 85,
+    "name": "Dodrio",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 29,
+    "maxLevel": 31,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 127,
+    "name": "Pinsir",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 27,
+    "maxLevel": 29,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 35,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 33,
+    "maxLevel": 33,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 33,
+    "maxLevel": 33,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 178,
+    "name": "Xatu",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 29,
+    "maxLevel": 31,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 202,
+    "name": "Wobbuffet",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 27,
+    "maxLevel": 29,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 204,
+    "name": "Pineco",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 34,
+    "maxLevel": 34,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 207,
+    "name": "Gligar",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 37,
+    "maxLevel": 40,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 209,
+    "name": "Snubbull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 34,
+    "maxLevel": 34,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 214,
+    "name": "Heracross",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 27,
+    "maxLevel": 29,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 228,
+    "name": "Houndour",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 39,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 234,
+    "name": "Stantler",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 36,
+    "maxLevel": 39,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 241,
+    "name": "Miltank",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 37,
+    "maxLevel": 40,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 35,
+    "maxLevel": 40,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 224,
+    "name": "Octillery",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 35,
+    "maxLevel": 40,
+    "catchRate": 75,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "abandoned_ship": {
+  "name": "Abandoned Ship",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "fiery_path": {
+  "name": "Fiery Path",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 66,
+    "name": "Machop",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 16,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 109,
+    "name": "Koffing",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 322,
+    "name": "Numel",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 324,
+    "name": "Torkoal",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 218,
+    "name": "Slugma",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 88,
+    "name": "Grimer",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "meteor_falls": {
+  "name": "Meteor Falls",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 33,
+    "maxLevel": 40,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 338,
+    "name": "Solrock",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 39,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 339,
+    "name": "Barboach",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 340,
+    "name": "Whiscash",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 45,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 371,
+    "name": "Bagon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 35,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 338,
+    "name": "Solrock",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "jagged_pass": {
+  "name": "Jagged Pass",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 66,
+    "name": "Machop",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 322,
+    "name": "Numel",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 325,
+    "name": "Spoink",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route106": {
+  "name": "Route 106",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route107": {
+  "name": "Route 107",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route108": {
+  "name": "Route 108",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route109": {
+  "name": "Route 109",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route115": {
+  "name": "Route 115",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 276,
+    "name": "Taillow",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 333,
+    "name": "Swablu",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 25,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 39,
+    "name": "Jigglypuff",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 24,
+    "maxLevel": 25,
+    "catchRate": 170,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 277,
+    "name": "Swellow",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 24,
+    "maxLevel": 26,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "new_mauville": {
+  "name": "New Mauville",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 81,
+    "name": "Magnemite",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 100,
+    "name": "Voltorb",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 82,
+    "name": "Magneton",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 101,
+    "name": "Electrode",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route119": {
+  "name": "Route 119",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 24,
+    "maxLevel": 27,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 263,
+    "name": "Zigzagoon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 264,
+    "name": "Linoone",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 318,
+    "name": "Carvanha",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 357,
+    "name": "Tropius",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 352,
+    "name": "Kecleon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route120": {
+  "name": "Route 120",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 262,
+    "name": "Mightyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 339,
+    "name": "Barboach",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 359,
+    "name": "Absol",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 27,
+    "catchRate": 30,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 20,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 273,
+    "name": "Seedot",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 352,
+    "name": "Kecleon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route121": {
+  "name": "Route 121",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 262,
+    "name": "Mightyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 353,
+    "name": "Shuppet",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 44,
+    "name": "Gloom",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 28,
+    "maxLevel": 28,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 352,
+    "name": "Kecleon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route122": {
+  "name": "Route 122",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route123": {
+  "name": "Route 123",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 261,
+    "name": "Poochyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 26,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 262,
+    "name": "Mightyena",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 353,
+    "name": "Shuppet",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 44,
+    "name": "Gloom",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 28,
+    "maxLevel": 28,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 28,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 352,
+    "name": "Kecleon",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 200,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route125": {
+  "name": "Route 125",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route126": {
+  "name": "Route 126",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route127": {
+  "name": "Route 127",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route128": {
+  "name": "Route 128",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 10,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 222,
+    "name": "Corsola",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 370,
+    "name": "Luvdisc",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 35,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route129": {
+  "name": "Route 129",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 321,
+    "name": "Wailord",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "rare",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route130": {
+  "name": "Route 130",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 360,
+    "name": "Wynaut",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 50,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route131": {
+  "name": "Route 131",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route132": {
+  "name": "Route 132",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 116,
+    "name": "Horsea",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route133": {
+  "name": "Route 133",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 116,
+    "name": "Horsea",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route134": {
+  "name": "Route 134",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 116,
+    "name": "Horsea",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "seafloor_cavern": {
+  "name": "Seafloor Cavern",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 28,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 33,
+    "maxLevel": 36,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 90,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "cave_of_origin": {
+  "name": "Cave Of Origin",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 28,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 302,
+    "name": "Sableye",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 34,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 33,
+    "maxLevel": 36,
+    "catchRate": 90,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "shoal_cave": {
+  "name": "Shoal Cave",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 32,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 363,
+    "name": "Spheal",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 26,
+    "maxLevel": 32,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 30,
+    "maxLevel": 32,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 361,
+    "name": "Snorunt",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 26,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 363,
+    "name": "Spheal",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "lilycove_city": {
+  "name": "Lilycove City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 120,
+    "name": "Staryu",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "dewford_town": {
+  "name": "Dewford Town",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "slateport_city": {
+  "name": "Slateport City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "mossdeep_city": {
+  "name": "Mossdeep City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "pacifidlog_town": {
+  "name": "Pacifidlog Town",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 319,
+    "name": "Sharpedo",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "ever_grande_city": {
+  "name": "Ever Grande City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 10,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 222,
+    "name": "Corsola",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 30,
+    "maxLevel": 35,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 278,
+    "name": "Wingull",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 30,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 320,
+    "name": "Wailmer",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 125,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 370,
+    "name": "Luvdisc",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 35,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 279,
+    "name": "Pelipper",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "petalburg_city": {
+  "name": "Petalburg City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 30,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 341,
+    "name": "Corphish",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 45,
+    "catchRate": 205,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "sky_pillar": {
+  "name": "Sky Pillar",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 34,
+    "maxLevel": 35,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 302,
+    "name": "Sableye",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 33,
+    "maxLevel": 34,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 344,
+    "name": "Claydol",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 36,
+    "maxLevel": 38,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 354,
+    "name": "Banette",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 37,
+    "maxLevel": 38,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 334,
+    "name": "Altaria",
+    "method": "grass",
+    "version": "emerald",
+    "rarityTier": "uncommon",
+    "minLevel": 38,
+    "maxLevel": 39,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "sootopolis_city": {
+  "name": "Sootopolis City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 10,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 35,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 130,
+    "name": "Gyarados",
+    "method": "fishing",
+    "version": "emerald",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 45,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "_meta": {
+  "region": "Hoenn",
+  "basis": "Pokemon Emerald (Gen 3), pokeemerald wild_encounters.json; rarity from ROM slot weights land[20,20,10,10,10,10,5,5,4,4,1,1]/water[60,30,5,4,1]/fishing per-rod.",
+  "keyedBy": "connectivity node id (see connectivity_hoenn.json)",
+  "schema": "location -> {name, type, catchable:[{dexNumber, name, method, version, rarityTier, minLevel, maxLevel, catchRate, catchRateExempt}]}",
+  "methods": [
+   "grass",
+   "surf",
+   "rock_smash",
+   "fishing"
+  ]
+ }
+}

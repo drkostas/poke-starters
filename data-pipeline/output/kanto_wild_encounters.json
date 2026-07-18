@@ -1,0 +1,7337 @@
+[
+  {
+    "map": "Cerulean Cave 1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 46,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "HYPNO",
+        "dexNumber": 97,
+        "level": 46,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 46,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DODRIO",
+        "dexNumber": 85,
+        "level": 49,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 49,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ARBOK",
+        "dexNumber": 24,
+        "level": 52,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KADABRA",
+        "dexNumber": 64,
+        "level": 49,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 52,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 53,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 53,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave 1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 46,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "HYPNO",
+        "dexNumber": 97,
+        "level": 46,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 46,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DODRIO",
+        "dexNumber": 85,
+        "level": 49,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 49,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSLASH",
+        "dexNumber": 28,
+        "level": 52,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KADABRA",
+        "dexNumber": 64,
+        "level": 49,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 52,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 53,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 53,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave 2F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "DODRIO",
+        "dexNumber": 85,
+        "level": 51,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 51,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KADABRA",
+        "dexNumber": 64,
+        "level": 51,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "RHYDON",
+        "dexNumber": 112,
+        "level": 52,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAROWAK",
+        "dexNumber": 105,
+        "level": 52,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ELECTRODE",
+        "dexNumber": 101,
+        "level": 52,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 56,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WIGGLYTUFF",
+        "dexNumber": 40,
+        "level": 54,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 55,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 60,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave B1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RHYDON",
+        "dexNumber": 112,
+        "level": 55,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAROWAK",
+        "dexNumber": 105,
+        "level": 55,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ELECTRODE",
+        "dexNumber": 101,
+        "level": 55,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ARBOK",
+        "dexNumber": 24,
+        "level": 57,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 65,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 63,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 67,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave B1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RHYDON",
+        "dexNumber": 112,
+        "level": 55,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAROWAK",
+        "dexNumber": 105,
+        "level": 55,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ELECTRODE",
+        "dexNumber": 101,
+        "level": 55,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 64,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSLASH",
+        "dexNumber": 28,
+        "level": 57,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 65,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 63,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 67,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Diglett's Cave",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 18,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 19,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 16,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 21,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DIGLETT",
+        "dexNumber": 50,
+        "level": 22,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DUGTRIO",
+        "dexNumber": 51,
+        "level": 29,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DUGTRIO",
+        "dexNumber": 51,
+        "level": 31,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Mt. Moon 1F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 7,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 9,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 8,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 10,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 8,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 11,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CLEFAIRY",
+        "dexNumber": 35,
+        "level": 8,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Mt. Moon B1F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 7,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 7,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 8,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 9,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 10,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 11,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CLEFAIRY",
+        "dexNumber": 35,
+        "level": 9,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 9,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Mt. Moon B2F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 9,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 9,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 10,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 11,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 12,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CLEFAIRY",
+        "dexNumber": 35,
+        "level": 10,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 12,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CLEFAIRY",
+        "dexNumber": 35,
+        "level": 12,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 32,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 34,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 34,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 37,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 39,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 32,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 34,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 34,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 37,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 39,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 2F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 32,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 34,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 34,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 2F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 32,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 34,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 34,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 3F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 35,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 34,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 40,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 34,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 38,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 36,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 42,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion 3F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 35,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAGMAR",
+        "dexNumber": 126,
+        "level": 34,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 40,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 34,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 38,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 36,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 42,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion B1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 35,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 40,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 34,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 35,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 42,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 42,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Mansion B1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 35,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRIMER",
+        "dexNumber": 88,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MUK",
+        "dexNumber": 89,
+        "level": 40,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PONYTA",
+        "dexNumber": 77,
+        "level": 34,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "KOFFING",
+        "dexNumber": 109,
+        "level": 35,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MAGMAR",
+        "dexNumber": 126,
+        "level": 38,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEZING",
+        "dexNumber": 110,
+        "level": 42,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Tower 3F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 19,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 24,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 22,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 25,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Tower 4F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 19,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 22,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 24,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Tower 5F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 19,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 22,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 24,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Tower 6F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 19,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 22,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 24,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Pokemon Tower 7F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GASTLY",
+        "dexNumber": 92,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 22,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CUBONE",
+        "dexNumber": 104,
+        "level": 24,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "HAUNTER",
+        "dexNumber": 93,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Power Plant",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAGNEMITE",
+        "dexNumber": 81,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 20,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAGNEMITE",
+        "dexNumber": 81,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 32,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 35,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ELECTABUZZ",
+        "dexNumber": 125,
+        "level": 33,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "ELECTABUZZ",
+        "dexNumber": 125,
+        "level": 36,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Power Plant",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MAGNEMITE",
+        "dexNumber": 81,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 20,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAGNEMITE",
+        "dexNumber": 81,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 32,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MAGNETON",
+        "dexNumber": 82,
+        "level": 35,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 33,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "RAICHU",
+        "dexNumber": 26,
+        "level": 36,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Rock Tunnel 1F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 17,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 16,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 15,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 15,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Rock Tunnel B1F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 17,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 16,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 18,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 1",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 3,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 4,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 4,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 5,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 10",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 14,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 11,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 17,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 10",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 14,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 11,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VOLTORB",
+        "dexNumber": 100,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 17,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 11",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 14,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 15,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 12,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 9,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 15,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 11,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 15,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 11",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 14,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 15,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 12,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 9,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 15,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 11,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DROWZEE",
+        "dexNumber": 96,
+        "level": 15,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 12",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 27,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 12",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 27,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 13",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 27,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 13",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 27,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 14",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 14",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 15",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GLOOM",
+        "dexNumber": 44,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 15",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 26,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEPINBELL",
+        "dexNumber": 70,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 30,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 16",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 18,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 22,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 22,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 23,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 25,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 17",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 25,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 27,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 25,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 27,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 18",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 20,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 25,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 27,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 29,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 2",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 4,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 3,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 2,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 5,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 4,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 5,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 2",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 4,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 3,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 2,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 5,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 4,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 5,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 21",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 21,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 23,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATICATE",
+        "dexNumber": 20,
+        "level": 30,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 21,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEOTTO",
+        "dexNumber": 17,
+        "level": 32,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TANGELA",
+        "dexNumber": 114,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TANGELA",
+        "dexNumber": 114,
+        "level": 30,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TANGELA",
+        "dexNumber": 114,
+        "level": 32,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 21",
+    "method": "surf",
+    "version": "both",
+    "encounterRatePct": 1.9531,
+    "encounterRateByte": 5,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 35,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 40,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 22",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 4,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 5,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 3,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 4,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 22",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 3,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 4,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 2,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 5,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 3,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 4,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 23",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 26,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ARBOK",
+        "dexNumber": 24,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 43,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 41,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 43,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 23",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 33,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 26,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 38,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSLASH",
+        "dexNumber": 28,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DITTO",
+        "dexNumber": 132,
+        "level": 43,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 41,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "FEAROW",
+        "dexNumber": 22,
+        "level": 43,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 24",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 7,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 12,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 14,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 8,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 12,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 24",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 9.7656,
+    "encounterRateByte": 25,
+    "slots": [
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 7,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 12,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 14,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 8,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 12,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 25",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 9,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 14,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 10,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 7,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 8,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 25",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 8,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 9,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 14,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "ABRA",
+        "dexNumber": 63,
+        "level": 10,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 7,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 8,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 3",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 6,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 7,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 7,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 8,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 8,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "JIGGLYPUFF",
+        "dexNumber": 39,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "JIGGLYPUFF",
+        "dexNumber": 39,
+        "level": 5,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "JIGGLYPUFF",
+        "dexNumber": 39,
+        "level": 7,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 4",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 8,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 8,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 12,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 12,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 8,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 12,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 4",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 7.8125,
+    "encounterRateByte": 20,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 8,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 8,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 12,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 12,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 8,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 12,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 5",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 14,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 16,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 5",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 14,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 16,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 6",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 14,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 16,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 6",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 13,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 12,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 16,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 14,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 16,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 7",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 19,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 19,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ODDISH",
+        "dexNumber": 43,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 18,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 19,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 20,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 7",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 19,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 19,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "BELLSPROUT",
+        "dexNumber": 69,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 22,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 18,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 18,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 19,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 20,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 8",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 18,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 18,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 16,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MANKEY",
+        "dexNumber": 56,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 19,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 15,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GROWLITHE",
+        "dexNumber": 58,
+        "level": 18,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 8",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 18,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 18,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 17,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 16,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PIDGEY",
+        "dexNumber": 16,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MEOWTH",
+        "dexNumber": 52,
+        "level": 20,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 19,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 15,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "VULPIX",
+        "dexNumber": 37,
+        "level": 18,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 9",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 14,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 11,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "EKANS",
+        "dexNumber": 23,
+        "level": 17,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 9",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 16,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 14,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 11,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 13,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "RATTATA",
+        "dexNumber": 19,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SPEAROW",
+        "dexNumber": 21,
+        "level": 17,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 13,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SANDSHREW",
+        "dexNumber": 27,
+        "level": 17,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone Center",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RHYHORN",
+        "dexNumber": 111,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SCYTHER",
+        "dexNumber": 123,
+        "level": 23,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 23,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone Center",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RHYHORN",
+        "dexNumber": 111,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PINSIR",
+        "dexNumber": 127,
+        "level": 23,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 23,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone East",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 24,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "KANGASKHAN",
+        "dexNumber": 115,
+        "level": 25,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SCYTHER",
+        "dexNumber": 123,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone East",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 23,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 24,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PARASECT",
+        "dexNumber": 47,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "KANGASKHAN",
+        "dexNumber": 115,
+        "level": 25,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PINSIR",
+        "dexNumber": 127,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone North",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RHYHORN",
+        "dexNumber": 111,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 27,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 32,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 26,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TAUROS",
+        "dexNumber": 128,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone North",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "RHYHORN",
+        "dexNumber": 111,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PARAS",
+        "dexNumber": 46,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 25,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 27,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 32,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CHANSEY",
+        "dexNumber": 113,
+        "level": 26,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TAUROS",
+        "dexNumber": 128,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone West",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINO",
+        "dexNumber": 33,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TAUROS",
+        "dexNumber": 128,
+        "level": 26,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "KANGASKHAN",
+        "dexNumber": 115,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone West",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 11.7188,
+    "encounterRateByte": 30,
+    "slots": [
+      {
+        "species": "NIDORAN_F",
+        "dexNumber": 29,
+        "level": 25,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "DODUO",
+        "dexNumber": 84,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "VENONAT",
+        "dexNumber": 48,
+        "level": 23,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 24,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORINA",
+        "dexNumber": 30,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "EXEGGCUTE",
+        "dexNumber": 102,
+        "level": 26,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "NIDORAN_M",
+        "dexNumber": 32,
+        "level": 25,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TAUROS",
+        "dexNumber": 128,
+        "level": 26,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "KANGASKHAN",
+        "dexNumber": 115,
+        "level": 28,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 19",
+    "method": "surf",
+    "version": "both",
+    "encounterRatePct": 1.9531,
+    "encounterRateByte": 5,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 35,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 40,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Route 20",
+    "method": "surf",
+    "version": "both",
+    "encounterRatePct": 1.9531,
+    "encounterRateByte": 5,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 10,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 20,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 35,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 40,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands 1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 30,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 21,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GOLDUCK",
+        "dexNumber": 55,
+        "level": 38,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands 1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 30,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 21,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 28,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 38,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B1F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 32,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DEWGONG",
+        "dexNumber": 87,
+        "level": 38,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B1F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 32,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "DEWGONG",
+        "dexNumber": 87,
+        "level": 38,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B2F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 32,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 30,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B2F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 30,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 32,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 32,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 28,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 30,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 30,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 28,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 30,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GOLDUCK",
+        "dexNumber": 55,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B3F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 33,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 29,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DEWGONG",
+        "dexNumber": 87,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B3F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 33,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 29,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "DEWGONG",
+        "dexNumber": 87,
+        "level": 37,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B4F",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 33,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 29,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 32,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B4F",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 31,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 33,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 33,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 29,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 31,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 31,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "SEEL",
+        "dexNumber": 86,
+        "level": 29,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLDUCK",
+        "dexNumber": 55,
+        "level": 39,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 32,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Victory Road 1F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 36,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 39,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 42,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRAVELER",
+        "dexNumber": 75,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MACHOKE",
+        "dexNumber": 67,
+        "level": 42,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MAROWAK",
+        "dexNumber": 105,
+        "level": 43,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Victory Road 2F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 3.9062,
+    "encounterRateByte": 10,
+    "slots": [
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 22,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 26,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 36,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 39,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 42,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "MACHOKE",
+        "dexNumber": 67,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 40,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MAROWAK",
+        "dexNumber": 105,
+        "level": 40,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "GRAVELER",
+        "dexNumber": 75,
+        "level": 43,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Victory Road 3F",
+    "method": "grass",
+    "version": "both",
+    "encounterRatePct": 5.8594,
+    "encounterRateByte": 15,
+    "slots": [
+      {
+        "species": "MACHOP",
+        "dexNumber": 66,
+        "level": 24,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "GEODUDE",
+        "dexNumber": 74,
+        "level": 26,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "ZUBAT",
+        "dexNumber": 41,
+        "level": 22,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 42,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "VENOMOTH",
+        "dexNumber": 49,
+        "level": 40,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "ONIX",
+        "dexNumber": 95,
+        "level": 45,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "GRAVELER",
+        "dexNumber": 75,
+        "level": 43,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "GOLBAT",
+        "dexNumber": 42,
+        "level": 41,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "MACHOKE",
+        "dexNumber": 67,
+        "level": 42,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "MACHOKE",
+        "dexNumber": 67,
+        "level": 45,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Viridian Forest",
+    "method": "grass",
+    "version": "red",
+    "encounterRatePct": 3.125,
+    "encounterRateByte": 8,
+    "slots": [
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 4,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 3,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 4,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 3,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 5,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Viridian Forest",
+    "method": "grass",
+    "version": "blue",
+    "encounterRatePct": 3.125,
+    "encounterRateByte": 8,
+    "slots": [
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 4,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 5,
+        "slotWeightPct": 19.9219
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 3,
+        "slotWeightPct": 15.2344
+      },
+      {
+        "species": "CATERPIE",
+        "dexNumber": 10,
+        "level": 5,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 4,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "METAPOD",
+        "dexNumber": 11,
+        "level": 6,
+        "slotWeightPct": 9.7656
+      },
+      {
+        "species": "KAKUNA",
+        "dexNumber": 14,
+        "level": 4,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "WEEDLE",
+        "dexNumber": 13,
+        "level": 3,
+        "slotWeightPct": 5.0781
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 3,
+        "slotWeightPct": 4.2969
+      },
+      {
+        "species": "PIKACHU",
+        "dexNumber": 25,
+        "level": 5,
+        "slotWeightPct": 1.1719
+      }
+    ]
+  },
+  {
+    "map": "Any fishing spot",
+    "method": "old_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 5,
+        "slotWeightPct": 100.0
+      }
+    ]
+  },
+  {
+    "map": "Any fishing spot",
+    "method": "good_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 10,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "POLIWAG",
+        "dexNumber": 60,
+        "level": 10,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Pallet Town",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "POLIWAG",
+        "dexNumber": 60,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Viridian City",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "POLIWAG",
+        "dexNumber": 60,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Cerulean City",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      }
+    ]
+  },
+  {
+    "map": "Vermilion City",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Celadon City",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "POLIWHIRL",
+        "dexNumber": 61,
+        "level": 23,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Fuchsia City",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "SEAKING",
+        "dexNumber": 119,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Cinnabar Island",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 4",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      }
+    ]
+  },
+  {
+    "map": "Route 6",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Route 10",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "POLIWHIRL",
+        "dexNumber": 61,
+        "level": 23,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Route 11",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Route 12",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 13",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 17",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 18",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "TENTACOOL",
+        "dexNumber": 72,
+        "level": 5,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "MAGIKARP",
+        "dexNumber": 129,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 19",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 20",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 21",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 22",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "POLIWAG",
+        "dexNumber": 60,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Route 23",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEAKING",
+        "dexNumber": 119,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 23,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Route 24",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      }
+    ]
+  },
+  {
+    "map": "Route 25",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Gym",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 33.3333
+      }
+    ]
+  },
+  {
+    "map": "Vermilion Dock",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 50.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 50.0
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B3F",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Seafoam Islands B4F",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "STARYU",
+        "dexNumber": 120,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "HORSEA",
+        "dexNumber": 116,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SHELLDER",
+        "dexNumber": 90,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "GOLDEEN",
+        "dexNumber": 118,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone East",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "DRATINI",
+        "dexNumber": 147,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone North",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "DRATINI",
+        "dexNumber": 147,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone West",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "DRATINI",
+        "dexNumber": 147,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Safari Zone Center",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "DRATINI",
+        "dexNumber": 147,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KRABBY",
+        "dexNumber": 98,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "PSYDUCK",
+        "dexNumber": 54,
+        "level": 15,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SLOWPOKE",
+        "dexNumber": 79,
+        "level": 15,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave 2F",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEAKING",
+        "dexNumber": 119,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 23,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave B1F",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEAKING",
+        "dexNumber": 119,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 23,
+        "slotWeightPct": 25.0
+      }
+    ]
+  },
+  {
+    "map": "Cerulean Cave 1F",
+    "method": "super_rod",
+    "version": "both",
+    "encounterRatePct": null,
+    "encounterRateByte": null,
+    "slots": [
+      {
+        "species": "SLOWBRO",
+        "dexNumber": 80,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEAKING",
+        "dexNumber": 119,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "KINGLER",
+        "dexNumber": 99,
+        "level": 23,
+        "slotWeightPct": 25.0
+      },
+      {
+        "species": "SEADRA",
+        "dexNumber": 117,
+        "level": 23,
+        "slotWeightPct": 25.0
+      }
+    ]
+  }
+]

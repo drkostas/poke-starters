@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Try the live demo
+    url: https://poke-starters-demo.gkos.dev
+    about: Reproduce your issue on the hosted build first.
+  - name: Question or idea to discuss
+    url: https://github.com/drkostas/poke-starters/discussions
+    about: For open-ended questions, use Discussions instead of an issue.

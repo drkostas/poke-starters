@@ -1,0 +1,39 @@
+{
+  "name": "poke-starters",
+  "version": "1.0.0",
+  "description": "Finds the optimal Pokémon starter trio across Gens 1–3 — perfect type triangles, defensive coverage, and where to catch each one — in a single-file vanilla-JS web app.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Kostas Georgiou",
+  "homepage": "https://github.com/drkostas/poke-starters#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drkostas/poke-starters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/drkostas/poke-starters/issues"
+  },
+  "keywords": [
+    "pokemon",
+    "optimizer",
+    "starter",
+    "type-chart",
+    "vanilla-js",
+    "web-worker",
+    "accessibility",
+    "game"
+  ],
+  "scripts": {
+    "build": "cd app && python3 build_lab.py",
+    "serve": "cd app && python3 server.py",
+    "lint": "oxlint",
+    "test": "node --test tests/optimizer.unit.test.mjs tests/optimizer.invariants.test.mjs",
+    "test:e2e": "playwright test tests/e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^24.13.2",
+    "oxlint": "^1.71.0",
+    "typescript": "~6.0.2"
+  }
+}

@@ -1,0 +1,4773 @@
+{
+  "_meta": {
+    "region": "Kanto",
+    "basis": "Pokemon Red/Blue (Gen 1), pokered ROM disassembly; catch rates = Gen-1 base_stats bytes",
+    "keyedBy": "connectivity node id (see connectivity_kanto.json)",
+    "schema": "location -> {name, type, catchable:[{dexNumber, name, method, version, rarityTier, minLevel, maxLevel, catchRate, catchRateExempt, note?}]}",
+    "methods": [
+      "grass",
+      "surf",
+      "old_rod",
+      "good_rod",
+      "super_rod",
+      "safari",
+      "static",
+      "starter",
+      "gift",
+      "fossil",
+      "game_corner",
+      "trade"
+    ],
+    "rarityTiers": {
+      "common": "aggregated wild slot weight >= 15%",
+      "uncommon": "5-14%",
+      "rare": "1-4%",
+      "very_rare": "<1%",
+      "static": "single fixed overworld encounter (catch roll applies)",
+      "guaranteed": "received without a catch roll (starter/gift/fossil/game_corner/trade)"
+    },
+    "versionValues": [
+      "red",
+      "blue",
+      "both"
+    ],
+    "notes": [
+      "catchRate is the Gen-1 R/B catch-rate byte keyed by National Dex number.",
+      "catchRateExempt=true only for Safari Zone: safari mechanics (bait/rock/flee) replace the normal catch-rate roll.",
+      "Guaranteed methods (starter/gift/fossil/game_corner/trade) list the species catchRate for reference, but the mon is received without a catch roll.",
+      "Old Rod / Good Rod encounters are location-independent (fixed ROM tables); attached to every non-Safari node with fishable water.",
+      "Level ranges are aggregated across all floors/sub-areas that map to a node; a species' rarityTier is the best (easiest) tier seen across those sub-areas.",
+      "Trade received-mon levels are null: the received Pokemon inherits the level of the mon you trade in."
+    ]
+  },
+  "pallet": {
+    "name": "Pallet Town",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 1,
+        "name": "Bulbasaur",
+        "method": "starter",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Choose-one starter (rival takes the type-advantaged one)."
+      },
+      {
+        "dexNumber": 4,
+        "name": "Charmander",
+        "method": "starter",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Choose-one starter (rival takes the type-advantaged one)."
+      },
+      {
+        "dexNumber": 7,
+        "name": "Squirtle",
+        "method": "starter",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Choose-one starter (rival takes the type-advantaged one)."
+      }
+    ]
+  },
+  "viridian": {
+    "name": "Viridian City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "pewter": {
+    "name": "Pewter City",
+    "type": "town",
+    "catchable": []
+  },
+  "cerulean": {
+    "name": "Cerulean City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 54,
+        "name": "Psyduck",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 124,
+        "name": "Jynx",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Poliwhirl; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "vermilion": {
+    "name": "Vermilion City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 83,
+        "name": "Farfetch'd",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Spearow; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "lavender": {
+    "name": "Lavender Town",
+    "type": "town",
+    "catchable": []
+  },
+  "celadon": {
+    "name": "Celadon City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 61,
+        "name": "Poliwhirl",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 79,
+        "name": "Slowpoke",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 133,
+        "name": "Eevee",
+        "method": "gift",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 25,
+        "maxLevel": 25,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "One-time gift Pokemon."
+      },
+      {
+        "dexNumber": 30,
+        "name": "Nidorina",
+        "method": "game_corner",
+        "version": "red",
+        "rarityTier": "guaranteed",
+        "minLevel": 17,
+        "maxLevel": 17,
+        "catchRate": 120,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 33,
+        "name": "Nidorino",
+        "method": "game_corner",
+        "version": "blue",
+        "rarityTier": "guaranteed",
+        "minLevel": 17,
+        "maxLevel": 17,
+        "catchRate": 120,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 35,
+        "name": "Clefairy",
+        "method": "game_corner",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 150,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 63,
+        "name": "Abra",
+        "method": "game_corner",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 6,
+        "maxLevel": 9,
+        "catchRate": 200,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 123,
+        "name": "Scyther",
+        "method": "game_corner",
+        "version": "red",
+        "rarityTier": "guaranteed",
+        "minLevel": 25,
+        "maxLevel": 25,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 127,
+        "name": "Pinsir",
+        "method": "game_corner",
+        "version": "blue",
+        "rarityTier": "guaranteed",
+        "minLevel": 20,
+        "maxLevel": 20,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 137,
+        "name": "Porygon",
+        "method": "game_corner",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 18,
+        "maxLevel": 26,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      },
+      {
+        "dexNumber": 147,
+        "name": "Dratini",
+        "method": "game_corner",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 18,
+        "maxLevel": 24,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Game Corner prize (coins, not money)."
+      }
+    ]
+  },
+  "fuchsia": {
+    "name": "Fuchsia City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 119,
+        "name": "Seaking",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "saffron": {
+    "name": "Saffron City",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 106,
+        "name": "Hitmonlee",
+        "method": "gift",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "One-time gift Pokemon."
+      },
+      {
+        "dexNumber": 107,
+        "name": "Hitmonchan",
+        "method": "gift",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "One-time gift Pokemon."
+      },
+      {
+        "dexNumber": 131,
+        "name": "Lapras",
+        "method": "gift",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "One-time gift Pokemon."
+      }
+    ]
+  },
+  "cinnabar": {
+    "name": "Cinnabar Island",
+    "type": "town",
+    "catchable": [
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 138,
+        "name": "Omanyte",
+        "method": "fossil",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Revived from fossil at Cinnabar Pokemon Lab."
+      },
+      {
+        "dexNumber": 140,
+        "name": "Kabuto",
+        "method": "fossil",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Revived from fossil at Cinnabar Pokemon Lab."
+      },
+      {
+        "dexNumber": 142,
+        "name": "Aerodactyl",
+        "method": "fossil",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "Revived from fossil at Cinnabar Pokemon Lab."
+      },
+      {
+        "dexNumber": 86,
+        "name": "Seel",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 190,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Ponyta; received level = level of the mon you trade in (variable)."
+      },
+      {
+        "dexNumber": 101,
+        "name": "Electrode",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 60,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Raichu; received level = level of the mon you trade in (variable)."
+      },
+      {
+        "dexNumber": 114,
+        "name": "Tangela",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Venonat; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "indigo_plateau": {
+    "name": "Indigo Plateau",
+    "type": "town",
+    "catchable": []
+  },
+  "route1": {
+    "name": "Route 1",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 4,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route2": {
+    "name": "Route 2",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 10,
+        "name": "Caterpie",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 13,
+        "name": "Weedle",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 122,
+        "name": "Mr. Mime",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Abra; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "route3": {
+    "name": "Route 3",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 6,
+        "maxLevel": 8,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 8,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 39,
+        "name": "Jigglypuff",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 3,
+        "maxLevel": 7,
+        "catchRate": 170,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route4": {
+    "name": "Route 4",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 6,
+        "maxLevel": 12,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 6,
+        "maxLevel": 12,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "gift",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Magikarp salesman; costs ¥500 (scripted purchase)."
+      }
+    ]
+  },
+  "route5": {
+    "name": "Route 5",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 52,
+        "name": "Meowth",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 56,
+        "name": "Mankey",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 16,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 29,
+        "name": "Nidoran♀",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 235,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Nidoran♂; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "route6": {
+    "name": "Route 6",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 52,
+        "name": "Meowth",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 56,
+        "name": "Mankey",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 16,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 16,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route7": {
+    "name": "Route 7",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 19,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 37,
+        "name": "Vulpix",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 18,
+        "maxLevel": 20,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 19,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 52,
+        "name": "Meowth",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 17,
+        "maxLevel": 20,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 56,
+        "name": "Mankey",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 17,
+        "maxLevel": 20,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 58,
+        "name": "Growlithe",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 18,
+        "maxLevel": 20,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 19,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route8": {
+    "name": "Route 8",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 20,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 17,
+        "maxLevel": 19,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 17,
+        "maxLevel": 19,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 37,
+        "name": "Vulpix",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 18,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 52,
+        "name": "Meowth",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 20,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 56,
+        "name": "Mankey",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 20,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 58,
+        "name": "Growlithe",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 18,
+        "catchRate": 190,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route9": {
+    "name": "Route 9",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 14,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 11,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 11,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route10": {
+    "name": "Route 10",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 11,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 11,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 100,
+        "name": "Voltorb",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 14,
+        "maxLevel": 17,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 61,
+        "name": "Poliwhirl",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 79,
+        "name": "Slowpoke",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route11": {
+    "name": "Route 11",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 17,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 96,
+        "name": "Drowzee",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 9,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 30,
+        "name": "Nidorina",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 120,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Nidorino; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "route12": {
+    "name": "Route 12",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 27,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 44,
+        "name": "Gloom",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 48,
+        "name": "Venonat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 26,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 70,
+        "name": "Weepinbell",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 143,
+        "name": "Snorlax",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 25,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route13": {
+    "name": "Route 13",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 27,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 44,
+        "name": "Gloom",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 48,
+        "name": "Venonat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 26,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 70,
+        "name": "Weepinbell",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 132,
+        "name": "Ditto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 25,
+        "maxLevel": 25,
+        "catchRate": 35,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route14": {
+    "name": "Route 14",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 17,
+        "name": "Pidgeotto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 44,
+        "name": "Gloom",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 48,
+        "name": "Venonat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 26,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 70,
+        "name": "Weepinbell",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 132,
+        "name": "Ditto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 35,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route15": {
+    "name": "Route 15",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 17,
+        "name": "Pidgeotto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 44,
+        "name": "Gloom",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 48,
+        "name": "Venonat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 28,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 70,
+        "name": "Weepinbell",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 132,
+        "name": "Ditto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": 35,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route16": {
+    "name": "Route 16",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 20,
+        "name": "Raticate",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 23,
+        "maxLevel": 25,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 20,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 84,
+        "name": "Doduo",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 22,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 143,
+        "name": "Snorlax",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 25,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route17": {
+    "name": "Route 17",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 20,
+        "name": "Raticate",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 29,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 20,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 22,
+        "name": "Fearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 25,
+        "maxLevel": 27,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 84,
+        "name": "Doduo",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 28,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route18": {
+    "name": "Route 18",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 20,
+        "name": "Raticate",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 29,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 20,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 22,
+        "name": "Fearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 29,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 84,
+        "name": "Doduo",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 28,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 108,
+        "name": "Lickitung",
+        "method": "trade",
+        "version": "both",
+        "rarityTier": "guaranteed",
+        "minLevel": null,
+        "maxLevel": null,
+        "catchRate": 45,
+        "catchRateExempt": false,
+        "note": "In-game trade; give Slowbro; received level = level of the mon you trade in (variable)."
+      }
+    ]
+  },
+  "route22": {
+    "name": "Route 22",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 4,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 29,
+        "name": "Nidoran♀",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 4,
+        "catchRate": 235,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 32,
+        "name": "Nidoran♂",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 2,
+        "maxLevel": 4,
+        "catchRate": 235,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route23": {
+    "name": "Route 23",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 21,
+        "name": "Spearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 22,
+        "name": "Fearow",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 38,
+        "maxLevel": 43,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 23,
+        "name": "Ekans",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 24,
+        "name": "Arbok",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 41,
+        "maxLevel": 41,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 27,
+        "name": "Sandshrew",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 28,
+        "name": "Sandslash",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 41,
+        "maxLevel": 41,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 132,
+        "name": "Ditto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 33,
+        "maxLevel": 43,
+        "catchRate": 35,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 80,
+        "name": "Slowbro",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 99,
+        "name": "Kingler",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 117,
+        "name": "Seadra",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 119,
+        "name": "Seaking",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 60,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route24": {
+    "name": "Route 24",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 10,
+        "name": "Caterpie",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 7,
+        "maxLevel": 7,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 11,
+        "name": "Metapod",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 8,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 13,
+        "name": "Weedle",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 7,
+        "maxLevel": 7,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 14,
+        "name": "Kakuna",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 8,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 13,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 14,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 63,
+        "name": "Abra",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 200,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 14,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 54,
+        "name": "Psyduck",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route25": {
+    "name": "Route 25",
+    "type": "route",
+    "catchable": [
+      {
+        "dexNumber": 10,
+        "name": "Caterpie",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 8,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 11,
+        "name": "Metapod",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 7,
+        "maxLevel": 9,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 13,
+        "name": "Weedle",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 8,
+        "maxLevel": 8,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 14,
+        "name": "Kakuna",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 7,
+        "maxLevel": 9,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 13,
+        "maxLevel": 13,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 43,
+        "name": "Oddish",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 14,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 63,
+        "name": "Abra",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 10,
+        "maxLevel": 12,
+        "catchRate": 200,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 69,
+        "name": "Bellsprout",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 12,
+        "maxLevel": 14,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 54,
+        "name": "Psyduck",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route19": {
+    "name": "Route 19",
+    "type": "water",
+    "catchable": [
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "surf",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 40,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route20": {
+    "name": "Route 20",
+    "type": "water",
+    "catchable": [
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "surf",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 40,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "route21": {
+    "name": "Route 21",
+    "type": "water",
+    "catchable": [
+      {
+        "dexNumber": 16,
+        "name": "Pidgey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 21,
+        "maxLevel": 23,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 17,
+        "name": "Pidgeotto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 32,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 19,
+        "name": "Rattata",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 21,
+        "maxLevel": 23,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 20,
+        "name": "Raticate",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 30,
+        "maxLevel": 30,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 114,
+        "name": "Tangela",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 28,
+        "maxLevel": 32,
+        "catchRate": 45,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 72,
+        "name": "Tentacool",
+        "method": "surf",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 40,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "viridian_forest": {
+    "name": "Viridian Forest",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 10,
+        "name": "Caterpie",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 11,
+        "name": "Metapod",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 4,
+        "maxLevel": 6,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 13,
+        "name": "Weedle",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 14,
+        "name": "Kakuna",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 4,
+        "maxLevel": 6,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 25,
+        "name": "Pikachu",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 3,
+        "maxLevel": 5,
+        "catchRate": 190,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "mt_moon": {
+    "name": "Mt. Moon",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 35,
+        "name": "Clefairy",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 150,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 41,
+        "name": "Zubat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 6,
+        "maxLevel": 12,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 46,
+        "name": "Paras",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 8,
+        "maxLevel": 12,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 74,
+        "name": "Geodude",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 7,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "rock_tunnel": {
+    "name": "Rock Tunnel",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 41,
+        "name": "Zubat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 18,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 66,
+        "name": "Machop",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 15,
+        "maxLevel": 17,
+        "catchRate": 180,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 74,
+        "name": "Geodude",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 16,
+        "maxLevel": 18,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 95,
+        "name": "Onix",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 13,
+        "maxLevel": 17,
+        "catchRate": 45,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "digletts_cave": {
+    "name": "Diglett's Cave",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 50,
+        "name": "Diglett",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 22,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 51,
+        "name": "Dugtrio",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 29,
+        "maxLevel": 31,
+        "catchRate": 50,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "seafoam_islands": {
+    "name": "Seafoam Islands",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 41,
+        "name": "Zubat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 21,
+        "maxLevel": 21,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 42,
+        "name": "Golbat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 29,
+        "maxLevel": 32,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 54,
+        "name": "Psyduck",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 55,
+        "name": "Golduck",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 37,
+        "maxLevel": 39,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 79,
+        "name": "Slowpoke",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 80,
+        "name": "Slowbro",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 37,
+        "maxLevel": 39,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 86,
+        "name": "Seel",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 87,
+        "name": "Dewgong",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 37,
+        "maxLevel": 38,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 99,
+        "name": "Kingler",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "rare",
+        "minLevel": 37,
+        "maxLevel": 39,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 117,
+        "name": "Seadra",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "rare",
+        "minLevel": 37,
+        "maxLevel": 39,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 33,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 90,
+        "name": "Shellder",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 116,
+        "name": "Horsea",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 120,
+        "name": "Staryu",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": 225,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 144,
+        "name": "Articuno",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 50,
+        "maxLevel": 50,
+        "catchRate": 3,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "safari_zone": {
+    "name": "Safari Zone",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 54,
+        "name": "Psyduck",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone Super Rod; safari mechanics, no catch-rate roll."
+      },
+      {
+        "dexNumber": 79,
+        "name": "Slowpoke",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone Super Rod; safari mechanics, no catch-rate roll."
+      },
+      {
+        "dexNumber": 98,
+        "name": "Krabby",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone Super Rod; safari mechanics, no catch-rate roll."
+      },
+      {
+        "dexNumber": 147,
+        "name": "Dratini",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 15,
+        "maxLevel": 15,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone Super Rod; safari mechanics, no catch-rate roll."
+      },
+      {
+        "dexNumber": 29,
+        "name": "Nidoran♀",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 25,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 30,
+        "name": "Nidorina",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 33,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 32,
+        "name": "Nidoran♂",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 25,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 33,
+        "name": "Nidorino",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 30,
+        "maxLevel": 33,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 46,
+        "name": "Paras",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 23,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 47,
+        "name": "Parasect",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 25,
+        "maxLevel": 30,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 48,
+        "name": "Venonat",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 23,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 49,
+        "name": "Venomoth",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 31,
+        "maxLevel": 32,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 84,
+        "name": "Doduo",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 26,
+        "maxLevel": 26,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 102,
+        "name": "Exeggcute",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 27,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 111,
+        "name": "Rhyhorn",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 26,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 113,
+        "name": "Chansey",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 23,
+        "maxLevel": 26,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 115,
+        "name": "Kangaskhan",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 25,
+        "maxLevel": 28,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 123,
+        "name": "Scyther",
+        "method": "safari",
+        "version": "red",
+        "rarityTier": "rare",
+        "minLevel": 23,
+        "maxLevel": 28,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 127,
+        "name": "Pinsir",
+        "method": "safari",
+        "version": "blue",
+        "rarityTier": "rare",
+        "minLevel": 23,
+        "maxLevel": 28,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      },
+      {
+        "dexNumber": 128,
+        "name": "Tauros",
+        "method": "safari",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 26,
+        "maxLevel": 28,
+        "catchRate": null,
+        "catchRateExempt": true,
+        "note": "Safari Zone walk-in encounter; safari mechanics (bait/rock), no catch-rate roll."
+      }
+    ]
+  },
+  "cerulean_cave": {
+    "name": "Cerulean Cave",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 24,
+        "name": "Arbok",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 52,
+        "maxLevel": 57,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 26,
+        "name": "Raichu",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 53,
+        "maxLevel": 64,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 28,
+        "name": "Sandslash",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 52,
+        "maxLevel": 57,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 40,
+        "name": "Wigglytuff",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 54,
+        "maxLevel": 54,
+        "catchRate": 50,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 42,
+        "name": "Golbat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 46,
+        "maxLevel": 46,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 47,
+        "name": "Parasect",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 52,
+        "maxLevel": 64,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 49,
+        "name": "Venomoth",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 49,
+        "maxLevel": 51,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 64,
+        "name": "Kadabra",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 49,
+        "maxLevel": 51,
+        "catchRate": 100,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 82,
+        "name": "Magneton",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 46,
+        "maxLevel": 46,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 85,
+        "name": "Dodrio",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 49,
+        "maxLevel": 51,
+        "catchRate": 45,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 97,
+        "name": "Hypno",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 46,
+        "maxLevel": 46,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 101,
+        "name": "Electrode",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 52,
+        "maxLevel": 55,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 105,
+        "name": "Marowak",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 52,
+        "maxLevel": 55,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 112,
+        "name": "Rhydon",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 52,
+        "maxLevel": 55,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 113,
+        "name": "Chansey",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 56,
+        "maxLevel": 64,
+        "catchRate": 30,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 132,
+        "name": "Ditto",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 53,
+        "maxLevel": 67,
+        "catchRate": 35,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 129,
+        "name": "Magikarp",
+        "method": "old_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 5,
+        "maxLevel": 5,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 60,
+        "name": "Poliwag",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 255,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 118,
+        "name": "Goldeen",
+        "method": "good_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 10,
+        "maxLevel": 10,
+        "catchRate": 225,
+        "catchRateExempt": false,
+        "note": "Location-independent: Old/Good Rod usable at any water tile."
+      },
+      {
+        "dexNumber": 80,
+        "name": "Slowbro",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 99,
+        "name": "Kingler",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 117,
+        "name": "Seadra",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 119,
+        "name": "Seaking",
+        "method": "super_rod",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 23,
+        "maxLevel": 23,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 150,
+        "name": "Mewtwo",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 70,
+        "maxLevel": 70,
+        "catchRate": 3,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "victory_road": {
+    "name": "Victory Road",
+    "type": "cave",
+    "catchable": [
+      {
+        "dexNumber": 41,
+        "name": "Zubat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 42,
+        "name": "Golbat",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 40,
+        "maxLevel": 41,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 49,
+        "name": "Venomoth",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 40,
+        "maxLevel": 40,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 66,
+        "name": "Machop",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 22,
+        "maxLevel": 24,
+        "catchRate": 180,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 67,
+        "name": "Machoke",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 41,
+        "maxLevel": 45,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 74,
+        "name": "Geodude",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 24,
+        "maxLevel": 26,
+        "catchRate": 255,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 75,
+        "name": "Graveler",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 41,
+        "maxLevel": 43,
+        "catchRate": 120,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 95,
+        "name": "Onix",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 36,
+        "maxLevel": 45,
+        "catchRate": 45,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 105,
+        "name": "Marowak",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "rare",
+        "minLevel": 40,
+        "maxLevel": 43,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 146,
+        "name": "Moltres",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 50,
+        "maxLevel": 50,
+        "catchRate": 3,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "pokemon_tower": {
+    "name": "Pokemon Tower",
+    "type": "building",
+    "catchable": [
+      {
+        "dexNumber": 92,
+        "name": "Gastly",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 18,
+        "maxLevel": 24,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 93,
+        "name": "Haunter",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 25,
+        "maxLevel": 30,
+        "catchRate": 90,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 104,
+        "name": "Cubone",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 20,
+        "maxLevel": 24,
+        "catchRate": 190,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "power_plant": {
+    "name": "Power Plant",
+    "type": "building",
+    "catchable": [
+      {
+        "dexNumber": 25,
+        "name": "Pikachu",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 20,
+        "maxLevel": 24,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 26,
+        "name": "Raichu",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 33,
+        "maxLevel": 36,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 81,
+        "name": "Magnemite",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 21,
+        "maxLevel": 23,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 82,
+        "name": "Magneton",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 32,
+        "maxLevel": 35,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 100,
+        "name": "Voltorb",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 21,
+        "maxLevel": 23,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 125,
+        "name": "Electabuzz",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "uncommon",
+        "minLevel": 33,
+        "maxLevel": 36,
+        "catchRate": 45,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 100,
+        "name": "Voltorb",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 40,
+        "maxLevel": 40,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 101,
+        "name": "Electrode",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 43,
+        "maxLevel": 43,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 145,
+        "name": "Zapdos",
+        "method": "static",
+        "version": "both",
+        "rarityTier": "static",
+        "minLevel": 50,
+        "maxLevel": 50,
+        "catchRate": 3,
+        "catchRateExempt": false
+      }
+    ]
+  },
+  "pokemon_mansion": {
+    "name": "Pokemon Mansion",
+    "type": "building",
+    "catchable": [
+      {
+        "dexNumber": 37,
+        "name": "Vulpix",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "common",
+        "minLevel": 32,
+        "maxLevel": 35,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 58,
+        "name": "Growlithe",
+        "method": "grass",
+        "version": "red",
+        "rarityTier": "common",
+        "minLevel": 32,
+        "maxLevel": 35,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 77,
+        "name": "Ponyta",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 28,
+        "maxLevel": 36,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 88,
+        "name": "Grimer",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 30,
+        "maxLevel": 35,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 89,
+        "name": "Muk",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 37,
+        "maxLevel": 42,
+        "catchRate": 75,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 109,
+        "name": "Koffing",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "common",
+        "minLevel": 30,
+        "maxLevel": 35,
+        "catchRate": 190,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 110,
+        "name": "Weezing",
+        "method": "grass",
+        "version": "both",
+        "rarityTier": "uncommon",
+        "minLevel": 37,
+        "maxLevel": 42,
+        "catchRate": 60,
+        "catchRateExempt": false
+      },
+      {
+        "dexNumber": 126,
+        "name": "Magmar",
+        "method": "grass",
+        "version": "blue",
+        "rarityTier": "uncommon",
+        "minLevel": 34,
+        "maxLevel": 38,
+        "catchRate": 45,
+        "catchRateExempt": false
+      }
+    ]
+  }
+}
