@@ -1,8 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "echo 'Static site: app/lab.built.html is prebuilt and checked in (CI enforces no drift).'",
+  "installCommand": "echo 'No build-time dependencies.'",
   "outputDirectory": "app",
   "cleanUrls": true,
-  "rewrites": [{ "source": "/", "destination": "/lab.built.html" }],
+  "rewrites": [{ "source": "/", "destination": "/lab.built" }],
   "headers": [
     {
       "source": "/(sprites|maps|fonts|data)/(.*)",
