@@ -1,0 +1,129 @@
+{
+  "generatedDate": "2026-07-16",
+  "generations": "1-9 (national dex 1..1025)",
+  "sources": [
+    {
+      "name": "cristobalmitchell/pokedex (MIT)",
+      "url": "https://raw.githubusercontent.com/cristobalmitchell/pokedex/main/data/pokemon.csv",
+      "provides": "dexNumber, name, generation, types, baseStats, bst, height, weight, catchRate"
+    },
+    {
+      "name": "PokeAPI pokemon (default form)",
+      "url": "https://pokeapi.co/api/v2/pokemon/{id}",
+      "provides": "abilities (name/isHidden/slot); second-source base stats for the full cross-check"
+    },
+    {
+      "name": "PokeAPI evolution-chain",
+      "url": "https://pokeapi.co/api/v2/evolution-chain/{id}",
+      "provides": "evolution_chains.json; evolutionChainId, isFinalEvolution, evolutionStageCount backfill"
+    },
+    {
+      "name": "PokeAPI pokemon-species (name->dex map)",
+      "url": "https://pokeapi.co/api/v2/pokemon-species",
+      "provides": "authoritative species name -> national dex number mapping"
+    },
+    {
+      "name": "veekun/pokedex type_efficacy.csv",
+      "url": "https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/type_efficacy.csv",
+      "provides": "modern 18-type effectiveness matrix"
+    },
+    {
+      "name": "veekun/pokedex types.csv",
+      "url": "https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/types.csv",
+      "provides": "type id -> name map for the efficacy matrix"
+    },
+    {
+      "name": "smogon/pokemon-showdown gen1/typechart.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/mods/gen1/typechart.ts",
+      "provides": "Gen-1 15-type effectiveness matrix"
+    }
+  ],
+  "counts": {
+    "species": 1025,
+    "withEvolutionData": 1025,
+    "chains": 541,
+    "types": 18,
+    "typesGen1": 15
+  },
+  "notes": [
+    "pokemon.json is a map keyed by national dex number as a string ('1'..'1025').",
+    "types are lowercase; 1 or 2 per species. Dual-type effectiveness = product of both defending lookups.",
+    "abilities come from the PokeAPI DEFAULT form (name/isHidden/slot); the CSV ability strings were discarded because they embed form annotations (e.g. 'Rock Head (Blue-Striped Form)').",
+    "base stats, types, height, weight reflect the DEFAULT form only; alternate/mega/regional/rider forms are not separate entries (e.g. Wishiwashi=Solo, Zygarde=50%, Minior=Meteor, Necrozma=base).",
+    "evolutionStageCount is the total number of stages in a species' whole evolution line (chain max depth).",
+    "isFinalEvolution is true when the species is a leaf in its evolution tree (includes non-evolving species).",
+    "type_chart files carry a '_meta' key; every other top-level key is a real lowercase type.",
+    "Catch-rate anomalies (parsed to the first integer) are listed in this manifest under catchRateNotes.",
+    "3 species had CSV base stats reconciled to current PokeAPI values (see statCorrections): the CSV predates a few post-launch stat revisions."
+  ],
+  "catchRateNotes": [
+    {
+      "dex": 774,
+      "name": "Minior",
+      "raw": "30 (Meteorite)255 (Core)",
+      "used": 30
+    }
+  ],
+  "statCorrections": [
+    {
+      "dex": 488,
+      "name": "Cresselia",
+      "csv": {
+        "hp": 120,
+        "atk": 70,
+        "def": 120,
+        "spAtk": 75,
+        "spDef": 130,
+        "speed": 85
+      },
+      "used_pokeapi": {
+        "hp": 120,
+        "atk": 70,
+        "def": 110,
+        "spAtk": 75,
+        "spDef": 120,
+        "speed": 85
+      }
+    },
+    {
+      "dex": 888,
+      "name": "Zacian",
+      "csv": {
+        "hp": 92,
+        "atk": 130,
+        "def": 115,
+        "spAtk": 80,
+        "spDef": 115,
+        "speed": 138
+      },
+      "used_pokeapi": {
+        "hp": 92,
+        "atk": 120,
+        "def": 115,
+        "spAtk": 80,
+        "spDef": 115,
+        "speed": 138
+      }
+    },
+    {
+      "dex": 889,
+      "name": "Zamazenta",
+      "csv": {
+        "hp": 92,
+        "atk": 130,
+        "def": 115,
+        "spAtk": 80,
+        "spDef": 115,
+        "speed": 138
+      },
+      "used_pokeapi": {
+        "hp": 92,
+        "atk": 120,
+        "def": 115,
+        "spAtk": 80,
+        "spDef": 115,
+        "speed": 138
+      }
+    }
+  ]
+}

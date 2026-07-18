@@ -1,0 +1,1537 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23fff' stroke='%23222' stroke-width='2'/%3E%3Cpath d='M1.3 16a14.7 14.7 0 0 1 29.4 0z' fill='%23e3350d'/%3E%3Cpath d='M1 16h30' stroke='%23222' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23fff' stroke='%23222' stroke-width='2'/%3E%3C/svg%3E">
+<title>Starter Lab: Optimizer Demo</title>
+<style>
+@font-face{font-family:"Rajdhani";font-weight:500;src:url(__FONT_RAJD5__) format("woff2");font-display:swap;}
+@font-face{font-family:"Rajdhani";font-weight:700;src:url(__FONT_RAJD7__) format("woff2");font-display:swap;}
+@font-face{font-family:"PressStart";font-weight:400;src:url(__FONT_PRESS__) format("woff2");font-display:swap;}
+:root{
+  --shell-a:#D0342A;--shell-b:#C6102A;--shell-edge:#7c0d1b;
+  --cream:#e4e2d2;--cream-2:#d3d2be;--ink:#20301a;
+  --lcd:#8bac0f;--lcd-dk:#0f380f;--lcd-lt:#9bbc0f;--lens:#4d8a97;--lens-dk:#2b5b66;
+  --cab:#12707c;--cab-dk:#0a4a53;--gold:#f4c13a;--gold-dk:#c9971e;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--raj:"Rajdhani",var(--sans);
+  --t-grass:#7AC74C;--t-poison:#A33EA1;--t-fire:#EE8130;--t-water:#6390F0;--t-electric:#F7D02C;
+  --t-fighting:#C22E28;--t-ground:#E2BF65;--t-ghost:#735797;--t-rock:#B6A136;--t-psychic:#F95587;
+  --t-normal:#A8A77A;--t-flying:#A98FF3;--t-bug:#A6B91A;
+}
+*{box-sizing:border-box;}body{margin:0;}
+.wrap{min-height:100vh;min-height:100dvh;background:radial-gradient(1200px 600px at 50% -10%,#2a2d33,#15171c 60%,#0e0f13);
+  padding:clamp(12px,2.4vw,32px);padding-bottom:max(clamp(12px,2.4vw,32px),env(safe-area-inset-bottom));font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;}
+.device{max-width:1200px;margin:0 auto;border-radius:26px;padding:16px;
+  background:linear-gradient(155deg,var(--shell-a),var(--shell-b));
+  box-shadow:0 40px 90px -40px rgba(120,10,25,.8),inset 0 3px 0 rgba(255,255,255,.30),
+    inset 0 -10px 22px rgba(90,0,10,.5),0 0 0 1px var(--shell-edge);}
+.hinge{height:8px;border-radius:6px;margin:2px 8px 14px;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.16) 0 3px,rgba(255,255,255,.08) 3px 6px);}
+.dhead{display:flex;align-items:center;gap:14px;margin:0 6px 14px;}
+.lens{width:30px;height:30px;border-radius:50%;flex:0 0 30px;position:relative;
+  background:radial-gradient(circle at 36% 32%,#bfeaf1,var(--lens) 55%,var(--lens-dk));
+  box-shadow:0 0 0 3px #efeadb,0 0 0 5px var(--shell-edge),inset 0 1px 2px rgba(255,255,255,.6);}
+.lens::after{content:"";position:absolute;inset:-7px;border-radius:50%;
+  border:2px solid rgba(180,235,245,.5);animation:ping 3.4s ease-out infinite;}
+@keyframes ping{0%{transform:scale(.75);opacity:.7}70%{opacity:0}100%{transform:scale(1.5);opacity:0}}
+.minilamps{display:flex;gap:7px;}.minilamps i{width:11px;height:11px;border-radius:50%;box-shadow:inset 0 1px 1px rgba(255,255,255,.6);}
+.ml-r{background:#e4453b}.ml-y{background:#f4c13a}.ml-g{background:#4bbf6a}
+.brand{display:flex;flex-direction:column;line-height:1;}
+.brand .t{font-family:var(--raj);font-weight:700;font-size:22px;color:#fff;letter-spacing:.02em;text-shadow:0 1px 0 rgba(0,0,0,.25);}
+.brand .s{font-family:var(--mono);font-size:10.5px;color:#ffe3d9;letter-spacing:.14em;text-transform:uppercase;margin-top:3px;}
+.era{margin-left:auto;display:flex;gap:4px;background:rgba(0,0,0,.18);padding:4px;border-radius:9px;}
+.era button{border:0;cursor:pointer;font-family:var(--raj);font-weight:700;font-size:11px;letter-spacing:.06em;
+  color:#ffd9cf;background:transparent;padding:5px 10px;border-radius:6px;transition:all .15s;}
+.era button.on{background:var(--gold);color:#3a1500;}
+
+.stage{display:grid;grid-template-columns:272px 1fr 292px;gap:12px;align-items:start;}
+@media(max-width:1000px){.stage{grid-template-columns:1fr;}
+  /* mobile: lead with the slot machine + SPIN, push the filter panel below */
+  .stage>.slot{order:1;} .stage>.screen{order:2;} .stage>.panel{order:3;} }
+.panel{background:linear-gradient(180deg,var(--cream),var(--cream-2));border-radius:14px;
+  box-shadow:inset 0 2px 5px rgba(255,255,255,.7),inset 0 -3px 8px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.15);padding:13px;}
+.ptitle{font-family:var(--raj);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--ink);opacity:.8;margin:0 0 10px;display:flex;align-items:center;gap:7px;}
+.ptitle::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--shell-b);}
+.sharebtn{margin-left:auto;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:#7a1620;background:rgba(198,16,42,.12);border:1px solid rgba(198,16,42,.35);border-radius:6px;padding:3px 7px;cursor:pointer;
+  transition:background .12s,color .12s,transform .1s;user-select:none;}
+.sharebtn:hover{background:var(--shell-b);color:#fff;}
+.sharebtn:active{transform:translateY(1px);}
+.sharebtn.done{background:#2d7a2d;border-color:#1f5a1f;color:#fff;}
+.grp{margin:0 0 11px;}
+.grp>label{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:#4a5340;margin:0 0 5px;}
+.grp>label .v{color:var(--shell-b);font-family:var(--mono);}
+.seg{display:flex;gap:3px;background:#cfceb8;border-radius:8px;padding:3px;}
+.seg button{flex:1;border:0;background:transparent;font-family:var(--mono);font-size:11px;color:#4a5139;
+  padding:5px 2px;border-radius:6px;cursor:pointer;transition:all .12s;font-weight:600;}
+.seg button.on{background:var(--lcd-dk);color:var(--lcd-lt);box-shadow:0 1px 2px rgba(0,0,0,.3);}
+.seg button:not(.on):hover{background:rgba(15,56,15,.1);color:#3d4432;}
+.seg button:not(:disabled):active{transform:translateY(1px);}
+.chips{display:flex;flex-wrap:wrap;gap:4px;}
+.chip{font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;cursor:pointer;color:#fff;opacity:.38;
+  transition:opacity .14s,transform .14s;text-transform:uppercase;letter-spacing:.02em;background:var(--c);
+  text-shadow:0 1px 1px rgba(0,0,0,.3);user-select:none;}
+.chip.on{opacity:1;}.chip:active{transform:scale(.92);}
+.chip:not(.on):hover{opacity:.72;transform:translateY(-1px);}
+.tsel{width:100%;font-family:var(--mono);font-size:12px;padding:7px 9px;border-radius:8px;border:2px solid #b9b8a1;
+  background:#f2f1e2;color:var(--ink);font-weight:600;cursor:pointer;}
+.hint{font-family:var(--mono);font-size:10px;color:#565b44;margin-top:4px;}
+.histo{display:flex;align-items:flex-end;gap:2px;height:34px;padding:3px;background:#cfceb8;border-radius:8px;
+  position:relative;box-shadow:inset 0 2px 4px rgba(0,0,0,.18);}
+.histo .bar{flex:1;background:#9aa07f;border-radius:2px 2px 0 0;transition:background .2s;}
+.histo .bar.in{background:var(--lcd-dk);}
+.histo input{position:absolute;inset:0;width:100%;margin:0;opacity:0;cursor:ew-resize;}
+.runbtn{width:100%;margin-top:4px;border:0;cursor:pointer;font-family:var(--raj);font-weight:700;font-size:15px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--lcd-lt);background:linear-gradient(180deg,#155415,var(--lcd-dk));
+  padding:12px;border-radius:11px;box-shadow:0 3px 0 #072807,0 6px 12px -4px rgba(0,0,0,.5);transition:transform .1s,box-shadow .1s;}
+.runbtn:active{transform:translateY(3px);box-shadow:0 0 0 #072807;}
+/* advanced-filters accordion + reset (progressive disclosure so the panel isn't a wall on first paint) */
+.advtoggle{width:100%;margin:2px 0 10px;border:0;cursor:pointer;text-align:left;font-family:var(--raj);font-weight:700;
+  font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#5a4a2a;background:rgba(15,56,15,.06);
+  padding:9px 11px;border-radius:9px;transition:background .15s;display:flex;align-items:baseline;gap:8px;}
+.advtoggle:hover{background:rgba(15,56,15,.11);}
+.advtoggle small{font-family:var(--mono);font-size:9.5px;letter-spacing:0;text-transform:none;color:#665631;font-weight:400;}
+.advtoggle[aria-expanded="true"]{background:rgba(15,56,15,.11);}
+.advfilters[hidden]{display:none;}
+.advfilters{animation:advin .18s ease;}
+@keyframes advin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.resetbtn{width:100%;margin-top:8px;border:0;cursor:pointer;font-family:var(--raj);font-weight:700;font-size:12px;
+  letter-spacing:.06em;text-transform:uppercase;color:#7a5a2a;background:transparent;padding:8px;border-radius:9px;transition:background .15s,color .15s;}
+.resetbtn:hover{background:rgba(122,90,42,.1);color:#5a4020;}
+
+/* slot */
+.slot{background:linear-gradient(180deg,var(--cab),var(--cab-dk));border-radius:16px;padding:14px;position:relative;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.18),inset 0 -8px 18px rgba(0,0,0,.4),0 3px 8px rgba(0,0,0,.3);
+  display:flex;flex-direction:column;gap:12px;}
+.marquee{background:linear-gradient(180deg,#123,#012);border:2px solid var(--gold);border-radius:10px;text-align:center;
+  padding:7px;font-family:"PressStart",var(--mono);font-size:11px;color:var(--gold);letter-spacing:1px;
+  text-shadow:0 0 8px rgba(244,193,58,.6);position:relative;overflow:hidden;}
+.marquee .bulbs{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 8% 50%,rgba(255,240,180,.8) 2px,transparent 3px) repeat-x;
+  background-size:26px 100%;opacity:.32;animation:chase 2.6s linear infinite;}
+@keyframes chase{to{background-position:26px 0}}
+.reels{display:flex;gap:10px;background:#06232a;border-radius:12px;padding:12px;justify-content:center;
+  box-shadow:inset 0 4px 14px rgba(0,0,0,.6),0 0 0 3px var(--gold-dk),0 0 0 5px #083;position:relative;}
+.reel{flex:1;max-width:150px;height:192px;overflow:hidden;border-radius:8px;position:relative;
+  background:linear-gradient(180deg,#0c343d,#0a2a31 50%,#0c343d);box-shadow:inset 0 0 0 2px rgba(0,0,0,.5);
+  transition:max-width .35s ease,opacity .35s ease,transform .35s ease;}
+.reel.gone{max-width:0;opacity:0;transform:scale(.6);margin:0 -5px;pointer-events:none;}
+.reel .strip{display:flex;flex-direction:column;will-change:transform;}
+.reel.blur .strip{filter:blur(2.5px);}
+.cell{height:64px;display:flex;align-items:center;justify-content:center;}
+.cell img{width:56px;height:56px;object-fit:contain;image-rendering:pixelated;transition:filter .2s,opacity .2s;}
+.cell.dim img{filter:grayscale(1) brightness(.55);opacity:.5;}
+.cell .q{font-family:"PressStart",var(--mono);font-size:20px;color:#2e6570;}
+/* face-down reel (before reveal) — a Poké Ball back */
+.cell.facedown{position:relative;}
+.cell.facedown .ball{width:44px;height:44px;border-radius:50%;display:inline-block;position:relative;
+  background:linear-gradient(#e8433a 0 45%,#141414 45% 55%,#f3f3f3 55% 100%);box-shadow:inset 0 0 0 3px #141414,0 2px 5px rgba(0,0,0,.4);
+  animation:ballbob 1.6s ease-in-out infinite;}
+.cell.facedown .ball::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;background:#f3f3f3;border:3px solid #141414;transform:translate(-50%,-50%);}
+@keyframes ballbob{50%{transform:translateY(-3px)}}
+/* reveal prompt */
+.revealprompt{text-align:center;margin:8px 0 2px;font-family:var(--raj);font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--gold);font-size:14px;animation:rppulse 1.15s ease-in-out infinite;}
+.revealprompt[hidden]{display:none;}
+.revealprompt b{color:#fff;}
+.revealprompt .rp-arrow{display:inline-block;color:#ff6b5e;}
+.revealprompt small{display:block;text-transform:none;letter-spacing:0;font-family:var(--mono);font-size:10px;color:#8fb3bb;font-weight:400;margin-top:2px;animation:none;}
+@keyframes rppulse{50%{opacity:.5}}
+.sbtn.spin.pulse{animation:spinpulse 1.1s ease-in-out infinite;}
+@keyframes spinpulse{0%,100%{box-shadow:0 4px 0 #8a0f0a,0 8px 16px -4px rgba(0,0,0,.5),0 0 0 0 rgba(255,107,94,.7)}50%{box-shadow:0 4px 0 #8a0f0a,0 8px 22px -2px rgba(0,0,0,.5),0 0 0 10px rgba(255,107,94,0)}}
+.payline{position:absolute;left:8px;right:8px;top:calc(50% - 32px);height:64px;pointer-events:none;
+  border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);border-radius:4px;
+  box-shadow:0 0 14px rgba(244,193,58,.5),inset 0 0 22px rgba(244,193,58,.12);}
+.result{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.rank{font-family:"PressStart",var(--mono);font-size:12px;color:#fff;background:#0a2a31;border:2px solid var(--gold);
+  border-radius:8px;padding:6px 9px;white-space:nowrap;}
+.tier{font-family:var(--raj);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 10px;border-radius:8px;color:#06232a;background:var(--gold);}
+.tier.relax{background:#ff9b3d;color:#241000;}
+.scorechips{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap;}
+.sc{background:#0a2a31;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:4px 9px;text-align:center;min-width:50px;}
+.sc b{display:block;font-family:var(--mono);font-weight:700;font-size:16px;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1;}
+.sc small{font-size:8px;color:#8fb3bb;text-transform:uppercase;letter-spacing:.08em;}
+.banner{text-align:center;font-family:var(--raj);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:#241000;background:#ff9b3d;border-radius:8px;padding:6px;opacity:0;transform:translateY(-4px);
+  transition:opacity .3s,transform .3s;}
+.banner.show{opacity:1;transform:none;}
+.ladder{display:flex;gap:5px;flex-wrap:wrap;}
+.rung{flex:1;min-width:96px;font-family:var(--mono);font-size:9.5px;color:#7fb7c3;background:#0a2a31;border-radius:7px;
+  padding:5px 7px;border:1px solid rgba(255,255,255,.08);position:relative;transition:all .2s;}
+.rung .n{font-family:var(--raj);font-weight:700;font-size:10px;} /* full opacity so #7fb7c3-on-#0a2a31 (inactive) and #06232a-on-gold (active) both clear 4.5:1 */
+.rung.on{color:#06232a;background:var(--gold);box-shadow:0 0 10px rgba(244,193,58,.4);}
+.rung.passed{opacity:.42;text-decoration:line-through;}
+.controls{display:flex;align-items:center;gap:10px;justify-content:center;}
+.sbtn{border:0;cursor:pointer;font-family:var(--raj);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:#06232a;background:linear-gradient(180deg,#ffd873,var(--gold));padding:10px 14px;border-radius:10px;
+  box-shadow:0 3px 0 var(--gold-dk),0 5px 10px -3px rgba(0,0,0,.4);transition:transform .1s,box-shadow .1s;font-size:13px;}
+.sbtn:active{transform:translateY(3px);box-shadow:0 0 0 var(--gold-dk);}
+.sbtn.spin{background:radial-gradient(circle at 40% 35%,#ff6b5e,#d3241a);color:#fff;border-radius:50%;width:66px;height:66px;
+  box-shadow:0 4px 0 #8a0f0a,0 8px 16px -4px rgba(0,0,0,.5);font-size:12px;}
+.sbtn.spin:active{transform:translateY(4px);box-shadow:0 0 0 #8a0f0a;}
+.sbtn:disabled{opacity:.5;cursor:default;}
+/* evolve bar */
+.evobar{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:10px;
+  background:#06232a;border-radius:10px;padding:7px 10px;box-shadow:inset 0 0 0 1px rgba(244,193,58,.18);}
+.evobar[hidden]{display:none;}
+.evobar .elbl{display:flex;flex-direction:column;line-height:1.15;min-width:120px;text-align:center;}
+.evobar .elbl b{font-family:var(--raj);font-weight:700;color:var(--gold);font-size:13px;letter-spacing:.04em;}
+.evobar .elbl small{font-family:var(--mono);font-size:9.5px;color:#8fb3bb;}
+.ebtn{border:0;cursor:pointer;font-family:var(--raj);font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:#06232a;background:linear-gradient(180deg,#ffd873,var(--gold));padding:7px 12px;border-radius:8px;font-size:12px;
+  box-shadow:0 3px 0 var(--gold-dk);transition:transform .1s,box-shadow .1s,opacity .15s;display:inline-flex;align-items:center;gap:5px;}
+.ebtn.go{background:linear-gradient(180deg,#3c8f3c,#155415);box-shadow:0 3px 0 #072807;color:#eaffd6;}
+.ebtn:active{transform:translateY(3px);box-shadow:0 0 0 var(--gold-dk);}
+.ebtn.go:active{box-shadow:0 0 0 #072807;}
+.ebtn:disabled{opacity:.4;cursor:default;transform:none;}
+/* evolution flash animation on a reel */
+.reel.evoflash{box-shadow:0 0 0 2px #fff inset,0 0 30px rgba(255,255,255,.85);}
+.reel.evoflash::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;
+  background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.9),rgba(255,255,255,0) 60%);
+  animation:evosparkle .85s ease-out;}
+@keyframes evosparkle{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+.sndbtn.off{opacity:.55;text-decoration:line-through;}
+/* custom tooltip (works on hover AND tap/focus — touch friendly) */
+#tip{position:fixed;z-index:2147483005;max-width:250px;background:#0f380f;color:#eaffea;font-family:var(--mono);
+  font-size:11px;line-height:1.4;padding:7px 9px;border-radius:7px;box-shadow:0 4px 14px rgba(0,0,0,.5),0 0 0 1px rgba(244,193,58,.35);
+  pointer-events:none;opacity:0;transition:opacity .12s;}
+#tip.on{opacity:1;}
+/* ---- Professor Oak guided walkthrough ---- */
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+#tour[hidden]{display:none;}
+#tour-catch{position:fixed;inset:0;z-index:2147483000;pointer-events:auto;background:transparent;}
+#tour-cut{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:10px;z-index:2147483001;pointer-events:none;
+  box-shadow:0 0 0 9999px rgba(6,20,25,.74),0 0 0 3px var(--gold),0 0 22px 4px rgba(244,193,58,.55) inset;
+  transition:top .45s cubic-bezier(.4,0,.2,1),left .45s cubic-bezier(.4,0,.2,1),width .45s cubic-bezier(.4,0,.2,1),height .45s cubic-bezier(.4,0,.2,1);}
+#tour-oak{position:fixed;top:0;left:0;z-index:2147483002;pointer-events:none;transform:translate(-200px,-200px);
+  transition:transform .5s cubic-bezier(.34,1.2,.5,1);filter:drop-shadow(0 4px 6px rgba(0,0,0,.55));}
+#tour-oak .oakspr{width:calc(16px * 3);height:calc(32px * 3);background:url('__OAK__') no-repeat;
+  background-size:calc(144px * 3) calc(32px * 3);image-rendering:pixelated;}
+#tour-bubble{position:fixed;z-index:2147483003;pointer-events:auto;max-width:300px;min-width:210px;
+  background:linear-gradient(180deg,#0f3a44,#0a2b33);color:#eaffff;border-radius:12px;padding:12px 14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.55),0 0 0 2px var(--gold),0 0 0 4px rgba(6,20,25,.6);
+  font-family:var(--raj);transition:top .4s ease,left .4s ease;}
+#tour-bubble::after{content:"";position:absolute;width:14px;height:14px;background:inherit;transform:rotate(45deg);box-shadow:0 0 0 2px var(--gold);}
+#tour-bubble[data-arrow="top"]::after{top:-8px;left:calc(var(--arw,50%) - 7px);clip-path:polygon(0 0,100% 0,0 100%);}
+#tour-bubble[data-arrow="bottom"]::after{bottom:-8px;left:calc(var(--arw,50%) - 7px);clip-path:polygon(100% 0,100% 100%,0 100%);}
+#tour-bubble[data-arrow="left"]::after{left:-8px;top:calc(var(--arw,50%) - 7px);clip-path:polygon(0 0,0 100%,100% 100%);}
+#tour-bubble[data-arrow="right"]::after{right:-8px;top:calc(var(--arw,50%) - 7px);clip-path:polygon(100% 0,0 0,100% 100%);}
+.tour-hd{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:5px;}
+.tour-name{font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);font-size:12px;}
+#tour-prog{font-family:var(--mono);font-size:10px;color:#8fb3bb;}
+#tour-say{font-size:14px;line-height:1.45;color:#eaffff;}
+#tour-say b{color:#ffe08a;}
+.tour-ctl{display:flex;gap:6px;justify-content:flex-end;margin-top:10px;align-items:center;}
+.tbtn{border:0;cursor:pointer;font-family:var(--raj);font-weight:700;font-size:12px;letter-spacing:.04em;padding:6px 11px;border-radius:8px;
+  color:#06232a;background:linear-gradient(180deg,#ffd873,var(--gold));box-shadow:0 2px 0 var(--gold-dk);transition:transform .1s,box-shadow .1s,opacity .15s;}
+.tbtn.go{background:linear-gradient(180deg,#3c8f3c,#155415);box-shadow:0 2px 0 #072807;color:#eaffd6;}
+.tbtn.ghost{background:transparent;color:#8fb3bb;box-shadow:none;margin-right:auto;}
+.tbtn:active{transform:translateY(2px);box-shadow:none;}
+.tbtn:disabled{opacity:.4;cursor:default;}
+@media(prefers-reduced-motion:reduce){ #tour-cut,#tour-oak,#tour-bubble{transition:none!important;} }
+@media(max-width:640px){ #tour-bubble{max-width:calc(100vw - 24px);left:12px!important;right:12px!important;} }
+[title],[data-tip]{cursor:help;}
+button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[title],[role=button][title]{cursor:pointer;}
+
+/* stats screen */
+.screen{background:linear-gradient(180deg,var(--lcd-lt),var(--lcd));border-radius:14px;padding:12px;font-family:var(--mono);
+  color:var(--lcd-dk);position:relative;overflow:hidden;box-shadow:inset 0 2px 6px rgba(15,56,15,.4),0 0 0 3px #6d8a0c,0 0 0 5px #4c6b2e;}
+.screen::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(15,56,15,.07) 0 2px,transparent 2px 4px);}
+.screen h4{margin:0 0 8px;font-family:var(--raj);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  display:flex;justify-content:space-between;align-items:center;}
+.smon{display:flex;gap:8px;padding:7px 0;border-top:1px dashed rgba(15,56,15,.4);}
+.smon:first-of-type{border-top:0;}
+.smon .sp{width:42px;flex:0 0 42px;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.smon .sp .im{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(15,56,15,.12);
+  border-radius:7px;box-shadow:inset 0 0 0 1px rgba(15,56,15,.4);}
+.smon .sp img{width:100%;height:100%;image-rendering:pixelated;filter:saturate(.4) sepia(.35) hue-rotate(38deg) contrast(1.05);mix-blend-mode:multiply;}
+.pips{display:flex;gap:2px;}.pip{width:6px;height:6px;border-radius:50%;background:rgba(15,56,15,.25);position:relative;transition:background .2s;}
+.pip.on{background:var(--lcd-dk);}
+.pip.now{box-shadow:0 0 0 2px var(--gold);background:var(--gold);}
+.pips.link .pip.on:not(:last-child)::after{content:"";position:absolute;left:6px;top:50%;width:4px;height:2px;
+  background:var(--lcd-dk);transform:translateY(-50%);animation:grow .3s ease;}
+@keyframes grow{from{width:0}to{width:4px}}
+.smon .sd{flex:1;min-width:0;}
+.smon .nm{font-family:var(--raj);font-weight:700;font-size:13px;display:flex;justify-content:space-between;}
+.smon .nm .bst{font-family:var(--mono);opacity:.75;font-size:11px;}
+.stypes{display:flex;gap:3px;margin:2px 0 4px;}
+.stype{font-size:8px;font-weight:700;color:#0f380f;background:rgba(15,56,15,.18);padding:1px 5px;border-radius:4px;
+  text-transform:uppercase;letter-spacing:.03em;border:1px solid rgba(15,56,15,.4);}
+.statrow{display:grid;grid-template-columns:24px 1fr 24px;gap:5px;align-items:center;font-size:9px;line-height:1.5;}
+.statrow .lb{opacity:.75;}.statrow .vl{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;}
+.bar{height:5px;background:rgba(15,56,15,.2);border-radius:3px;overflow:hidden;}
+.bar>i{display:block;height:100%;background:var(--lcd-dk);border-radius:3px;transition:width .4s ease;}
+.team{margin-top:9px;border-top:2px solid rgba(15,56,15,.5);padding-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.tstat{background:rgba(15,56,15,.1);border-radius:6px;padding:5px 7px;}
+.tstat b{display:block;font-family:var(--raj);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;}
+.tstat small{font-size:8px;text-transform:uppercase;letter-spacing:.06em;opacity:.75;}
+/* defensive matrix */
+.dmx{margin-top:9px;border-top:2px solid rgba(15,56,15,.5);padding-top:8px;}
+.dmx .lbl{font-family:var(--raj);font-weight:700;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#0f380f;opacity:.82;margin:0 0 5px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.dmx .sw-list{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0;text-align:right;text-transform:none;}
+.dmx .sw-list.ok{color:#2d5a12;opacity:.85;}
+.dmx .sw-list.bad{color:#c6102a;}
+.dmgrid{display:grid;grid-template-columns:repeat(9,1fr);gap:2px;}
+.dmc{font-family:var(--mono);font-size:7.5px;font-weight:700;text-align:center;padding:3px 0;border-radius:3px;letter-spacing:.01em;
+  color:#0f380f;background:rgba(15,56,15,.06);border:1px solid transparent;position:relative;text-transform:uppercase;transition:transform .1s;cursor:default;}
+.dmc:hover{transform:translateY(-1px);}
+.dmc.resist{background:rgba(15,56,15,.34);}
+.dmc.immune{background:rgba(15,56,15,.62);color:#dff0a8;}
+.dmc.weak{background:rgba(244,193,58,.6);color:#4a3600;}
+.dmc.shared{background:#c6102a;color:#fff0ec;box-shadow:0 0 0 1px #7c0d1b inset;}
+.dmc .ct{position:absolute;top:-4px;right:-3px;font-size:7px;font-weight:700;background:#7c0d1b;color:#fff;border-radius:6px;min-width:10px;padding:0 1px;line-height:1.35;}
+/* forced-colors / Windows high-contrast: backgrounds are stripped, so carry weak/resist/immune state on a visible border + a text glyph */
+@media (forced-colors: active){
+  .dmc{border:1px solid GrayText;}
+  .dmc.weak::before{content:"! ";} .dmc.shared::before{content:"!! ";} .dmc.resist::before{content:"- ";} .dmc.immune::before{content:"0 ";}
+  .dmc.weak,.dmc.shared{border-color:Highlight;} .dmc.immune{border-style:double;}
+}
+.dmleg{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-family:var(--mono);font-size:7.5px;color:#3a4a2a;opacity:.8;}
+.dmleg i{display:inline-block;width:9px;height:9px;border-radius:2px;vertical-align:-1px;margin-right:3px;}
+.dmswap{margin-top:7px;font-family:var(--mono);font-size:8.5px;line-height:1.55;color:#33421f;background:rgba(244,193,58,.16);
+  border:1px solid rgba(201,151,30,.45);border-radius:6px;padding:5px 8px;}
+.dmswap b{color:#6b4e00;font-weight:700;}
+.dmswap .fn{opacity:.7;}
+.dmswap .ar{color:#c6102a;font-weight:700;}
+.dmswap .cv{color:#8a5a00;font-style:italic;opacity:.85;}
+
+/* map */
+.mapdock{margin:12px 6px 4px;background:linear-gradient(180deg,#0b323b,#082830);border-radius:14px;padding:12px;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.08),0 3px 8px rgba(0,0,0,.3);}
+.maphd{display:flex;gap:10px;align-items:baseline;margin-bottom:10px;}
+.maplabel{font-family:var(--raj);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
+.maphd .cap{margin-left:auto;font-family:var(--mono);font-size:11px;color:#8fb3bb;text-align:right;max-width:62%;}
+.mapstage{display:flex;gap:10px;}@media(max-width:1000px){.mapstage{flex-direction:column;}}
+.mapgrid{flex:1;min-width:0;display:grid;gap:12px;grid-template-columns:1fr;}
+.mapgrid[data-n="2"]{grid-template-columns:1fr 1fr;}
+.mapgrid[data-n="3"]{grid-template-columns:1fr 1fr 1fr;}
+@media(max-width:900px){.mapgrid[data-n="2"],.mapgrid[data-n="3"]{grid-template-columns:1fr;}}
+.mappanel{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.panelcap{font-family:var(--mono);font-size:11px;color:#bfe3ea;line-height:1.4;min-height:2.8em;}
+.panelcap b{color:var(--gold);font-family:var(--raj);letter-spacing:.06em;text-transform:uppercase;font-weight:700;}
+.panelcap .pnote{color:#d9b45a;font-style:italic;}
+/* no min-height: the map PNG drives the box height so the absolutely-positioned SVG overlay + pin
+   share exactly the image's box (a fixed min-height let the overlay overshoot on narrow screens). */
+.mapwrap{position:relative;flex:1;border-radius:10px;overflow:hidden;background:#0a2a31;
+  box-shadow:inset 0 0 0 2px rgba(244,193,58,.25),inset 0 0 40px rgba(0,0,0,.4);}
+.mapwrap img{display:block;width:100%;height:auto;image-rendering:pixelated;}
+.overlay{position:absolute;inset:0;pointer-events:none;}
+.cdot{position:absolute;width:14px;height:14px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(155,188,15,.95),rgba(155,188,15,0) 70%);
+  box-shadow:0 0 0 2px rgba(233,255,168,.9);animation:cpulse 2.8s ease-in-out infinite;opacity:0;transition:opacity .3s;}
+.cdot.on{opacity:1;}
+@keyframes cpulse{0%,100%{transform:translate(-50%,-50%) scale(.85)}50%{transform:translate(-50%,-50%) scale(1.25)}}
+.cdot .tag{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--mono);font-size:9px;color:#e9ffa8;text-shadow:0 1px 2px #000;background:rgba(6,35,42,.75);padding:1px 5px;border-radius:4px;}
+.ring{position:absolute;border-radius:50%;transform:translate(-50%,-50%);border:2px dashed rgba(244,193,58,.7);
+  background:radial-gradient(circle,rgba(244,193,58,.10),transparent 70%);transition:width .5s ease,height .5s ease,opacity .4s;
+  width:0;height:0;opacity:0;}
+.pin{position:absolute;width:32px;height:32px;transform:translate(-50%,-50%);transition:left .5s ease,top .5s ease;}
+.pin img{width:100%;height:100%;image-rendering:pixelated;filter:drop-shadow(0 1px 2px rgba(0,0,0,.75));animation:blink 1.9s ease-in-out infinite;}
+@keyframes blink{50%{opacity:.55}}
+.legend{width:150px;flex:0 0 150px;font-family:var(--mono);font-size:10px;color:#bfe3ea;display:flex;flex-direction:column;gap:6px;}
+@media(max-width:1000px){.legend{width:auto;flex-direction:row;flex-wrap:wrap;}}
+.legend .lg{display:flex;align-items:center;gap:6px;}
+.legend .sw{width:12px;height:12px;border-radius:50%;flex:0 0 12px;}
+.foot{max-width:1200px;margin:16px auto 0;color:#9aa0ad;font-size:12.5px;line-height:1.6;text-align:center;}
+.foot code{font-family:var(--mono);background:rgba(255,255,255,.08);padding:1px 6px;border-radius:5px;color:#dfe3ea;}
+.jackpot{position:absolute;top:74px;left:50%;transform:translate(-50%,0);z-index:6;pointer-events:none;
+  font-family:"PressStart",var(--mono);font-size:14px;color:#3a1500;background:var(--gold);padding:10px 16px;border-radius:10px;
+  box-shadow:0 0 0 3px #fff,0 0 32px rgba(244,193,58,.85);opacity:0;white-space:nowrap;}
+.jackpot.show{animation:jack 1.7s ease;}
+@keyframes jack{0%{opacity:0;transform:translate(-50%,6px) scale(.6)}14%{opacity:1;transform:translate(-50%,0) scale(1.12)}28%{transform:translate(-50%,0) scale(1)}78%{opacity:1}100%{opacity:0;transform:translate(-50%,-16px) scale(1)}}
+.dexgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:6px;margin-top:12px;max-height:58vh;overflow:auto;padding-right:4px;}
+.dextile{background:#cdd0bb;border-radius:8px;padding:6px 4px;text-align:center;cursor:pointer;transition:background .12s,transform .12s;}
+.dextile:hover{background:#9bbc0f;transform:translateY(-2px);}
+.dextile img{width:46px;height:46px;image-rendering:pixelated;}
+.dextile span{display:block;font-family:var(--raj);font-weight:600;font-size:10px;margin-top:1px;color:#20301a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.dextile small{font-size:8px;color:#454b39;font-family:var(--mono);} /* solid dark dex-number, was opacity:.55 (2.9:1 fail) */
+.screen{overflow-y:auto;}
+.triwrap{background:rgba(15,56,15,.10);border-radius:9px;margin:0 0 9px;padding:2px;}
+.triwrap svg{width:100%;height:auto;display:block;}
+.tri-none{fill:#365314;}.tri-perfect{fill:#166534;}
+.triedge{font-size:6.5px;font-weight:700;font-family:ui-monospace,monospace;pointer-events:none;}
+.trinode{font-size:8.5px;font-weight:700;fill:#0f380f;font-family:ui-monospace,monospace;pointer-events:none;}
+.tritype{font-size:6.5px;font-weight:700;font-family:ui-monospace,monospace;pointer-events:none;}
+#trisvg g[data-node]{cursor:help;} #trisvg line[data-arrow]{cursor:help;}
+.trihint{min-height:26px;margin-top:2px;font-family:var(--mono);font-size:9px;line-height:1.4;color:#2d4a12;
+  background:rgba(15,56,15,.08);border-radius:6px;padding:5px 8px;text-align:center;}
+.trihint b{color:#0f380f;}
+.mapsvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.mapsvg .gnode{pointer-events:auto;}
+.edge{stroke:#2b5560;stroke-width:2;opacity:.28;fill:none;stroke-linecap:round;transition:stroke .25s,stroke-width .25s,opacity .25s;}
+.edge.reach{stroke:#ff2f2f;stroke-width:5;opacity:.5;}
+.gnode{fill:#0e2a31;stroke:#4d7f8a;stroke-width:1.3;transition:fill .2s,stroke .2s;}
+.gnode.t-town{stroke:#bfe3ea;stroke-width:1.8;}
+.gnode.reach{fill:rgba(255,50,50,.5);stroke:#ff8a8a;}
+.gnode.catch{fill:#9bbc0f;stroke:#e9ffa8;stroke-width:2;animation:cpulse2 2.6s ease-in-out infinite;}
+@keyframes cpulse2{0%,100%{opacity:.72;r:4}50%{opacity:.98;r:5}}
+.glabel{fill:#fff;font-family:ui-monospace,monospace;font-size:7px;font-weight:700;paint-order:stroke;stroke:#06232a;stroke-width:2.4px;stroke-linejoin:round;}
+.dualrange{display:flex;flex-direction:column;gap:2px;}
+.dualrange input{width:100%;accent-color:#0f380f;height:15px;}
+.chip.exc{opacity:1;box-shadow:0 0 0 2px #ff4d4d;text-decoration:line-through;}
+.reels.busy{opacity:.5;transition:opacity .12s;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+/* ---- clickable affordances ---- */
+.cdot{pointer-events:auto;cursor:pointer;}
+.smon.click{cursor:pointer;border-radius:8px;transition:background .12s;}
+.smon.click:hover{background:rgba(15,56,15,.10);}
+.reel{cursor:pointer;}
+/* ---- detail modal ---- */
+.dbackdrop{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:20px;
+  background:rgba(6,10,14,.74);backdrop-filter:blur(3px);}
+.dbackdrop.open{display:flex;animation:dfade .18s ease;}
+@keyframes dfade{from{opacity:0}to{opacity:1}}
+.dmodal{width:min(760px,96vw);max-height:90vh;overflow:auto;border-radius:20px;padding:14px;
+  background:linear-gradient(160deg,#D0342A,#C6102A);
+  box-shadow:0 34px 90px -30px rgba(0,0,0,.85),inset 0 2px 0 rgba(255,255,255,.28),inset 0 -8px 18px rgba(90,0,10,.5);
+  animation:dpop .22s cubic-bezier(.2,.9,.3,1.1);}
+@keyframes dpop{from{transform:scale(.94) translateY(10px);opacity:.4}to{transform:none;opacity:1}}
+.dscreen{background:#dcdfce;border-radius:14px;padding:16px;box-shadow:inset 0 2px 6px rgba(0,0,0,.32);
+  font-family:var(--mono);color:#20301a;}
+.dhead2{display:flex;align-items:center;gap:14px;}
+.dhead2 .big{width:86px;height:86px;flex:0 0 86px;background:#9bbc0f;border-radius:12px;
+  box-shadow:inset 0 0 0 2px #0f380f;display:flex;align-items:center;justify-content:center;}
+.dhead2 .big img{width:90%;height:90%;image-rendering:pixelated;}
+.dhead2 h3{margin:0;font-family:var(--raj);font-weight:700;font-size:26px;line-height:1;}
+.dhead2 .meta{font-size:11.5px;opacity:.72;margin-top:4px;line-height:1.5;}
+.dclose{margin-left:auto;align-self:flex-start;border:0;background:#0f380f;color:#9bbc0f;font-family:var(--raj);
+  font-weight:700;border-radius:10px;padding:8px 13px;cursor:pointer;font-size:14px;letter-spacing:.05em;}
+.dclose:hover{filter:brightness(1.15);}
+.dsec{margin-top:14px;}
+.dsec h4{margin:0 0 7px;font-family:var(--raj);font-weight:700;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;opacity:.7;}
+.evochain{display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.evostage{text-align:center;background:#cdd0bb;border-radius:9px;padding:6px 8px;min-width:78px;font-size:11px;}
+.evostage .im{width:52px;height:52px;margin:0 auto;background:#9bbc0f;border-radius:8px;box-shadow:inset 0 0 0 2px #0f380f;display:flex;align-items:center;justify-content:center;}
+.evostage .im img{width:88%;height:88%;image-rendering:pixelated;}
+.evostage b{display:block;font-family:var(--raj);font-size:12px;margin-top:2px;}
+.evostage small{opacity:.65;}
+.evoarrow{text-align:center;font-size:12px;color:#0f380f;opacity:.75;line-height:1.3;min-width:52px;}
+.evoarrow small{font-size:9px;display:block;}
+.effrow{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:5px;}
+.effrow .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;width:74px;flex:0 0 74px;opacity:.7;}
+.effchip{font-size:10px;font-weight:700;color:#fff;padding:2px 7px;border-radius:5px;text-shadow:0 1px 1px rgba(0,0,0,.3);}
+.effchip .x{opacity:.85;font-size:9px;margin-left:2px;}
+.dstats{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;}
+.dstats .statrow{grid-template-columns:26px 1fr 30px;}
+
+/* ---- a11y + audit fixes ---- */
+:focus-visible{outline:3px solid #2b5b66;outline-offset:2px;border-radius:3px;}
+.mt:focus-visible,.chip:focus-visible,.dextile:focus-visible,.sharebtn:focus-visible{outline-color:#2b5b66;}
+.era button:focus-visible,.sbtn:focus-visible,.dclose:focus-visible,.tbtn:focus-visible{outline-color:#fff;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;}}
+.seg.inert{opacity:.42;filter:saturate(.4);}
+.tsel:disabled{opacity:.5;cursor:not-allowed;}
+.relaxnote{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.02em;color:#3a1500;
+  background:var(--gold);border:1px solid var(--gold-dk);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle;}
+.relaxnote[hidden]{display:none;}
+.sc.active{position:relative;} .sc.active b{color:#fff;} .sc.active::after{content:"";position:absolute;left:12%;right:12%;bottom:2px;height:2px;background:var(--gold);border-radius:2px;}
+.whyline{margin-top:7px;font-family:var(--mono);font-size:10px;line-height:1.45;color:#bfe3ea;text-align:center;}
+.whyline b{color:var(--gold);}
+.rung .gate{display:inline-block;margin-top:2px;font-size:8px;font-weight:700;font-family:var(--mono);}
+.rung .gate.ok{color:#7fe08a;} .rung .gate.no{color:#e88;}
+.rung.on .gate.ok{color:#0c4d18;} .rung.on .gate.no{color:#7a1018;} /* dark green/red on the gold active rung */
+.covgap{margin-top:7px;font-family:var(--mono);font-size:8.5px;line-height:1.4;color:#33421f;text-align:center;}
+.covgap b{color:#0f380f;}
+.dmswap .rem{color:#2d7a2d;font-weight:700;}
+/* interaction affordances + hover-to-highlight the driving members */
+.reel{transition:transform .12s,box-shadow .12s;}
+.reel:hover{transform:translateY(-2px);box-shadow:0 0 0 2px var(--gold) inset,0 5px 12px -4px rgba(0,0,0,.55);}
+.smon.hl{outline:2px solid var(--gold-dk);outline-offset:-2px;background:rgba(244,193,58,.15);border-radius:8px;}
+.dmc{cursor:help;} .rung{cursor:help;} .sc{cursor:help;}
+.helpbtn{width:24px;height:24px;flex:0 0 auto;border-radius:50%;border:2px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);color:#fff;font-weight:700;font-family:var(--raj);font-size:14px;cursor:pointer;margin-left:8px;}
+.helpbtn:hover{background:#fff;color:var(--shell-b);}
+.intro{margin:0 0 12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:10px 14px;color:#fff5f2;font-size:12.5px;line-height:1.55;display:flex;gap:10px;align-items:flex-start;}
+.intro b{color:var(--gold);}
+.intro[hidden]{display:none;}
+.introx{flex:0 0 auto;background:transparent;border:0;color:#fff;font-size:14px;cursor:pointer;opacity:.8;line-height:1;padding:2px 4px;}
+.introx:hover{opacity:1;}
+.ladder{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;}
+.ladder .rung{flex:none;min-width:0;}
+/* touch targets on small screens */
+/* ============ MOBILE APP-SHELL (<=1000px): segmented panes + sticky action bar + real type scale ============ */
+@media(max-width:1000px){
+  /* section switcher: Build | Team | Maps, sticky under the header */
+  .viewseg{display:flex;gap:6px;position:sticky;top:0;z-index:30;margin:0 0 8px;padding:7px;
+    background:#0e1519;border-radius:13px;box-shadow:0 5px 14px -7px rgba(0,0,0,.65),inset 0 0 0 1px rgba(255,255,255,.04);}
+  .viewseg button{flex:1;min-height:44px;border:0;border-radius:9px;cursor:pointer;font-family:var(--raj);
+    font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;background:transparent;color:#93a8af;transition:background .12s,color .12s;}
+  .viewseg button.on{background:var(--gold);color:#06232a;box-shadow:0 2px 6px rgba(0,0,0,.35);}
+  [data-view]{display:none;}
+  [data-view].on{display:block;}
+
+  /* real mobile type scale: nothing a user reads below 11px, no positive tracking below 11px */
+  .dmc,.dmc .ct,.dmleg,.dmswap,.stype,.tstat small,.sc small,.rung .gate{font-size:10px;}
+  .statrow{font-size:11px;gap:7px;}
+  .hint,.whyline,.trihint,.covgap,.panelcap,.cghint,#proxhint{font-size:12px;line-height:1.5;}
+  .rung{font-size:11px;} .rung .n{font-size:12px;}
+  .foot{font-size:12.5px;text-align:left;line-height:1.6;}
+  .dmc,.stype,.rung,.grp>label{letter-spacing:0;}
+  .dextile span{font-size:11px;} .dextile small{font-size:9.5px;}
+  .smon .nm{font-size:13px;}
+
+  /* touch targets >=44px */
+  .chip{min-height:44px;padding:10px 12px;display:inline-flex;align-items:center;}
+  .seg button,.era button,.ebtn,.sharebtn,.dclose,.tsel,.resetbtn,.advtoggle,.runbtn,.sbtn{min-height:44px;}
+  .helpbtn{width:44px;height:44px;} .chips{gap:6px;}
+
+  /* one-row header (was a two-row wrap that ate ~50% of the header height) */
+  .dhead{flex-wrap:nowrap;row-gap:0;column-gap:7px;}
+  .minilamps{display:none;}                                  /* drop decorative lamps to free header width */
+  .brand{flex:1 1 auto;order:0;text-align:left;min-width:0;}
+  .brand .t{font-size:16px;white-space:nowrap;}              /* keep STARTER LAB on one line */
+  .lens{width:34px;height:34px;}
+
+  /* fluid reel height so SPIN seats above the fold */
+  .reel{height:clamp(120px,32vw,168px);}
+
+  /* gated: hide the empty analysis screen until a team is revealed (kills a screen of blank placeholders) */
+  .device:not(.revealed) .screen{display:none;}
+
+  /* sticky bottom SPIN/Prev/Next bar, pinned in the thumb zone */
+  .slot .controls{position:fixed;left:0;right:0;bottom:0;z-index:50;margin:0;justify-content:center;gap:12px;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));
+    background:linear-gradient(180deg,rgba(8,59,67,0),#083b43 42%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  .slot .controls .sbtn{min-height:48px;}
+  .slot{padding-bottom:78px;}          /* clear space so content isn't hidden behind the fixed bar */
+}
+@media(min-width:1001px){ .viewseg{display:none;} [data-view]{display:block!important;} }   /* desktop: three-column grid, untouched */
+@media(max-width:640px){ .brand .s{display:none;} }                                          /* drop the mono subtitle on phones */
+</style>
+
+<div class="wrap"><div class="device">
+  <div class="hinge" aria-hidden="true"></div>
+  <div class="dhead" role="banner">
+    <h1 class="visually-hidden">Starter Lab — Pokémon starter-trio optimizer</h1>
+    <div class="lens" aria-hidden="true"></div>
+    <div class="minilamps"><i class="ml-r"></i><i class="ml-y"></i><i class="ml-g"></i></div>
+    <div class="brand"><span class="t">STARTER LAB</span><span class="s" id="brandsub">Kanto &middot; combination optimizer</span></div>
+    <button class="helpbtn" id="helpbtn" title="How this works — open the guided intro" aria-label="How this works">?</button>
+    <button class="helpbtn sndbtn" id="sndbtn" title="Sound effects: on/off" aria-label="Toggle sound effects" aria-pressed="true">&#128266;</button>
+    <div class="era" id="era"><button data-era="frlg" class="on" title="Sprite art: FireRed / LeafGreen (Gen 3)">FR-LG</button><button data-era="rby" title="Sprite art: Red / Blue / Yellow (Gen 1)">RBY</button></div>
+  </div>
+
+  <div class="intro" id="intro" role="region" aria-label="How this works">
+    <span><b>What is this?</b> The <b>Starter Lab</b> builds your dream Pok&eacute;mon team from the filters you set. Choose your regions, types and power on the left, spin the slot machine to reveal the <b>top&#8209;ranked trio</b>, then read the right panel to see <b>why</b> that team wins and the maps below to learn <b>where to catch</b> each member.</span>
+    <button class="tbtn go" id="starttour" style="flex:0 0 auto;margin:0 8px" title="Professor Oak walks you through the whole page">&#9654; Take the tour</button>
+    <button class="introx" id="introx" title="Got it" aria-label="Dismiss">&#10005;</button>
+  </div>
+
+  <!-- mobile-only section switcher (hidden on desktop; the three panes tile as a grid there) -->
+  <nav class="viewseg" id="viewseg" aria-label="Sections">
+    <button type="button" data-v="build" aria-current="false">Build</button>
+    <button type="button" data-v="team" class="on" aria-current="true">Team</button>
+    <button type="button" data-v="maps" aria-current="false">Maps</button>
+  </nav>
+  <div class="stage" role="main" aria-label="Team builder">
+    <!-- PARAMS -->
+    <div class="panel" data-view="build">
+      <p class="ptitle" role="heading" aria-level="2">Parameters<span class="sharebtn" id="sharebtn" title="Copy a link that restores these exact settings">&#8862; Copy link</span></p>
+      <!-- essentials: the only things a first-timer needs to touch -->
+      <div class="grp"><label>Generations <span class="v" id="poolv" title="Pok&eacute;mon eligible under the current generations + filters &mdash; the pool the optimizer chooses from">pool 151</span></label><div class="chips" id="gens"></div><div class="hint">Tap one or more &mdash; I = Kanto, II = Johto, III = Hoenn. Combining widens the pool.</div>
+        <div class="seg" id="crossgen" style="margin-top:7px" title="Cross-gen: force at least one Pok&eacute;mon from EACH selected generation. I + II + III at size 3 gives one Kanto, one Johto and one Hoenn, shown on three maps side by side."><button data-cg="0" class="on">Any mix</button><button data-cg="1">Cross-gen</button></div>
+        <div class="hint" id="cghint">Select 2+ generations to build a cross-gen team.</div></div>
+      <div class="grp"><label>Strategy <span class="v" title="The single rule the optimizer ranks teams by.">what to optimize for</span></label>
+        <select class="tsel" id="strat" aria-label="Strategy — what to optimize for"><option>Perfect type triangle</option><option>Max coverage</option><option>Min shared weakness</option><option>Max stat-fairness</option><option>Same-type set</option></select></div>
+      <div class="grp"><label>Team size</label>
+        <div class="seg" id="sizeseg"><button data-s="2">2</button><button data-s="3" class="on">3</button><button data-s="6">6</button></div></div>
+      <button class="advtoggle" id="advtoggle" aria-expanded="false" aria-controls="advfilters"><span class="advarrow">&#9656;</span> Advanced filters <small>types &middot; BST &middot; rarity &middot; base town&hellip;</small></button>
+      <div class="advfilters" id="advfilters" hidden>
+      <div class="grp"><label>Base town</label>
+        <select class="tsel" id="basesel" style="margin-bottom:6px" aria-label="Base town" title="Restrict the team to Pok&eacute;mon catchable near a base town (in any selected region); Proximity sets how far"><option value="">Anywhere</option></select>
+        <label title="How many route-steps from your base town the search may reach.">Proximity <span class="v">route steps</span></label>
+        <div class="seg" id="prox"><button data-p="0">In town</button><button data-p="1" class="on">&le;1</button><button data-p="2">&le;2</button><button data-p="3">&le;3</button></div>
+        <div class="hint" id="proxhint">Routes within 1 step light up on the map</div></div>
+      <div class="grp"><label>Encounter rarity</label>
+        <div class="seg" id="rarity"><button data-r="0" class="on" title="No rarity filter">Any</button><button data-r="2" title="Keep species that are rare or more common (drops very-rare only)">Rare+</button><button data-r="3" title="Keep uncommon or more common (drops rare &amp; very-rare)">Uncommon+</button><button data-r="4" title="Common encounters only">Common</button></div>
+        <div class="hint">Filters out hard-to-find Pok&eacute;mon. Each step keeps that tier <em>or easier</em> to catch.</div></div>
+      <div class="grp"><label>Types &mdash; tap: include / exclude</label><div class="chips" id="types"></div></div>
+      <div class="grp"><label title="How many times the base form can still evolve: 0 = single-stage, 1 = two-stage, 2 = full three-stage line">Evolutions</label>
+        <div class="seg" id="evoseg" style="margin-bottom:5px"><button data-e="any" class="on">Any</button><button data-e="0">0</button><button data-e="1">1</button><button data-e="2">2</button></div>
+        <div class="seg" id="fullchain" title="On: the type/BST filters must hold across the WHOLE evolution line, not just the base form"><button>Full-chain match</button><button class="on">Off</button></div></div>
+      <div class="grp"><label title="BST = Base Stat Total (HP+Atk+Def+SpA+SpD+Spe), a measure of raw power. Filter the team by the stat total at a chosen evolution stage.">BST (power) at <span class="v" id="bstStageLbl">last</span> &middot; <span class="v" id="bandv">0-720</span></label>
+        <div class="seg" id="bststage" style="margin-bottom:6px"><button data-stage="first">1st</button><button data-stage="second">2nd</button><button data-stage="last" class="on">Last</button><button data-stage="avg">Avg</button></div>
+        <div class="dualrange"><input type="range" min="0" max="720" step="10" value="0" id="bstmin" aria-label="Minimum BST"><input type="range" min="0" max="720" step="10" value="720" id="bstmax" aria-label="Maximum BST"></div></div>
+      </div>
+      <button class="runbtn" id="run">&#9654; Run optimizer</button>
+        <button class="runbtn" id="dexbtn" style="margin-top:8px;background:linear-gradient(180deg,#2a5b66,#0a4a53);box-shadow:0 3px 0 #06232a,0 6px 12px -4px rgba(0,0,0,.5);color:#dff6fb">&#8862; Browse full dex</button>
+        <button class="resetbtn" id="resetbtn" title="Restore every filter to its default">&#8634; Reset filters</button>
+    </div>
+
+    <!-- SLOT -->
+    <div class="slot" data-view="team">
+      <div class="marquee" role="heading" aria-level="2">STARTER SLOTS<div class="bulbs"></div></div>
+      <div class="reels" id="reels"></div>
+      <div class="revealprompt" id="revealprompt" hidden><span class="rp-arrow">&#9660;</span> Press <b>SPIN</b> to reveal your team <small id="rp-sub"></small></div>
+      <div class="jackpot" id="jackpot"><span>★ TOP MATCH ★</span></div>
+      <div class="banner" id="banner">Relaxing filter</div>
+      <div class="result">
+        <span class="rank" id="rank">MATCH #1</span>
+        <span class="tier" id="tier">Perfect match</span>
+        <span class="relaxnote" id="relaxnote" hidden></span>
+        <div class="scorechips">
+          <div class="sc" title="Fairness: how balanced the three base-stat totals are (higher = better)"><b id="s-fair">--</b><small>Fair</small></div>
+          <div class="sc" title="Coverage: share of the era's types (15 in a Gen-1-only team, 18 otherwise) the team can hit super-effectively (higher = better)"><b id="s-cov">--</b><small>Cover</small></div>
+          <div class="sc" title="BST spread: gap between the strongest and weakest member (lower = better)"><b id="s-evo">--</b><small>Spread &darr;</small></div>
+          <div class="sc" id="sc-tri" title="Triangle: 100 = a perfect type cycle where each member beats the next (higher = better)"><b id="s-tri">--</b><small>Tri</small></div>
+        </div>
+        <div class="whyline" id="whyline"></div>
+      </div>
+      <div class="ladder" id="ladder"></div>
+      <div class="controls">
+        <button class="sbtn" id="prev">&#9664; Prev</button>
+        <button class="sbtn spin" id="spin">SPIN</button>
+        <button class="sbtn" id="next">Next &#9654;</button>
+      </div>
+      <div class="evobar" id="evobar" hidden>
+        <button class="ebtn" id="devolve" title="Revert one evolution stage" aria-label="Revert one evolution stage" disabled>&#9664;</button>
+        <span class="elbl"><b id="evolbl">Base forms</b><small id="evosub">Evolve the whole team one stage</small></span>
+        <button class="ebtn go" id="evolve" title="Evolve all three Pokémon one stage at once" aria-label="Evolve all three one stage">Evolve <span>&#9654;</span></button>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="screen" data-view="team" aria-label="Team analysis">
+      <h4 aria-level="2">Type triangle</h4>
+      <div class="triwrap"><svg id="trisvg" role="img" aria-label="Team type-effectiveness triangle" aria-describedby="trihint" viewBox="0 0 220 162" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="trihint" id="trihint"></div>
+      <h4 aria-level="2">Team readout</h4>
+      <div id="smons"></div>
+      <div class="team" id="team"></div>
+      <div class="covgap" id="covgap"></div>
+      <div class="dmx" id="dmx"></div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="mapdock" data-view="maps" role="region" aria-label="Catch maps">
+    <div class="maphd">
+      <span class="maplabel" id="maplabel" role="heading" aria-level="2">Catch maps</span>
+      <span class="cap" id="mapcap">Where each combo Pokémon is caught</span>
+    </div>
+    <div class="mapstage">
+      <div class="mapgrid" id="mapgrid" data-n="1"></div>
+      <div class="legend">
+        <div class="lg"><span class="sw" style="background:#9bbc0f"></span> catch location (pulsing)</div>
+        <div class="lg"><span class="sw" style="background:#ff2f2f"></span> <span>reachable route &amp; town (within <span id="legendprox">your step limit</span>)</span></div>
+        <div class="lg"><img src="__MARKER__" alt="" style="width:11px;height:13px;vertical-align:-2px;margin-right:5px;image-rendering:pixelated"> base town (you are here)</div>
+        <div class="hint" style="color:#7fb7c3;margin-top:4px">Kanto / Johto / Hoenn maps are live. A cross-gen combo shows one map per region, each highlighting the members caught there.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dbackdrop" id="dback"><div class="dmodal" role="dialog" aria-modal="true" aria-label="Pokémon details"><div class="dscreen" id="dscreen"></div></div></div>
+<div id="tip" aria-hidden="true"></div>
+<div id="result-live" class="visually-hidden" aria-live="polite" role="status"></div>
+<!-- Professor Oak guided walkthrough -->
+<div id="tour" hidden>
+  <div id="tour-catch"></div>
+  <div id="tour-cut"></div>
+  <div id="tour-oak" aria-hidden="true"><div class="oakspr"></div></div>
+  <div id="tour-bubble" role="dialog" aria-modal="true" aria-label="Professor Oak's guided tour" aria-describedby="tour-say">
+    <div class="tour-hd"><span class="tour-name">Prof. Oak</span><span id="tour-prog"></span></div>
+    <div id="tour-say"></div>
+    <div class="tour-ctl">
+      <button class="tbtn ghost" id="tour-skip" title="End the tour">&#10005; Skip tour</button>
+      <button class="tbtn" id="tour-full" title="Continue into the full walkthrough" hidden>Show me everything &#9654;</button>
+      <button class="tbtn" id="tour-back" title="Previous step">&#9664; Back</button>
+      <button class="tbtn go" id="tour-next" title="Next step">Next &#9654;</button>
+    </div>
+    <div id="tour-live" class="visually-hidden" aria-live="polite"></div>
+  </div>
+</div>
+  <p class="foot" role="contentinfo">Real interactive demo: spin the reels, walk the ranked results with Next, and play with every parameter (each one drives its own animation). Sprites are authentic <code>PokeAPI</code> FR-LG / RBY game sprites; the maps are the real in-game Town Maps for Kanto, Johto and Hoenn, with ROM-accurate wild-encounter data and route graphs. Base-town BFS proximity works in any region. Every parameter recomputes live. <a href="https://github.com/drkostas/poke-starters" target="_blank" rel="noopener" style="color:#f4c13a;font-weight:700;white-space:nowrap">&#9733; Open source on GitHub</a> &middot; MIT &middot; a fan project, not affiliated with Nintendo / Game Freak.</p>
+</div>
+
+<script type="module">
+import { optimize, makeTypeApi, bfsReach } from './optimizer.mjs';
+const $=id=>document.getElementById(id);
+const TYPES=['normal','fire','water','electric','grass','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
+const TCOL={normal:'#A8A77A',fire:'#EE8130',water:'#6390F0',electric:'#F7D02C',grass:'#7AC74C',ice:'#96D9D6',fighting:'#C22E28',poison:'#A33EA1',ground:'#E2BF65',flying:'#A98FF3',psychic:'#F95587',bug:'#A6B91A',rock:'#B6A136',ghost:'#735797',dragon:'#6F35FC',dark:'#705746',steel:'#B7B7CE',fairy:'#D685AD'};
+// pick readable ink for a type-color background (dark text on light types, white on dark)
+// WCAG relative luminance -> pick whichever ink (near-black vs white) yields the HIGHER contrast ratio
+const inkFor=(hex)=>{ const h=hex.replace('#',''); const lin=v=>{ v/=255; return v<=0.03928?v/12.92:((v+0.055)/1.055)**2.4; };
+  const L=0.2126*lin(parseInt(h.slice(0,2),16))+0.7152*lin(parseInt(h.slice(2,4),16))+0.0722*lin(parseInt(h.slice(4,6),16));
+  const cWhite=1.05/(L+0.05), cDark=(L+0.05)/(0.007+0.05); return cDark>=cWhite?'#14140f':'#fff'; };
+const TOWN={pallet:[.28,.78],viridian:[.28,.60],pewter:[.24,.40],cerulean:[.62,.37],saffron:[.62,.53],celadon:[.52,.53],vermilion:[.62,.65],lavender:[.75,.53],fuchsia:[.54,.82],cinnabar:[.28,.90]};
+const STRAT_KEY={'Perfect type triangle':'triangle','Max coverage':'coverage','Min shared weakness':'weakness','Max stat-fairness':'fairness','Same-type set':'sametype'};
+
+let era='frlg', DATA=null, RESULTS=[], LADDER=[], idx=0, maxTierSeen=0, spinning=false, size=3, poolDex=[], TAPI=null, TAPI_G1=null, worker=null, reqId=0, workerReady=false, useWorker=true, pendingSpin=false, computingTimer=null, spinTimer=null;
+// Gen-1-only view uses the authentic Gen-1 type chart so the matrix/modal match the engine's scoring.
+const gen1OnlyView=()=>{ const g=selGens(); return g.length && g.every(x=>x===1); };
+const curTAPI=()=>(gen1OnlyView() && TAPI_G1) ? TAPI_G1 : TAPI;
+const sprUrl=(dex)=> (era==='rby'&&dex<=151)?`sprites/rby/${dex}.png`:`sprites/frlg/${dex}.png`;
+const setReelsMsg=(m)=>{ $('reels').innerHTML=`<div style="padding:46px 12px;width:100%;text-align:center;color:#9bbc0f;font-family:var(--mono);letter-spacing:.1em">${m}</div>`; };
+const sayResult=(t)=>{ const rl=$('result-live'); if(rl) rl.textContent=t; };           // polite screen-reader status for result/pool changes
+const anim=(el,frames,opts)=>{ try{ return el&&el.animate&&el.animate(frames,opts); }catch(e){} };  // no-op where Web Animations API is absent
+
+async function boot(){
+  setReelsMsg('LOADING DEX…');
+  try{
+    const [pokemon,typeChart,chains,typeChartGen1]=await Promise.all([
+      fetch('data/pokemon.json').then(r=>r.json()),
+      fetch('data/type_chart.json').then(r=>r.json()),
+      fetch('data/evolution_chains.json').then(r=>r.json()),
+      fetch('data/type_chart_gen1.json').then(r=>r.json()).catch(()=>null)]);
+    DATA={pokemon,typeChart,chains,typeChartGen1};
+    TAPI=makeTypeApi(typeChart); if(typeChartGen1) TAPI_G1=makeTypeApi(typeChartGen1);
+    try{ const load=(r)=>Promise.all([fetch(`data/locations_${r}.json`).then(x=>x.json()),fetch(`data/connectivity_${r}.json`).then(x=>x.json())]).then(([loc,conn])=>({loc,conn})).catch(()=>null);
+      const [kanto,johto,hoenn]=await Promise.all([load('kanto'),load('johto'),load('hoenn')]); // one region 404 must NOT disable the others
+      if(kanto){ REGIONS.kanto=kanto; DATA.locations=kanto.loc; DATA.connectivity=kanto.conn; }
+      if(johto) REGIONS.johto=johto; if(hoenn) REGIONS.hoenn=hoenn; initRegions();
+      // all AVAILABLE regions' graphs+locations so the optimizer can run base-town BFS in any loaded region
+      DATA.regions={}; if(kanto) DATA.regions.kanto={connectivity:kanto.conn,locations:kanto.loc};
+      if(johto) DATA.regions.johto={connectivity:johto.conn,locations:johto.loc};
+      if(hoenn) DATA.regions.hoenn={connectivity:hoenn.conn,locations:hoenn.loc}; }catch(err){ console.warn('no location data',err); }
+    buildControls(); wireControls(); applyHash(); updatePool(); setProximity(curProx());
+    if($('result-live') && $('result-live').parentNode!==document.body) document.body.appendChild($('result-live')); // keep the live region out of .wrap so modal/tour inert can't silence it
+    try{ worker=new Worker('worker.mjs',{type:'module'}); worker.onmessage=onWorkerMsg; worker.onerror=(er)=>{ useWorker=false; setComputing(false); runOptimizer(pendingSpin); }; worker.postMessage({type:'init', data:DATA}); }catch(err){ useWorker=false; }
+    runOptimizer(false);
+  }catch(e){ setReelsMsg('DATA LOAD FAILED: '+e.message); console.error(e); }
+}
+
+function selGens(){ const g=[...document.querySelectorAll('#gens .chip.on')].map(c=>+c.dataset.gen); return g.length?g:[1]; }
+function curProx(){ return +document.querySelector('#prox button.on').dataset.p; }
+function updatePool(){ const g=selGens();
+  poolDex=Object.values(DATA.pokemon).filter(p=>g.includes(p.generation)).map(p=>p.dexNumber);
+  $('poolv').textContent='pool '+poolDex.length;
+  anim($('poolv'),[{color:'#e4453b'},{color:''}],{duration:500});
+  const bs=$('brandsub'); if(bs){ const rn=[...new Set(g.slice().sort().map(x=>RNAME[genRegion[x]]).filter(Boolean))]; bs.innerHTML=rn.join(' &middot; ')+' &middot; combination optimizer'; }
+  rebuildBaseTowns(); updateGeoState(); updateCrossgenState(); }
+// cross-gen only bites with 2+ generations picked; the hint spells out exactly what it forces
+function updateCrossgenState(){ const seg=$('crossgen'); if(!seg) return; const g=selGens(); const multi=g.length>1;
+  seg.classList.toggle('inert',!multi); seg.querySelectorAll('button').forEach(b=>b.disabled=!multi);
+  const on=document.querySelector('#crossgen button.on').dataset.cg==='1';
+  const names=[...new Set(g.slice().sort().map(x=>RNAME[genRegion[x]]).filter(Boolean))];
+  $('cghint').textContent = !multi ? 'Select 2+ generations to build a cross-gen team.'
+    : on ? ('Forcing at least one from each: '+names.join(', ')+'. Each shows on its own map.')
+         : 'Team can mix any of the selected generations freely.'; }
+const GEN_REGION=[['kanto',1],['johto',2],['hoenn',3]];
+// the region a base-town option belongs to (drives which region's graph the BFS runs on)
+function baseTownRegion(){ const o=$('basesel')&&$('basesel').selectedOptions[0]; return (o&&o.dataset.region)||'kanto'; }
+// offer base towns from every SELECTED generation's region, grouped by region
+function rebuildBaseTowns(){ const sel=$('basesel'); if(!sel) return; const cur=sel.value; const g=selGens(); // per-region loop below skips any region that didn't load
+  let html='<option value="">Anywhere</option>';
+  for(const [r,gen] of GEN_REGION){ if(!g.includes(gen)) continue; const R=REGIONS[r]; if(!R||!R.conn) continue;
+    const towns=R.conn.nodes.filter(n=>n.type==='town'); if(!towns.length) continue;
+    html+=`<optgroup label="${RNAME[r]}">`+towns.map(n=>`<option value="${n.id}" data-region="${r}">${n.name}</option>`).join('')+'</optgroup>'; }
+  sel.innerHTML=html; if([...sel.options].some(o=>o.value===cur)) sel.value=cur; else sel.value=''; }
+// proximity only bites once a specific base town is picked; base town works in any selected region
+function updateGeoState(){ const sel=$('basesel'), prox=$('prox'); if(!sel||!prox) return;
+  const proxLive=!!sel.value; prox.classList.toggle('inert',!proxLive);
+  prox.querySelectorAll('button').forEach(b=>b.disabled=!proxLive); }
+
+function buildControls(){
+  const gens=$('gens'); gens.innerHTML='';
+  [['I',1],['II',2],['III',3]].forEach(([lab,g],i)=>{ const s=document.createElement('span');
+    s.className='chip'+(i===0?' on':''); s.dataset.gen=g; s.textContent=lab; s.style.setProperty('--c','#3B4CCA');
+    s.tabIndex=0; s.setAttribute('role','button'); s.setAttribute('aria-label','Generation '+g); s.setAttribute('aria-pressed', i===0?'true':'false');
+    s.onclick=()=>{ s.classList.toggle('on'); if(!document.querySelector('#gens .chip.on')) s.classList.add('on'); s.setAttribute('aria-pressed', String(s.classList.contains('on'))); updatePool(); runOptimizer(false); }; gens.appendChild(s); });
+  const types=$('types'); types.innerHTML='';
+  TYPES.forEach(t=>{ const s=document.createElement('span'); s.className='chip'; s.dataset.type=t; s.dataset.state='off'; s.textContent=t;
+    s.tabIndex=0; s.setAttribute('role','button'); s.setAttribute('aria-label',t+' — tap to include, again to exclude');
+    s.style.setProperty('--c',TCOL[t]); s.style.color=inkFor(TCOL[t]); s.onclick=()=>{ const st=s.dataset.state; const nx=st==='off'?'inc':st==='inc'?'exc':'off'; s.dataset.state=nx; s.setAttribute('aria-pressed',nx!=='off'); s.classList.toggle('on',nx==='inc'); s.classList.toggle('exc',nx==='exc'); runOptimizer(false); }; types.appendChild(s); });
+}
+function segSingle(seg,cb){ seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  seg.querySelectorAll('button').forEach(x=>{ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); });
+  b.classList.add('on'); b.setAttribute('aria-pressed','true'); cb&&cb(b); }); }
+// ---- mobile section switcher (Build | Team | Maps); a no-op visually on desktop (panes are display:block!important there) ----
+const isMobileView=()=>{ try{ return matchMedia('(max-width:1000px)').matches; }catch(e){ return false; } };
+function setView(v){
+  document.querySelectorAll('[data-view]').forEach(el=>el.classList.toggle('on', el.getAttribute('data-view')===v));
+  document.querySelectorAll('#viewseg button').forEach(b=>{ const on=b.dataset.v===v; b.classList.toggle('on',on); b.setAttribute('aria-current', on?'true':'false'); });
+  try{ window.scrollTo({top:0}); }catch(e){}
+}
+function wireControls(){
+  if($('viewseg')){ $('viewseg').addEventListener('click',e=>{ const b=e.target.closest('button[data-v]'); if(b){ sfx('cursor'); setView(b.dataset.v); } }); setView('team'); }
+  segSingle($('prox'),b=>{ setProximity(+b.dataset.p); runOptimizer(false); });
+  segSingle($('evoseg'),()=>runOptimizer(false));
+  segSingle($('rarity'),()=>runOptimizer(false));
+  segSingle($('crossgen'),()=>{ updateCrossgenState(); runOptimizer(false); });
+  segSingle($('fullchain'),()=>runOptimizer(false));
+  segSingle($('bststage'),b=>{ $('bstStageLbl').textContent=b.textContent; runOptimizer(false); });
+  segSingle($('sizeseg'),b=>{ size=+b.dataset.s; runOptimizer(false); });
+  $('strat').onchange=()=>runOptimizer(false);
+  // expose single-select segmented groups to assistive tech (role=group + per-button aria-pressed, initialized from the load-time selection)
+  const SEGLBL={prox:'Proximity route steps',evoseg:'Evolutions',rarity:'Rarity',crossgen:'Cross-gen',fullchain:'Full evolution chain',bststage:'BST stage of interest',sizeseg:'Team size',era:'Sprite art style'};
+  Object.keys(SEGLBL).forEach(id=>{ const seg=$(id); if(!seg) return; if(!seg.getAttribute('role')) seg.setAttribute('role','group'); if(!seg.getAttribute('aria-label')) seg.setAttribute('aria-label',SEGLBL[id]);
+    seg.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', String(b.classList.contains('on')))); });
+  $('basesel').onchange=()=>{ updateGeoState(); setProximity(curProx()); runOptimizer(false); };
+  $('run').onclick=()=>{ sfx('confirm'); maxTierSeen=0; if(isMobileView()) setView('team'); runOptimizer(true); }; // jump to the Team pane so the reveal is on-screen
+  if($('sharebtn')){ $('sharebtn').onclick=copyShareLink; $('sharebtn').tabIndex=0; $('sharebtn').setAttribute('role','button'); }
+  // advanced-filters accordion
+  if($('advtoggle')) $('advtoggle').onclick=()=>{ const a=$('advfilters'); const open=a.hidden; a.hidden=!open;
+    $('advtoggle').setAttribute('aria-expanded',String(open)); const ar=$('advtoggle').querySelector('.advarrow'); if(ar) ar.textContent = (open?'▾':'▸'); };
+  if($('resetbtn')) $('resetbtn').onclick=resetFilters;
+  // keyboard-activate the span/div controls (Enter/Space -> click) for a11y
+  document.addEventListener('keydown',e=>{ if(e.key!=='Enter'&&e.key!==' ')return; const t=e.target;
+    if(t&&t.getAttribute&&(t.getAttribute('role')==='button'||t.getAttribute('role')==='tab')&&t.tagName!=='BUTTON'){ e.preventDefault(); t.click(); } });
+  window.addEventListener('hashchange',()=>{ if(tActive) return; if(applyHash()) runOptimizer(false); }); // pasted share-link applies live (not mid-tour)
+  // hover a defensive-matrix cell or the Spread chip -> highlight the members that drive it
+  if($('dmx')){ $('dmx').addEventListener('mouseover',e=>{ const c=e.target.closest('.dmc[data-weak]'); if(c) hlMembers((c.dataset.weak||'').split(',').filter(Boolean).map(Number)); });
+    $('dmx').addEventListener('mouseout',e=>{ if(e.target.closest('.dmc')) hlMembers(null); }); }
+  const scw=document.querySelector('.scorechips');
+  if(scw){ scw.addEventListener('mouseover',e=>{ const sc=e.target.closest('.sc[data-hl]'); if(sc) hlMembers((sc.dataset.hl||'').split(',').filter(Boolean).map(Number)); });
+    scw.addEventListener('mouseout',e=>{ if(e.target.closest('.sc')) hlMembers(null); }); }
+  $('spin').onclick=()=>{ if(spinning||!RESULTS.length) return; revealTeam(RESULTS[idx]); };
+  $('next').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx+1)%RESULTS.length; revealTeam(RESULTS[idx]); };
+  $('prev').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx-1+RESULTS.length)%RESULTS.length; revealTeam(RESULTS[idx]); };
+  $('era').querySelectorAll('button').forEach(b=>b.onclick=()=>{ $('era').querySelectorAll('button').forEach(x=>{ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); });
+    b.classList.add('on'); b.setAttribute('aria-pressed','true'); era=b.dataset.era; const wasSpin=spinning; clearTimeout(spinTimer); spinning=false; $('spin').disabled=false;
+    if(revealed && RESULTS[idx]){ landInstant(RESULTS[idx]); renderTeamReadout(RESULTS[idx]); // full readout so an era switch mid-respin can't leave rank/tier/maps/evobar stale
+      const j=$('jackpot'), shown=j&&j.classList.contains('show'), want=RESULTS[idx].tier===0;
+      if(want&&!shown) flashJackpot(RESULTS[idx]); else if(!want&&shown) hideJackpot(); }
+    else if(wasSpin && RESULTS.length){ coverReels(); if($('revealprompt'))$('revealprompt').hidden=false; $('spin').classList.add('pulse'); } // cancelled an in-flight reveal -> back to the gated cover, not a frozen half-spin
+    document.querySelectorAll('.reels img,.smon img').forEach(im=>anim(im,[{opacity:.2},{opacity:1}],{duration:300})); syncHash(); });
+  const bmin=$('bstmin'), bmax=$('bstmax'); const bupd=()=>{ let lo=+bmin.value, hi=+bmax.value; if(lo>hi){ const tmp=lo; lo=hi; hi=tmp; } $('bandv').textContent=lo+'-'+hi; anim($('s-fair'),[{color:'#fff'},{color:''}],{duration:300}); };
+  bmin.oninput=bupd; bmax.oninput=bupd; bmin.onchange=()=>runOptimizer(false); bmax.onchange=()=>runOptimizer(false); bupd();
+}
+
+function readParams(){
+  return { generations:selGens(), size,
+    evolutions:document.querySelector('#evoseg button.on').dataset.e,
+    fullChain: $('fullchain').firstElementChild.classList.contains('on'),
+    includeTypes:[...document.querySelectorAll('#types .chip.on')].map(c=>c.dataset.type),
+    excludeTypes:[...document.querySelectorAll('#types .chip.exc')].map(c=>c.dataset.type),
+    bstStage:document.querySelector('#bststage button.on').dataset.stage,
+    bstMin:Math.min(+$('bstmin').value,+$('bstmax').value), bstMax:(Math.max(+$('bstmin').value,+$('bstmax').value)>=720?9999:Math.max(+$('bstmin').value,+$('bstmax').value)), // fully-open slider -> engine's unbounded sentinel so relax doesn't report a phantom "widened BST" step
+    primaryStrategy:STRAT_KEY[$('strat').value]||'triangle', baseTown:($('basesel').value||null), baseTownRegion:($('basesel').value?baseTownRegion():null), proximity:curProx(), rarityMin:+document.querySelector('#rarity button.on').dataset.r,
+    crossGen: (selGens().length>1) && (document.querySelector('#crossgen button.on').dataset.cg==='1'),
+    excludeLegendary:true, results:60 };
+}
+// ---- share by URL ----
+function serializeParams(){
+  const q=new URLSearchParams();
+  q.set('g', selGens().join(','));
+  q.set('sz', String(size));
+  q.set('ev', document.querySelector('#evoseg button.on').dataset.e);
+  q.set('fc', $('fullchain').firstElementChild.classList.contains('on')?'1':'0');
+  const inc=[...document.querySelectorAll('#types .chip.on')].map(c=>c.dataset.type);
+  const exc=[...document.querySelectorAll('#types .chip.exc')].map(c=>c.dataset.type);
+  if(inc.length) q.set('inc', inc.join(','));
+  if(exc.length) q.set('exc', exc.join(','));
+  q.set('bs', document.querySelector('#bststage button.on').dataset.stage);
+  q.set('bmin', String(Math.min(+$('bstmin').value,+$('bstmax').value)));
+  q.set('bmax', String(Math.max(+$('bstmin').value,+$('bstmax').value)));
+  q.set('st', STRAT_KEY[$('strat').value]||'triangle');
+  if($('basesel').value) q.set('base', $('basesel').value);
+  q.set('px', String(curProx()));
+  q.set('rar', document.querySelector('#rarity button.on').dataset.r);
+  if(selGens().length>1 && document.querySelector('#crossgen button.on').dataset.cg==='1') q.set('cg','1');
+  q.set('era', era);
+  return q.toString();
+}
+function syncHash(){ try{ history.replaceState(null,'', '#'+serializeParams()); }catch(e){} }
+function segPick(segId, attr, val){ const seg=$(segId); if(!seg) return null;
+  const b=[...seg.querySelectorAll('button')].find(x=>x.dataset[attr]===val);
+  if(b){ seg.querySelectorAll('button').forEach(x=>{ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); }); b.classList.add('on'); b.setAttribute('aria-pressed','true'); return b; } return null; }
+function resetFilters(){ sfx('toggle');
+  document.querySelectorAll('#gens .chip').forEach(c=>{ const on=c.dataset.gen==='1'; c.classList.toggle('on',on); c.setAttribute('aria-pressed',String(on)); });
+  segPick('crossgen','cg','0'); segPick('sizeseg','s','3'); size=3; segPick('prox','p','1'); segPick('rarity','r','0');
+  segPick('evoseg','e','any'); const bs=segPick('bststage','stage','last'); if(bs&&$('bstStageLbl'))$('bstStageLbl').textContent=bs.textContent;
+  const fc=$('fullchain'); fc.querySelectorAll('button').forEach(x=>x.classList.remove('on')); fc.children[1].classList.add('on');
+  $('strat').value='Perfect type triangle';
+  document.querySelectorAll('#types .chip').forEach(c=>{ c.dataset.state='off'; c.classList.remove('on','exc'); c.setAttribute('aria-pressed','false'); });
+  $('bstmin').value=0; $('bstmax').value=720; $('bandv').textContent='0-720';
+  $('basesel').value='';
+  updatePool(); updateGeoState(); setProximity(curProx()); runOptimizer(false); }
+function applyHash(){
+  const h=(location.hash||'').replace(/^#/,''); if(!h) return false;
+  const q=new URLSearchParams(h);
+  const KNOWN=['g','sz','ev','fc','inc','exc','bs','bmin','bmax','st','base','px','rar','cg','era'];
+  if(![...q.keys()].some(k=>KNOWN.includes(k))) return false;   // a hash with no recognized keys (e.g. #ref=x) must NOT wipe the current filters
+  // fully authoritative: every control is set from the hash, defaulting when its key is absent, so the live state always equals a real share link (no hybrid state)
+  { const gs=(q.get('g')||'1').split(',').filter(Boolean);
+    document.querySelectorAll('#gens .chip').forEach(c=>{ c.classList.toggle('on', gs.includes(c.dataset.gen)); c.setAttribute('aria-pressed', String(c.classList.contains('on'))); });
+    if(!document.querySelector('#gens .chip.on')){ const c0=document.querySelector('#gens .chip'); c0.classList.add('on'); c0.setAttribute('aria-pressed','true'); } }
+  { const b=segPick('sizeseg','s',q.get('sz')||'3'); if(b) size=+b.dataset.s; }
+  segPick('evoseg','e',q.get('ev')||'any');
+  { const on=(q.get('fc')||'0')==='1'; const seg=$('fullchain'); seg.querySelectorAll('button').forEach(x=>x.classList.remove('on')); seg.children[on?0:1].classList.add('on'); }
+  { const inc=(q.get('inc')||'').split(',').filter(Boolean), exc=(q.get('exc')||'').split(',').filter(Boolean);
+    document.querySelectorAll('#types .chip').forEach(c=>{ const t=c.dataset.type; const st=inc.includes(t)?'inc':exc.includes(t)?'exc':'off';
+      c.dataset.state=st; c.classList.toggle('on',st==='inc'); c.classList.toggle('exc',st==='exc'); c.setAttribute('aria-pressed',st!=='off'); }); }
+  { const b=segPick('bststage','stage',q.get('bs')||'last'); if(b)$('bstStageLbl').textContent=b.textContent; }
+  { let lo=+(q.get('bmin')||'0'), hi=+(q.get('bmax')||'720'); if(!isFinite(lo))lo=0; if(!isFinite(hi))hi=720; if(lo>hi){const t=lo;lo=hi;hi=t;} $('bstmin').value=lo; $('bstmax').value=hi; $('bandv').textContent=lo+'-'+hi; }
+  { const label=Object.keys(STRAT_KEY).find(k=>STRAT_KEY[k]===(q.get('st')||'triangle'))||'Perfect type triangle'; $('strat').value=label; }
+  rebuildBaseTowns(); // populate towns for the restored generations before selecting the base
+  { const v=q.get('base'); $('basesel').value = (v && [...$('basesel').options].some(o=>o.value===v)) ? v : ''; }
+  segPick('prox','p',q.get('px')||'1');
+  segPick('rarity','r',q.get('rar')||'0');
+  segPick('crossgen','cg', q.get('cg')||'0');
+  { era=(q.get('era')==='rby')?'rby':'frlg'; $('era').querySelectorAll('button').forEach(x=>{ const on=x.dataset.era===era; x.classList.toggle('on',on); x.setAttribute('aria-pressed',String(on)); }); }
+  updatePool(); setProximity(curProx());
+  return true;
+}
+function copyShareLink(){ const btn=$('sharebtn'); if(btn.classList.contains('done')) return; syncHash(); const url=location.href; const old=btn.innerHTML;
+  const done=()=>{ btn.classList.add('done'); btn.textContent='✓ Copied'; setTimeout(()=>{ btn.classList.remove('done'); btn.innerHTML=old; },1400); };
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done).catch(()=>{ prompt('Copy this link:', url); }); }
+  else { const ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); done();}catch(e){ prompt('Copy this link:', url); } document.body.removeChild(ta); } }
+function applyResults(out, doSpin, ms){ clearTimeout(spinTimer); spinning=false; $('spin').disabled=false; RESULTS=out.results; LADDER=out.strategyLadder; idx=0; maxTierSeen=0; $('poolv').textContent='pool '+out.trace.pool;
+  effBase = ('effBaseTown' in out) ? out.effBaseTown : (baseVal()||null);
+  effBaseRegion = (('effBaseTownRegion' in out) && out.effBaseTownRegion) ? out.effBaseTownRegion : baseTownRegion();
+  effProx = ('effProximity' in out) ? out.effProximity : curProx();
+  { const _p=(window.__perf=window.__perf||[]); _p.push({compute:+(+ms||0).toFixed(1),combos:out.trace.combosScored,pool:out.trace.pool,capped:!!out.trace.capped,noMatch:!RESULTS.length}); if(_p.length>200) _p.shift(); } // bounded telemetry buffer (no unbounded session growth)
+  if(!RESULTS.length){ setReelsMsg('NO MATCHES — relax the filters'); clearSide(); if($('evobar'))$('evobar').hidden=true; if($('revealprompt'))$('revealprompt').hidden=true; $('spin').classList.remove('pulse'); revealed=false; sfx('error'); sayResult('No teams match these filters. Relax the filters.'); return; }
+  buildReels(); idx=0;
+  if(doSpin) revealTeam(RESULTS[0]); else gateReveal();
+  const rn=$('relaxnote');
+  if(out.relaxed&&out.relaxed.length){
+    if(rn){ rn.textContent='⚠ no exact match — loosened: '+out.relaxed.join(' → '); rn.hidden=false; const tip='Your filters returned zero teams, so they were relaxed one step at a time (in this order) until '+RESULTS.length+' matches appeared.'; rn.title=tip; if(rn.dataset.tip!=null){ rn.dataset.tip=tip; rn.removeAttribute('title'); } }
+    const b=$('banner'); b.textContent='Auto-relaxed: '+out.relaxed.join(' + '); b.classList.remove('show'); void b.offsetWidth; b.classList.add('show'); setTimeout(()=>b.classList.remove('show'),3600);
+  } else if(rn){ rn.hidden=true; rn.textContent=''; } }
+function setComputing(on){ clearTimeout(computingTimer); if(on){ computingTimer=setTimeout(()=>$('reels').classList.add('busy'),170); } else { $('reels').classList.remove('busy'); } }
+function onWorkerMsg(e){ const m=e.data;
+  if(m.type==='ready'){ workerReady=true; return; }
+  if(m.type==='result'){ if(m.id!==reqId) return; setComputing(false); applyResults(m.out, pendingSpin, m.ms); return; }
+  if(m.type==='error'){ if(m.id!==reqId) return; setComputing(false); useWorker=false; runOptimizer(pendingSpin); } }
+function runOptimizer(doSpin){ if(!DATA) return; const p=readParams(); syncHash();
+  if(useWorker && worker && workerReady){ clearTimeout(spinTimer); spinning=false; const id=++reqId; pendingSpin=doSpin; setComputing(true); worker.postMessage({type:'optimize', id, params:p}); return; } // cancel any in-flight spin so a slow worker reply can't land a stale team against the new filters
+  const t0=performance.now(); const out=optimize(DATA,p); applyResults(out, doSpin, performance.now()-t0); }
+
+// ---- render ----
+const memberBase=(m)=>DATA.pokemon[String(m.baseDex)];
+// highlight the team-readout rows for the given base-dex list (hover a score/matrix cell -> see who drives it)
+function hlMembers(dexes){ document.querySelectorAll('#smons .smon').forEach(el=>{ el.classList.toggle('hl', !!(dexes&&dexes.includes(+el.dataset.dex))); }); }
+// which score drives the ranking for each strategy, in priority order (for the "why #N ranked higher" caption)
+const STRAT_TERMS={ triangle:[['tri','hi'],['shared','lo'],['cov','hi'],['fair','hi']], coverage:[['cov','hi'],['shared','lo'],['fair','hi']],
+  weakness:[['shared','lo'],['cov','hi'],['fair','hi']], fairness:[['fair','hi'],['cov','hi']], sametype:[['cov','hi'],['fair','hi'],['shared','lo']],
+  any:[['cov','hi'],['fair','hi'],['shared','lo']] };
+const TERMLABEL={ tri:'triangle score', cov:'coverage', shared:'shared weaknesses', fair:'stat balance' };
+const SORTBY={ triangle:'a perfect triangle, then fewest shared weaknesses', coverage:'widest type coverage', weakness:'fewest shared weaknesses', fairness:'most even stat totals', sametype:'a shared type', any:'coverage & balance' };
+const HEADCHIP={ triangle:'s-tri', coverage:'s-cov', fairness:'s-fair' };
+function whyBeats(better, cur){ if(better.tier<cur.tier) return `it satisfies an earlier strategy (${better.strategyLabel})`;
+  for(const [k,dir] of (STRAT_TERMS[cur.strategy]||STRAT_TERMS.any)){ const bv=better.score[k], cv=cur.score[k];
+    if(dir==='hi'&&bv>cv) return `higher ${TERMLABEL[k]} (${bv} vs ${cv})`;
+    if(dir==='lo'&&bv<cv) return `fewer ${TERMLABEL[k]} (${bv} vs ${cv})`; }
+  return 'an even tiebreak'; }
+function renderResult(c){ $('rank').textContent='MATCH #'+(idx+1)+' / '+RESULTS.length;
+  const te=$('tier'); te.textContent=c.strategyLabel; te.className='tier'+(c.tier>0?' relax':'');
+  $('s-fair').textContent=c.score.fair; $('s-cov').textContent=c.score.cov; $('s-tri').textContent=c.score.tri; $('s-evo').textContent=c.score.spread;
+  // highlight the chip that is actually the active sort key
+  ['s-fair','s-cov','s-tri','s-evo'].forEach(id=>{ const sc=$(id)&&$(id).closest('.sc'); if(sc) sc.classList.remove('active'); });
+  const hc=HEADCHIP[c.strategy]; if(hc&&$(hc)){ const sc=$(hc).closest('.sc'); if(sc) sc.classList.add('active'); }
+  const wl=$('whyline'); if(wl){ let t=(idx>0? '<b>#'+idx+'</b> ranked higher: '+whyBeats(RESULTS[idx-1],c)+'.  ' : '');
+    t+='Sorted by '+(SORTBY[c.strategy]||SORTBY.any)+'.'; wl.innerHTML=t; }
+  sayResult('Match '+(idx+1)+' of '+RESULTS.length+', '+c.strategyLabel+'. '+c.members.map(m=>m.finalName||m.baseName).join(', ')+'. Triangle '+c.score.tri+', coverage '+c.score.cov+'.'); }
+const LADDER_GATE={ triangle:['tri','≥',100], coverage:['cov','≥',80], weakness:['shared','≤',1], fairness:['fair','≥',85] };
+function renderLadder(c){ $('ladder').innerHTML=LADDER.map((s,i)=>{ let cls='rung'; if(i===c.tier)cls+=' on'; else if(i<c.tier)cls+=' passed';
+  const g=LADDER_GATE[s.key]; let note='', tip = i===c.tier?'This strategy’s bar was met — the match landed here':(i<c.tier?'Tried first; this combo missed the bar':'Not reached (an earlier strategy already matched)');
+  if(g && i<=c.tier){ const v=c.score[g[0]]; const ok = g[1]==='≥' ? v>=g[2] : v<=g[2];
+    note=`<span class="gate ${ok?'ok':'no'}">${g[0]} ${v}${g[1]}${g[2]} ${ok?'✓':'✗'}</span>`; }
+  return `<div class="${cls}" title="${tip}"><span class="n">${i===0?'PRIMARY':'FALLBACK '+i}</span><br>${s.label}${note?'<br>'+note:''}</div>`; }).join(''); }
+function relaxBanner(c){ if(c.tier>maxTierSeen){ maxTierSeen=c.tier; const b=$('banner');
+  b.textContent='Relaxing to: '+(LADDER[c.tier]?.label||'best remaining'); b.classList.add('show'); setTimeout(()=>b.classList.remove('show'),1900); } }
+const SL=['HP','AT','DF','SA','SD','SP'];
+const STATNAME={HP:'Hit Points',AT:'Attack',DF:'Defense',SA:'Special Attack',SD:'Special Defense',SP:'Speed'};
+const statrow=(lb,v)=>`<div class="statrow" title="${STATNAME[lb]||lb}: ${v} (bar scaled to 150)"><span class="lb">${lb}</span><div class="bar"><i style="width:${Math.min(100,v/150*100)}%"></i></div><span class="vl">${v}</span></div>`;
+function pips(stageCount, cur){ const full=$('fullchain').firstElementChild.classList.contains('on'); let h='<div class="pips'+(full?' link':'')+'">';
+  for(let i=0;i<3;i++)h+=`<span class="pip${i<stageCount?' on':''}${i===cur?' now':''}"></span>`; return h+'</div>'; }
+function renderSide(c){ if(window.__slHideTip) window.__slHideTip(); // dismiss any tooltip whose anchor this re-render removes
+  $('smons').innerHTML=c.members.map(m=>{ const cur=stageMon(m); const dex=stageDex(m); const s=cur.baseStats;
+    const chips=g1Types(cur.types).map(t=>`<span class="stype">${t}</span>`).join(''); // Gen-1 view: no retconned Fairy chip
+    const bars=[s.hp,s.atk,s.def,s.spAtk,s.spDef,s.speed].map((v,i)=>statrow(SL[i],v)).join('');
+    const tail = dex!==m.finalDex ? `<span class="bst">→ ${m.finalName}</span>` : (m.stageCount>1?'<span class="bst">final form</span>':'');
+    return `<div class="smon click" data-dex="${m.baseDex}" tabindex="0" role="button" aria-label="Inspect ${cur.name}"><div class="sp"><div class="im"><img alt="" src="${sprUrl(dex)}" onerror="this.onerror=null;this.src='sprites/frlg/${dex}.png'"></div>${pips(m.stageCount, stageIdx(m))}</div>
+      <div class="sd"><div class="nm">${cur.name}${tail}</div><div class="stypes">${chips}</div>${bars}</div></div>`; }).join('');
+  const bsts=c.members.map(m=>m.bst); const avg=Math.round(bsts.reduce((a,b)=>a+b,0)/bsts.length); const spread=Math.max(...bsts)-Math.min(...bsts);
+  // "why" for the tiles: which types the team can't hit SE (coverage) + who makes the BST spread
+  const TAo=curTAPI(); const eraTypes = gen1OnlyView() ? TYPES.filter(t=>t!=='dark'&&t!=='steel'&&t!=='fairy') : TYPES; const nTy=eraTypes.length;
+  const uncov=eraTypes.filter(t=>!c.members.some(m=>TAo.bestOffense(m.finalTypes,[t])>=2)).map(t=>TABBR[t]);
+  const hi=c.members.reduce((a,m)=>m.bst>a.bst?m:a), lo=c.members.reduce((a,m)=>m.bst<a.bst?m:a);
+  const covTip = uncov.length? 'Can’t hit super-effectively: '+uncov.join(' · ') : ('Full offensive coverage — hits all '+nTy+' types');
+  const spTip = spread? `${spread} = ${memberBase(hi).name} ${hi.bst} − ${memberBase(lo).name} ${lo.bst}` : 'all three share the same BST';
+  $('team').innerHTML=`<div class="tstat" title="Average base-stat total of the three final forms"><b>${avg}</b><small>Avg BST</small></div><div class="tstat" title="${spTip}"><b>${spread}</b><small>BST spread &darr;</small></div>
+    <div class="tstat" title="${covTip}"><b>${c.score.cov}%</b><small>Coverage</small></div><div class="tstat"><b>${c.members.length}</b><small>Team size</small></div>`;
+  const cg=$('covgap'); if(cg){ cg.innerHTML = uncov.length? '<b>Coverage gaps</b> (no super-effective hit): '+uncov.join(' · ') : ('<b>Full offensive coverage</b> &mdash; the team hits all '+nTy+' types super-effectively'); }
+  const spc=$('s-evo')&&$('s-evo').closest('.sc'); if(spc) spc.dataset.hl=hi.baseDex+','+lo.baseDex; // Spread chip hover -> highlight the two endpoint members
+  renderDefense(c);
+}
+const TABBR={normal:'NOR',fire:'FIR',water:'WAT',electric:'ELE',grass:'GRA',ice:'ICE',fighting:'FIG',poison:'POI',
+  ground:'GRD',flying:'FLY',psychic:'PSY',bug:'BUG',rock:'ROC',ghost:'GHO',dragon:'DRA',dark:'DRK',steel:'STE',fairy:'FAI'};
+// Gen-1 has 15 types (no dark/steel/fairy); keep the readout chips + defensive matrix era-consistent
+const eraTypeList=()=> gen1OnlyView() ? TYPES.filter(t=>t!=='dark'&&t!=='steel'&&t!=='fairy') : TYPES;
+const g1Types=(ts)=>{ if(!gen1OnlyView()) return ts; const t=ts.filter(x=>x!=='fairy'); return t.length?t:['normal']; };
+// per attacking type, how the team collectively defends (weak / resist / immune member counts)
+function defenseProfile(members){
+  const per={}; const T=curTAPI();
+  for(const t of eraTypeList()){ let w=0,r=0,im=0; // Gen-1: only the 15 era attack types
+    for(const m of members){ const mult=T.eff(t,m.finalTypes);
+      if(mult===0) im++; else if(mult>1) w++; else if(mult<1) r++; }
+    per[t]={w,r,im}; }
+  return per;
+}
+function renderDefense(c){
+  if(!TAPI){ $('dmx').innerHTML=''; return; }
+  const TD=curTAPI();
+  const per=defenseProfile(c.members);
+  const shared=eraTypeList().filter(t=>per[t].w>=2);
+  const weakMembers=(t)=> c.members.filter(m=>TD.eff(t,m.finalTypes)>1);
+  const cells=eraTypeList().map(t=>{ const {w,r,im}=per[t];
+    let cls='dmc',ct='';
+    if(w>=2){ cls+=' shared'; ct=`<span class="ct">${w}</span>`; }
+    else if(w===1){ cls+=' weak'; }
+    else if(im>0){ cls+=' immune'; }
+    else if(r>0){ cls+=' resist'; }
+    const wm=weakMembers(t);
+    // tooltip + hover both name WHICH members are weak, so a red cell explains itself
+    const title=`vs ${t.toUpperCase()} attacks: ${w?wm.map(m=>memberBase(m).name).join(' & ')+' weak':'no member weak'}${r?` · ${r} resist`:''}${im?` · ${im} immune`:''}`;
+    return `<div class="${cls}" title="${title}" data-weak="${wm.map(m=>m.baseDex).join(',')}">${TABBR[t]}${ct}</div>`; }).join('');
+  const swTxt = shared.length
+    ? `<span class="sw-list bad">! ${shared.map(t=>TABBR[t]).join(' ')}</span>`
+    : `<span class="sw-list ok">none — balanced</span>`;
+  let html=`<div class="lbl"><span>Defensive profile</span>${swTxt}</div>`+
+    `<div class="dmgrid">${cells}</div>`+
+    `<div class="dmleg"><span><i style="background:#c6102a"></i>shared weak (2+)</span>`+
+    `<span><i style="background:rgba(244,193,58,.75)"></i>1 weak</span>`+
+    `<span><i style="background:rgba(15,56,15,.34)"></i>resist</span>`+
+    `<span><i style="background:rgba(15,56,15,.62)"></i>immune</span></div>`;
+  if(c.swap){ const s=c.swap;
+    const toName=s.toFinalName&&s.toFinalName!==s.toBaseName?`${s.toBaseName} <span class="fn">&rarr;${s.toFinalName}</span>`:s.toBaseName;
+    const covTxt=(s.newCov!==c.score.cov)?`, coverage ${c.score.cov}&rarr;${s.newCov}%`:'';
+    const caveat=s.breaksTriangle?` <span class="cv">(breaks the perfect triangle)</span>`:'';
+    // name exactly which shared weaknesses the swap removes (recompute the post-swap team)
+    const after=c.members.map((m,i)=> i===s.slot? (s.toFinalTypes||m.finalTypes) : m.finalTypes);
+    const removed=shared.filter(t=> after.filter(ft=>TD.eff(t,ft)>1).length < 2).map(t=>TABBR[t]);
+    const remTxt=removed.length?` <span class="rem">removes ${removed.join(', ')}</span>`:'';
+    html+=`<div class="dmswap">&#8644; <b>${s.fromName}</b> is the weak link. Swap for <b>${toName}</b> &mdash; shared weakness <span class="ar">${s.oldShared}&rarr;${s.newShared}</span>${remTxt}${covTxt}${caveat}</div>`;
+  }
+  $('dmx').innerHTML=html;
+}
+function clearSide(){ $('smons').innerHTML=''; $('team').innerHTML=''; if($('dmx'))$('dmx').innerHTML=''; if($('covgap'))$('covgap').innerHTML=''; if($('whyline'))$('whyline').innerHTML=''; if($('relaxnote')){$('relaxnote').hidden=true;$('relaxnote').textContent='';} $('ladder').innerHTML=''; if($('trisvg'))$('trisvg').innerHTML=''; hideJackpot(); $('rank').textContent='\u2014'; const te=$('tier'); te.textContent='no match'; te.className='tier relax'; ['s-fair','s-cov','s-tri','s-evo'].forEach(id=>$(id).textContent='--'); if($('mapgrid'))$('mapgrid').innerHTML=''; if($('maplabel'))$('maplabel').textContent='\u2014'; $('mapcap').textContent='No matches \u2014 relax the filters'; }
+
+// ---- map (region-aware, auto multi-panel: Kanto / Johto / Hoenn) ----
+const REGIONS={};            // region -> {loc, conn, xy:{id:[x,y]}, towns:Set}
+const RNAME={kanto:'Kanto',johto:'Johto',hoenn:'Hoenn'};
+const genRegion={1:'kanto',2:'johto',3:'hoenn'};
+const GEN_OF=dex=>{ const p=DATA.pokemon[String(dex)]; return p&&p.generation; };
+const memberRegion=m=>genRegion[GEN_OF(m.baseDex)]||'kanto';  // a member's home-region map
+const STARTERS=new Set([1,4,7,152,155,158,252,255,258]);      // version starters — never wild-catchable
+function initRegions(){ for(const data of Object.values(REGIONS)){ const xy={}, towns=new Set();
+    for(const nd of (data.conn&&data.conn.nodes||[])){ if(nd.x!=null) xy[nd.id]=[nd.x,nd.y]; if(nd.type==='town') towns.add(nd.id); }
+    data.xy=xy; data.towns=towns; } }
+const MAPS_URL={kanto:'maps/kanto_frlg.png',johto:'maps/johto.png',hoenn:'maps/hoenn.png'};
+// viewBox height per region so the overlay's aspect matches the map PNG (keeps nodes round, not stretched)
+const VBH={kanto:160,johto:200,hoenn:148.5};
+const baseVal=()=>$('basesel').value;
+// the base/proximity the CURRENT results were actually computed under (may be relaxed from the controls),
+// so the map's reach + pin match the shown teams. Set in applyResults; fall back to live control values.
+let effBase=null, effBaseRegion='kanto', effProx=1;
+const baseTownName=(id)=>{ const R=REGIONS[effBaseRegion]; const nd=R&&R.conn&&R.conn.nodes.find(n=>n.id===id); return nd?nd.name:id; };
+function setProximity(p){ const node=baseVal();
+  $('proxhint').textContent = node ? (p===0?'Only Pokémon catchable in the town itself':`Reachable routes within ${p} step${p>1?'s':''} highlighted red (real BFS graph)`) : 'Anywhere: each map marks where every combo Pokémon is caught. Pick a town for BFS route highlighting.'; }
+// which nodes in `region` can catch member m (checks its whole evolution line)
+function memberCatchNodesIn(region, m){ const R=REGIONS[region]; if(!R||!R.loc) return [];
+  const dexes=(m.stages&&m.stages.length)?m.stages.map(s=>s.dex):[m.baseDex]; const out=[];
+  for(const [id,loc] of Object.entries(R.loc)){ if(id==='_meta')continue;
+    for(const c of (loc.catchable||[])){ if(dexes.includes(c.dexNumber)){ out.push(id); break; } } } return out; }
+// regions to render: base town -> just its region; else one panel per member's HOME region
+// (so a cross-gen trio splits onto its members' individual maps, an all-gen-1 trio shows just Kanto)
+// every returned region is guaranteed present in REGIONS (empty [] if location data failed to load)
+function comboPanelRegions(c){ const fb=()=>{ const r=genRegion[Math.max(...selGens())]; return REGIONS[r]?[r]:[]; };
+  const node=effBase;
+  if(node){ const br=effBaseRegion; return REGIONS[br]?[br]:[]; }
+  if(!c) return fb();
+  const selR=new Set(selGens().map(g=>genRegion[g]));
+  const present=new Set();
+  for(const m of c.members){ let caught=false;
+    for(const r of ['kanto','johto','hoenn']){ if(!REGIONS[r]||!selR.has(r)) continue; if(memberCatchNodesIn(r,m).length){ present.add(r); caught=true; } }
+    if(!caught){ const hr=memberRegion(m); if(REGIONS[hr]&&selR.has(hr)) present.add(hr); } } // non-wild member -> its home map (for the note)
+  const regs=['kanto','johto','hoenn'].filter(r=>present.has(r));
+  return regs.length?regs:fb(); }
+// render one map panel per relevant region (so a cross-gen trio shows up to 3 live maps at once)
+function renderMaps(c){ const grid=$('mapgrid'); if(!grid) return;
+  const regs=comboPanelRegions(c); grid.dataset.n=regs.length; grid.innerHTML='';
+  if(!regs.length){ if($('maplabel'))$('maplabel').textContent='—'; if($('mapcap'))$('mapcap').textContent='Catch maps unavailable (location data didn’t load)'; return; }
+  const node=effBase;
+  for(const r of regs) grid.appendChild(buildPanel(r,c,{isBase:!!node && r===effBaseRegion}));
+  $('maplabel').textContent = regs.length>1 ? (regs.map(r=>RNAME[r]).join(' + ')+'  ·  '+regs.length+' maps') : RNAME[regs[0]];
+  $('mapcap').textContent = node ? ('Base: '+(baseTownName(node)||'')+'  ·  ≤'+effProx+' steps  ·  red = reachable')
+    : (c ? (regs.length>1 ? 'Each member shown on every selected region where it’s catchable' : 'Where each team member is caught in the wild') : 'Pick parameters to see catch maps');
+  if($('legendprox')) $('legendprox').textContent = node ? ('≤'+effProx+' step'+(effProx===1?'':'s')) : 'your step limit'; }
+function buildPanel(region, c, opts){ const NS='http://www.w3.org/2000/svg';
+  const R=REGIONS[region]; if(!R||!R.xy){ const ph=document.createElement('div'); ph.className='mappanel'; ph.innerHTML='<div class="panelcap"><b>'+(RNAME[region]||region)+'</b> · map unavailable</div>'; return ph; }
+  const H=VBH[region]||160; const XY=R.xy, towns=R.towns;
+  const panel=document.createElement('div'); panel.className='mappanel'; panel.dataset.region=region;
+  const cap=document.createElement('div'); cap.className='panelcap'; panel.appendChild(cap);
+  const wrap=document.createElement('div'); wrap.className='mapwrap';
+  wrap.innerHTML='<img class="mapimg" src="'+MAPS_URL[region]+'" alt="'+RNAME[region]+' Town Map">'
+    +'<svg class="mapsvg" viewBox="0 0 240 '+H+'" preserveAspectRatio="none"><g class="gedges"></g><g class="gnodes"></g><g class="glabels"></g></svg>'
+    +'<div class="overlay"><div class="pin" style="display:none"><img src="__MARKER__" alt="you are here"></div></div>';
+  panel.appendChild(wrap);
+  const ge=wrap.querySelector('.gedges'), gn=wrap.querySelector('.gnodes'), gl=wrap.querySelector('.glabels');
+  const node=effBase; let reach=null;
+  if(opts.isBase && node && R.conn) reach=bfsReach(R.conn,node,effProx);
+  for(const [a,b] of (R.conn.edges||[])){ const pa=XY[a],pb=XY[b]; if(!pa||!pb)continue;
+    const ln=document.createElementNS(NS,'line'); ln.setAttribute('x1',pa[0]*240);ln.setAttribute('y1',pa[1]*H);ln.setAttribute('x2',pb[0]*240);ln.setAttribute('y2',pb[1]*H);
+    ln.setAttribute('class','edge'+(reach&&reach.has(a)&&reach.has(b)?' reach':'')); ge.appendChild(ln); }
+  // members to show here: those actually CATCHABLE in this region, plus any homed-here member that is
+  // catchable in NO region (so the "not in the wild" note lands on its home map, not a false one elsewhere)
+  const catchableNowhere=(m)=>['kanto','johto','hoenn'].every(r=>!REGIONS[r]||!memberCatchNodesIn(r,m).length);
+  const mine = c ? (node ? c.members : c.members.filter(m=> memberCatchNodesIn(region,m).length || (memberRegion(m)===region && catchableNowhere(m)) )) : [];
+  const seen={}; let here=0, total=mine.length; const missing=[];
+  for(const m of mine){ const cn=memberCatchNodesIn(region,m); if(!cn.length){ missing.push(m); continue; } here++;
+      let chosen=reach? cn.find(x=>reach.has(x)) : null; chosen=chosen||cn[0];
+      if(chosen&&XY[chosen]) (seen[chosen]=seen[chosen]||[]).push(memberBase(m).name); }
+  // draw route/cave nodes first, towns last so a town circle always sits on top and takes the pointer
+  const orderedNodes=[...R.conn.nodes].sort((a,b)=>(a.type==='town'?1:0)-(b.type==='town'?1:0));
+  for(const nd of orderedNodes){ const p=XY[nd.id]; if(!p)continue;
+    const cc=document.createElementNS(NS,'circle'); cc.setAttribute('cx',p[0]*240);cc.setAttribute('cy',p[1]*H);
+    cc.setAttribute('r',towns.has(nd.id)?3.6:2.3);
+    let cls='gnode t-'+nd.type; if(reach&&reach.has(nd.id))cls+=' reach'; if(seen[nd.id])cls+=' catch';
+    cc.setAttribute('class',cls); cc.dataset.node=nd.id;
+    const tt=document.createElementNS(NS,'title'); tt.textContent=nd.name+(seen[nd.id]?(' — '+seen[nd.id].join(', ')+' caught here'):''); cc.appendChild(tt);
+    if(towns.has(nd.id)){ cc.style.cursor='pointer'; cc.onclick=()=>setBaseTown(nd.id, region); }
+    gn.appendChild(cc); }
+  // labels, sorted top-to-bottom with a light vertical anti-collision nudge
+  const labs=[]; for(const nid in seen){ const p=XY[nid]; let lx=p[0]*240, anchor='middle'; if(lx<30){lx=3;anchor='start';}else if(lx>210){lx=237;anchor='end';}
+    labs.push({x:lx,y:p[1]*H-6,anchor,txt:seen[nid].length>1?(seen[nid][0]+' +'+(seen[nid].length-1)):seen[nid][0]}); }
+  labs.sort((a,b)=>a.y-b.y);
+  for(let i=1;i<labs.length;i++){ for(let j=0;j<i;j++){ if(Math.abs(labs[i].x-labs[j].x)<44 && Math.abs(labs[i].y-labs[j].y)<9){ labs[i].y=labs[j].y+9.5; } } }
+  for(const L of labs){ const tx=document.createElementNS(NS,'text'); tx.setAttribute('x',L.x);tx.setAttribute('y',L.y);tx.setAttribute('text-anchor',L.anchor);tx.setAttribute('class','glabel'); tx.textContent=L.txt; gl.appendChild(tx); }
+  if(opts.isBase && node && XY[node]){ const pin=wrap.querySelector('.pin'); pin.style.left=(XY[node][0]*100)+'%'; pin.style.top=(XY[node][1]*100)+'%'; pin.style.display='block'; }
+  let capt='<b>'+RNAME[region]+'</b>';
+  if(opts.isBase && node) capt+=' &middot; base '+(baseTownName(node)||'');
+  if(c){ if(here) capt+=' &middot; '+here+' of '+total+' caught here';
+    if(missing.length){ const parts=missing.map(m=>memberBase(m).name+(STARTERS.has(m.baseDex)?' (starter)':' (gift/trade/evolve-only)'));
+      capt+=' &middot; <span class="pnote">not in the wild: '+parts.join(', ')+'</span>'; } }
+  cap.innerHTML=capt; return panel; }
+
+// ---- reels ----
+const CELL=64,LAND=20,N=25;
+const cellImg=(dex)=>`<div class="cell"><img alt="" src="${sprUrl(dex)}" onerror="this.onerror=null;this.src='sprites/dex/${dex}.png'"></div>`;
+function buildReels(){ const rl=$('reels'); rl.innerHTML='';
+  for(let i=0;i<Math.max(size,3);i++){ const r=document.createElement('div'); r.className='reel'+(i>=size?' gone':'');
+    if(i<size){ r.title='Click for full stats, evolution line & catch spots'; r.tabIndex=0; r.setAttribute('role','button'); r.setAttribute('aria-label','Reel '+(i+1)+' — reveal the team, or inspect this member'); } // keyboard-operable (Enter/Space via the global role=button handler)
+    r.innerHTML='<div class="strip"></div>'; rl.appendChild(r); }
+  const pl=document.createElement('div'); pl.className='payline'; rl.appendChild(pl); if(RESULTS[idx]){ if(revealed) landInstant(RESULTS[idx]); else coverReels(); } }
+const strips=()=>[...document.querySelectorAll('.reel:not(.gone) .strip')];
+const reelEls=()=>[...document.querySelectorAll('.reel:not(.gone)')];
+const randDex=()=>poolDex.length?poolDex[(Math.random()*poolDex.length)|0]:((Math.random()*386)|0)+1;
+// ---- evolve preview: step every member up its evolution line together ----
+let evoView=0;                                   // 0 = base, 1 = +1, 2 = +2 (clamped per member)
+const stageIdx=(m)=>Math.min(evoView, (m.stageCount||1)-1);
+const stageDex=(m)=>{ const st=m.stages&&m.stages[stageIdx(m)]; return st?st.dex:m.baseDex; };
+const stageMon=(m)=>DATA.pokemon[String(stageDex(m))]||memberBase(m);
+const maxEvo=()=> RESULTS[idx] ? Math.max(0,...RESULTS[idx].members.map(m=>(m.stageCount||1)-1)) : 0;
+const EVO_LBL=['Base forms','Stage 2','Final forms'];
+function updateEvoBar(){ const bar=$('evobar'); if(!bar) return; const mx=maxEvo();
+  bar.hidden = !(RESULTS.length && mx>0);          // nothing to evolve (all single-stage) -> hide the bar
+  const lbl=$('evolbl'), sub=$('evosub'); if(lbl) lbl.textContent = EVO_LBL[Math.min(evoView,2)] || ('Stage '+(evoView+1));
+  if(sub) sub.textContent = evoView>=mx ? 'Fully evolved — revert to step back' : 'Evolve the whole team one stage';
+  const de=$('devolve'), ev=$('evolve'); const af=document.activeElement;
+  if(de) de.disabled = evoView<=0; if(ev) ev.disabled = evoView>=mx;
+  // if the button the user just pressed became disabled at the min/max stage, move focus to its still-enabled sibling
+  if(af===ev && ev && ev.disabled && de && !de.disabled){ try{ de.focus(); }catch(e){} }
+  else if(af===de && de && de.disabled && ev && !ev.disabled){ try{ ev.focus(); }catch(e){} } }
+function setEvo(v, animate){ if(!RESULTS[idx]) return; const mx=maxEvo(); const nv=Math.max(0,Math.min(v,mx));
+  const up = nv>evoView; evoView=nv; updateEvoBar();
+  if(animate && up){ evolveAnimateReels(); } else { landInstant(RESULTS[idx]); }
+  renderSide(RESULTS[idx]); renderTriangle(RESULTS[idx]); }
+function evolveAnimateReels(){ const c=RESULTS[idx]; sfx('evolve'); const rm=reduceMotion();
+  strips().forEach((strip,r)=>{ const m=c.members[r]; if(!m) return; const img=strip.querySelector('img'); if(!img) return;
+    if((m.stageCount-1) < evoView) return;         // this member is already maxed — no flash
+    if(rm){ img.src=sprUrl(stageDex(m)); return; } // reduced motion / photosensitivity: swap the sprite instantly, no strobe/scale
+    const reel=strip.closest('.reel'); reel.classList.add('evoflash');
+    anim(img,[{filter:'brightness(1) saturate(1)',transform:'scale(1)'},
+      {filter:'brightness(9) saturate(0)',transform:'scale(.5)',offset:.45},
+      {filter:'brightness(9) saturate(0)',transform:'scale(.55)',offset:.56},
+      {filter:'brightness(1) saturate(1)',transform:'scale(1)'}],{duration:850,easing:'ease-in-out'});
+    setTimeout(()=>{ img.src=sprUrl(stageDex(m)); }, 400);
+    setTimeout(()=>reel.classList.remove('evoflash'), 880); }); }
+function landInstant(c){ strips().forEach((strip,r)=>{ const m=c.members[r]; strip.style.transition='none'; strip.style.transform='translateY(0)';
+  const reel=strip.closest('.reel'); if(reel) reel.classList.remove('blur'); // clear any lingering spin blur so an instant re-land (e.g. era-switch mid-respin) is sharp
+  strip.innerHTML=m?`<div class="cell"></div>${cellImg(stageDex(m))}<div class="cell"></div>`:'<div class="cell"></div><div class="cell"><span class="q">?</span></div><div class="cell"></div>'; }); }
+// ---- gated reveal: the team stays face-down until the user SPINs (no pre-show spoiler) ----
+let revealed=false;
+const reduceMotion=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
+function coverReels(){ strips().forEach((strip)=>{ strip.style.transition='none'; strip.style.transform='translateY(0)';
+  strip.innerHTML='<div class="cell"></div><div class="cell facedown"><span class="ball"></span></div><div class="cell"></div>'; }); }
+function spinTo(c, onLand){ clearTimeout(spinTimer); const spinBtn=$('spin'); const wasFocused=document.activeElement===spinBtn; // disabling the focused SPIN would drop focus to <body>
+  spinning=true; $('spin').disabled=true; sfx('spin'); const S=strips(); const fast=reduceMotion();
+  S.forEach((strip,r)=>{ const m=c.members[r];
+    if(!m){ strip.innerHTML='<div class="cell"></div><div class="cell facedown"><span class="ball"></span></div><div class="cell"></div>'; return; }
+    const cells=[]; for(let i=0;i<N;i++)cells.push(randDex()); cells[LAND]=stageDex(m);
+    strip.innerHTML=cells.map(cellImg).join(''); strip.style.transition='none'; strip.style.transform='translateY(0)'; const reel=strip.closest('.reel'); reel.classList.add('blur'); reel.classList.remove('evoflash');
+    void strip.offsetHeight; const dur=fast?0.3:(1.0+r*0.3); strip.style.transition=`transform ${dur}s cubic-bezier(.12,.62,.2,1)`; strip.style.transform=`translateY(${-((LAND-1)*CELL)}px)`;
+    setTimeout(()=>reel.classList.remove('blur'),dur*700); });
+  const last=Math.max(0,Math.min(size,c.members.length)-1); const total=(fast?0.3:(1.0+last*0.3))*1000;
+  spinTimer=setTimeout(()=>{ spinning=false; $('spin').disabled=false; if(wasFocused && document.activeElement===document.body){ try{ spinBtn.focus(); }catch(e){} } sfx('reveal'); if(onLand) onLand(); },total); } // only restore the focus the disable dropped to <body>, never steal focus the user moved
+// after a recompute: cover the reels and hide EVERYTHING about the team until a spin lands
+function gateReveal(){ revealed=false; coverReels();
+  { const dv=document.querySelector('.device'); if(dv) dv.classList.remove('revealed'); } // mobile: re-hide the empty analysis screen
+  $('smons').innerHTML=''; $('team').innerHTML=''; if($('dmx'))$('dmx').innerHTML=''; if($('covgap'))$('covgap').innerHTML='';
+  if($('trisvg'))$('trisvg').innerHTML=''; if($('ladder'))$('ladder').innerHTML=''; if($('whyline'))$('whyline').innerHTML='';
+  if($('mapgrid'))$('mapgrid').innerHTML=''; if($('maplabel'))$('maplabel').textContent='—'; if($('mapcap'))$('mapcap').textContent='Press SPIN to reveal the catch maps';
+  ['s-fair','s-cov','s-tri','s-evo'].forEach(id=>{ const e=$(id); if(e) e.textContent='--'; });
+  $('rank').textContent='READY'; const te=$('tier'); if(te){ te.textContent='hidden'; te.className='tier'; }
+  if($('evobar')) $('evobar').hidden=true; hideJackpot();
+  const rp=$('revealprompt'); if(rp){ rp.hidden=false; const sub=$('rp-sub'); if(sub) sub.textContent=RESULTS.length+' team'+(RESULTS.length>1?'s':'')+' match — reel #'+(idx+1); }
+  $('spin').classList.add('pulse');
+  const poolN=(String($('poolv').textContent).match(/\d+/)||[poolDex.length])[0]; // announce the same count the visible chip shows (filtered line count, not the raw species count)
+  sayResult('Pool '+poolN+' Pokémon. '+RESULTS.length+' team'+(RESULTS.length>1?'s':'')+' match. Press SPIN to reveal.'); }
+// spin, then render the whole team + analysis ONLY when the reels stop
+// the full team readout (everything except the jackpot flash) — shared by the reveal land-callback and the era-switch recovery so they can't diverge
+function renderTeamReadout(c){ renderResult(c); renderSide(c); renderTriangle(c); renderLadder(c); renderMaps(c); relaxBanner(c); updateEvoBar(); }
+function revealTeam(c){ const rp=$('revealprompt'); if(rp) rp.hidden=true; $('spin').classList.remove('pulse'); evoView=0;
+  hideJackpot(); if($('evobar')) $('evobar').hidden=true; // clear the previous team's overlays before the re-spin
+  spinTo(c, ()=>{ revealed=true; landInstant(c); /* normalize the 25-cell spun strip back to 3 cells so evolve targets the visible sprite */
+    { const dv=document.querySelector('.device'); if(dv) dv.classList.add('revealed'); } // mobile: now show the analysis screen
+    renderTeamReadout(c); if(c.tier===0) flashJackpot(c); else hideJackpot(); }); }
+function flashJackpot(c){ const j=$('jackpot'); if(!j)return; j.querySelector('span').textContent=c.score.tri>=100?'★ PERFECT TRIANGLE ★':'★ TOP MATCH ★'; j.classList.remove('show'); void j.offsetWidth; j.classList.add('show'); }
+function hideJackpot(){ const j=$('jackpot'); if(j) j.classList.remove('show'); }
+
+// ---- detail modal + clickable towns + reels ----
+function methodLabel(m){ if(!m) return ''; if(m.tradeRequired) return 'Trade';
+  if(m.minLevel) return 'Lv '+m.minLevel; if(m.item) return 'Use '+String(m.item).replace(/-/g,' ');
+  if(m.minHappiness) return 'Friendship'; if(m.trigger) return String(m.trigger).replace(/-/g,' '); return 'evolve'; }
+const effChip=(t,m)=>`<span class="effchip" style="background:${TCOL[t]};color:${inkFor(TCOL[t])}">${t}<span class="x">×${m}</span></span>`;
+function openDetail(baseDex, member){
+  if(!DATA||!TAPI) return; const b=DATA.pokemon[String(baseDex)]; if(!b) return; sfx('open');
+  const maxGen=Math.max(...selGens());
+  const g1=(ts)=>{ if(!gen1OnlyView()) return ts; const t=ts.filter(x=>x!=='fairy'); return t.length?t:['normal']; }; // Gen-1 has no Fairy: pure-Fairy -> Normal
+  const chain=DATA.chains[String(b.evolutionChainId)];
+  const methodFor=(fromDex,toDex)=>{ const e=((chain&&chain.edges)||[]).find(x=>x.fromDex===fromDex&&x.toDex===toDex); return e?methodLabel(e.methods&&e.methods[0]):''; };
+  const stageCard=(dex,arrowMethod)=>{ const x=DATA.pokemon[String(dex)]; if(!x) return '';
+    const arrow=arrowMethod!=null?`<span class="evoarrow">▸<small>${arrowMethod}</small></span>`:'';
+    return `${arrow}<span class="evostage"><span class="im"><img alt="" src="${sprUrl(dex)}" onerror="this.onerror=null;this.src='sprites/dex/${dex}.png'"></span><b>${x.name}</b><small>BST ${x.bst}</small></span>`; };
+  let stagesHtml='', finalTypes=b.types, finalName=b.name, formLabel='', matchupLabel=b.name;
+  if(member && member.stages && member.stages.length){
+    // known branch (opened from a reel/team tile): render the ACTUAL path + its real final form
+    const path=member.stages.map(s=>s.dex);
+    stagesHtml=path.map((d,i)=> stageCard(d, i>0?methodFor(path[i-1],d):null)).join('');
+    finalName=member.finalName; finalTypes=member.finalTypes;
+    formLabel='final form '+finalName; matchupLabel='final form '+finalName;
+  } else if(chain){
+    // context-free (dex browser): render the WHOLE lineage from the chain ROOT, fanning out only at a
+    // true fork (>=2 era-visible children) — so a leaf/mid/pre-branch species isn't mislabeled. Matchups
+    // + label describe the species actually clicked.
+    const kidsOf=(dex)=> (chain.edges||[]).filter(e=>e.fromDex===dex && DATA.pokemon[String(e.toDex)] && DATA.pokemon[String(e.toDex)].generation<=maxGen);
+    const eraDex=[...new Set(chain.species.map(s=>s.dexNumber))].filter(d=>DATA.pokemon[String(d)] && DATA.pokemon[String(d)].generation<=maxGen);
+    const hasParent=new Set((chain.edges||[]).filter(e=>eraDex.includes(e.toDex)&&eraDex.includes(e.fromDex)).map(e=>e.toDex));
+    // root = the clicked species' OWN era-ancestor (walk up), so a disconnected era-subgraph (e.g. Gen-1
+    // Hitmonchan, whose shared parent Tyrogue is Gen-2) still renders the line containing b.
+    let root=b.dexNumber; for(let g=0; g<12; g++){ const p=(chain.edges||[]).find(e=>e.toDex===root && eraDex.includes(e.fromDex)); if(p) root=p.fromDex; else break; }
+    // recursive tree render: linear where single-child, fan out '/' at EVERY fork, each branch to its leaf
+    const seen=new Set();
+    const renderNode=(dex, arrowMethod)=>{ if(seen.has(dex)) return ''; seen.add(dex);
+      let h=stageCard(dex, arrowMethod); const k=kidsOf(dex);
+      if(k.length===1) h+=renderNode(k[0].toDex, methodFor(dex,k[0].toDex));
+      else if(k.length>=2) h+='<span class="evoarrow">▸<small>evolves into</small></span>'+k.map(e=>renderNode(e.toDex,null)).filter(Boolean).join('<span style="align-self:center;opacity:.55;margin:0 2px">/</span>');
+      return h; };
+    stagesHtml=renderNode(root, null);
+    finalTypes=b.types; finalName=b.name; matchupLabel=b.name; // show the clicked species' own matchups
+    const bKids=kidsOf(b.dexNumber).length, bHasParent=hasParent.has(b.dexNumber);
+    formLabel = bKids>=2 ? ('branch point · '+bKids+' forms')
+              : bKids===0 ? (bHasParent?('fully-evolved form '+b.name):'single stage')
+              : (bHasParent?('mid-stage form '+b.name):('base form '+b.name));
+  } else { formLabel='single stage'; }
+  finalTypes=g1(finalTypes); // strip retconned Fairy under the Gen-1 chart so matchups aren't all-neutral
+  const weak=[],resist=[],immune=[]; const TA=curTAPI();
+  for(const a of TYPES){ const m=TA.eff(a, finalTypes); if(m===0) immune.push(a); else if(m>1) weak.push([a,m]); else if(m<1) resist.push([a,m]); }
+  weak.sort((p,q)=>q[1]-p[1]); resist.sort((p,q)=>p[1]-q[1]);
+  const effHtml=
+    (weak.length?`<div class="effrow"><span class="lbl">Weak to</span>${weak.map(([t,m])=>effChip(t,m)).join('')}</div>`:'')+
+    (resist.length?`<div class="effrow"><span class="lbl">Resists</span>${resist.map(([t,m])=>effChip(t,m)).join('')}</div>`:'')+
+    (immune.length?`<div class="effrow"><span class="lbl">Immune</span>${immune.map(t=>effChip(t,0)).join('')}</div>`:'');
+  const st=b.baseStats;
+  const rows=[['HP',st.hp],['Atk',st.atk],['Def',st.def],['SpA',st.spAtk],['SpD',st.spDef],['Spe',st.speed]];
+  const statsHtml=rows.map(([lb,v])=>`<div class="statrow"><span class="lb">${lb}</span><div class="bar"><i style="width:${Math.min(100,v/150*100)}%"></i></div><span class="vl">${v}</span></div>`).join('');
+  const chips=g1(b.types).map(t=>`<span class="effchip" style="background:${TCOL[t]};color:${inkFor(TCOL[t])}">${t}</span>`).join(' ');
+  $('dscreen').innerHTML=`
+    <div class="dhead2">
+      <div class="big"><img alt="" src="${sprUrl(baseDex)}" onerror="this.onerror=null;this.src='sprites/dex/${baseDex}.png'"></div>
+      <div><h3>${b.name}</h3><div style="margin:3px 0">${chips}</div>
+        <div class="meta">#${String(baseDex).padStart(3,'0')} · Gen ${b.generation} · <span title="Higher = easier to catch; 255 is the easiest possible">catch rate ${b.catchRate}/255</span> · ${formLabel}</div></div>
+      <button class="dclose" id="dclose">✕ Close</button>
+    </div>
+    <div class="dsec"><h4>Evolution line (era-accurate)</h4><div class="evochain">${stagesHtml||'Single stage'}</div></div>
+    <div class="dsec"><h4>Base stats</h4><div class="dstats">${statsHtml}</div></div>
+    <div class="dsec"><h4>Type matchups (${matchupLabel})</h4>${effHtml||'No notable matchups'}</div>
+    <div class="dsec"><h4>Where to catch (wild encounters)</h4><div class="meta" id="dcatch" style="font-size:12px">…</div></div>`;
+  renderCatchInfo(baseDex);
+  $('dclose').onclick=closeDetail; openModal();
+}
+let lastFocus=null;
+function openModal(){ if(!$('dback').classList.contains('open')) lastFocus=document.activeElement; // keep the ORIGINAL opener (dex tile -> detail nests openModal; don't overwrite with the tile)
+  if($('dback').parentNode!==document.body) document.body.appendChild($('dback')); // hoist out of .wrap so inerting .wrap can't inert the modal itself
+  $('dback').classList.add('open');
+  for(const c of document.body.children){ if(c!==$('dback') && c.id!=='tip' && c.id!=='tour' && c.id!=='result-live') c.setAttribute('inert',''); } // trap Tab inside the dialog + hide the background from assistive tech
+  const b=$('dclose'); if(b) b.focus(); }
+function catchSpots(dex){ const out=[];
+  for(const [rk,R] of Object.entries(REGIONS)){ if(!R||!R.loc) continue;
+    for(const [id,loc] of Object.entries(R.loc)){ if(id==='_meta')continue;
+      for(const c of (loc.catchable||[])){ if(c.dexNumber===dex){ out.push({name:loc.name, region:RNAME[rk]||rk, method:c.method, tier:c.rarityTier, exempt:c.catchRateExempt}); break; } } } }
+  return out; }
+function renderCatchInfo(dex){ const el=$('dcatch'); if(!el) return;
+  if(!Object.values(REGIONS).some(R=>R&&R.loc)){ el.textContent='Location dataset loaded next.'; return; } // any loaded region, not just Kanto
+  const spots=catchSpots(dex);
+  el.innerHTML = spots.length
+    ? spots.slice(0,12).map(s=>`<span style="display:inline-block;margin:2px 6px 2px 0">${s.name} <small style="opacity:.6">(${s.region} · ${s.method}${s.tier?' · '+s.tier:''})</small></span>`).join('')
+    : 'Not catchable in the wild — obtain by evolution, gift, or trade.'; }
+function closeDetail(){ if($('dback').classList.contains('open')) sfx('close'); $('dback').classList.remove('open');
+  if(!tActive){ for(const c of document.body.children){ if(c.id!=='tip' && c.id!=='result-live') c.removeAttribute('inert'); } } // leave the tour's own inert alone; tEnd clears it
+  if(lastFocus&&lastFocus.focus){ try{lastFocus.focus();}catch(e){} } }
+function setBaseTown(node, region){ const sel=$('basesel'); const opt=[...sel.options].find(o=>o.value===node && (!region||o.dataset.region===region));
+  if(opt){ sel.value=node; updateGeoState(); setProximity(curProx()); runOptimizer(false); } }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
+$('smons').addEventListener('click',e=>{ const s=e.target.closest('.smon[data-dex]'); if(s){ const m=RESULTS[idx]&&RESULTS[idx].members.find(x=>x.baseDex===+s.dataset.dex); openDetail(+s.dataset.dex, m); } });
+$('reels').addEventListener('click',e=>{ const reel=e.target.closest('.reel:not(.gone)'); if(!reel||!RESULTS[idx])return;
+  if(!revealed){ if(!spinning) revealTeam(RESULTS[idx]); return; }   // covered reels reveal instead of opening detail
+  const r=reelEls().indexOf(reel); const m=RESULTS[idx].members[r]; if(m) openDetail(m.baseDex, m); });
+$('dback').addEventListener('click',e=>{ if(e.target.id==='dback') closeDetail(); });
+
+function openDex(){ if(!DATA) return; const g=selGens();
+  const mons=Object.values(DATA.pokemon).filter(p=>g.includes(p.generation)).sort((a,b)=>a.dexNumber-b.dexNumber);
+  const grid=mons.map(m=>`<div class="dextile" data-dex="${m.dexNumber}" title="${m.name}" tabindex="0" role="button" aria-label="${m.name}"><img alt="" src="${sprUrl(m.dexNumber)}" onerror="this.onerror=null;this.src='sprites/dex/${m.dexNumber}.png'"><span>${m.name}</span><small>#${String(m.dexNumber).padStart(3,'0')}</small></div>`).join('');
+  $('dscreen').innerHTML=`<div class="dhead2"><div><h3>Pokédex browser</h3><div class="meta">${mons.length} species in the selected generation(s) · click any to inspect</div></div><button class="dclose" id="dclose">\u2715 Close</button></div><div class="dexgrid">${grid}</div>`;
+  $('dclose').onclick=closeDetail;
+  $('dscreen').querySelectorAll('.dextile').forEach(tl=>tl.onclick=()=>openDetail(+tl.dataset.dex));
+  openModal(); }
+$('dexbtn').onclick=openDex;
+// intro / how-it-works: dismiss persists; the header ? re-opens it
+(function(){ const intro=$('intro'); if(!intro) return;
+  try{ if(localStorage.getItem('sl_intro')==='hid') intro.hidden=true; }catch(e){}
+  const hide=()=>{ intro.hidden=true; try{localStorage.setItem('sl_intro','hid');}catch(e){} };
+  if($('introx')) $('introx').onclick=hide;
+  if($('helpbtn')) $('helpbtn').onclick=()=>{ if(typeof tStart==='function') tStart(TOUR, false); };
+})();
+
+// ---- sound FX: GB-style chiptune, synthesized live via Web Audio (no external assets, offline-safe) ----
+let AC=null, muted=false; try{ muted=localStorage.getItem('sl_mute')==='1'; }catch(e){}
+function ac(){ if(!AC){ try{ AC=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC=null; } } if(AC&&AC.state==='suspended'){ try{AC.resume();}catch(e){} } return AC; }
+function tone(freq,dur,type='square',vol=0.12,when=0){ const a=ac(); if(!a||muted) return; const t=a.currentTime+when;
+  const o=a.createOscillator(), g=a.createGain(); o.type=type; o.frequency.setValueAtTime(freq,t);
+  g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+0.008); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  o.connect(g); g.connect(a.destination); o.start(t); o.stop(t+dur+0.03); }
+function noise(dur,vol=0.08){ const a=ac(); if(!a||muted) return; const n=Math.max(1,a.sampleRate*dur|0); const buf=a.createBuffer(1,n,a.sampleRate); const d=buf.getChannelData(0);
+  for(let i=0;i<n;i++) d[i]=(Math.random()*2-1)*(1-i/n); const s=a.createBufferSource(); s.buffer=buf; const g=a.createGain(); g.gain.value=vol; s.connect(g); g.connect(a.destination); s.start(); }
+const SFX={
+  select:()=>tone(660,0.05,'square',0.07),
+  toggle:()=>tone(880,0.05,'square',0.08),
+  confirm:()=>{ tone(784,0.06); tone(1047,0.09,'square',0.12,0.06); },
+  spin:()=>{ [523,659,784,988].forEach((f,i)=>tone(f,0.06,'square',0.09,i*0.05)); },
+  reveal:()=>{ tone(1047,0.08,'square',0.11); tone(1319,0.12,'triangle',0.12,0.07); },
+  evolve:()=>{ [659,659,784,988,1319,1568].forEach((f,i)=>tone(f,0.12,'square',0.1,i*0.12)); noise(0.18,0.04); },
+  error:()=>{ tone(196,0.16,'sawtooth',0.1); tone(147,0.2,'sawtooth',0.1,0.05); },
+  open:()=>tone(988,0.07,'triangle',0.1),
+  close:()=>tone(523,0.07,'triangle',0.1),
+};
+function sfx(name){ if(muted) return; try{ (SFX[name]||(()=>{}))(); }catch(e){} }
+function updateSndBtn(){ const b=$('sndbtn'); if(!b) return; b.textContent = String.fromCodePoint(muted?0x1F507:0x1F50A); b.classList.toggle('off',muted); b.setAttribute('aria-pressed',(!muted).toString()); }
+if($('sndbtn')) $('sndbtn').onclick=()=>{ muted=!muted; try{localStorage.setItem('sl_mute',muted?'1':'0');}catch(e){} updateSndBtn(); if(!muted){ ac(); sfx('toggle'); } };
+updateSndBtn();
+// generic click blip for interactive controls (buttons with their own SFX are excluded)
+document.addEventListener('pointerdown',e=>{ const t=e.target.closest&&e.target.closest('button,.chip,[role=button],.dextile,.mt'); if(!t) return;
+  if(t.disabled || t.getAttribute('aria-disabled')==='true') return; // no blip on disabled controls (matches their silent no-op)
+  if(t.closest('#spin,#next,#prev,#run,#evolve,#devolve,#sndbtn,.smon,.reel,.dextile,#dclose')) return; sfx('select'); }, true); // .reel plays its own spin/reveal/open sound
+
+// ---- evolve controls ----
+if($('evolve')) $('evolve').onclick=()=>{ if(!spinning) setEvo(evoView+1,true); };
+if($('devolve')) $('devolve').onclick=()=>{ if(!spinning){ sfx('toggle'); setEvo(evoView-1,false); } };
+
+// ---- custom tooltip: works on hover, keyboard focus AND tap (native `title` is flaky/absent on touch) ----
+// first read of a [title] moves it to [data-tip] permanently, so the element stays matchable and the
+// native (hover-only, touch-blind) tooltip never fires again.
+(function(){ const tip=$('tip'); if(!tip) return; let cur=null;
+  function txtOf(el){ if(el.dataset.tip!=null) return el.dataset.tip; const t=el.getAttribute('title');
+    if(t!=null){ el.dataset.tip=t; el.removeAttribute('title'); return t; } return ''; }
+  const findTip=(t)=> (t&&t.closest)? t.closest('[data-tip],[title]') : null;
+  function place(el){ tip.classList.add('on'); const r=el.getBoundingClientRect(); const tr=tip.getBoundingClientRect();
+    let x=r.left+r.width/2-tr.width/2, y=r.top-tr.height-8; if(y<6) y=r.bottom+8;
+    x=Math.max(6,Math.min(x, innerWidth-tr.width-6)); y=Math.min(Math.max(6,y), innerHeight-tr.height-6); tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  let showT=null, pendEl=null, warm=false, warmT=null;
+  function show(el){ if(!el||!el.isConnected){ hide(); return; } const t=txtOf(el); if(!t){ hide(); return; } cur=el; tip.textContent=t; place(el); warm=true; } // anchor detached mid-delay (buildReels/renderLadder) -> no ghost tooltip
+  function hide(){ tip.classList.remove('on'); cur=null; clearTimeout(showT); pendEl=null;
+    clearTimeout(warmT); warmT=setTimeout(()=>{ warm=false; }, 350); } // brief warm window: next hover shows quickly
+  function arm(el){ clearTimeout(showT); pendEl=el; showT=setTimeout(()=>{ if(pendEl===el) show(el); }, warm?90:340); } // hover-intent delay so a fast sweep never pops the tooltip
+  window.__slHideTip=hide; // let big re-renders dismiss a tooltip whose anchor they are about to remove
+  document.addEventListener('pointerover',e=>{ if(e.pointerType==='touch') return; const el=findTip(e.target);
+    if(el===cur){ clearTimeout(showT); pendEl=null; return; } // still on the shown element
+    clearTimeout(showT); pendEl=null; if(cur) hide(); if(el) arm(el); });
+  document.addEventListener('focusin',e=>{ const el=findTip(e.target); if(el){ clearTimeout(showT); show(el); } }); // keyboard: instant
+  document.addEventListener('focusout',()=>{ if(cur||pendEl) hide(); });
+  document.addEventListener('pointerdown',e=>{ if(e.pointerType!=='touch') return; const el=findTip(e.target); if(el){ clearTimeout(showT); cur===el?hide():show(el); } else hide(); }, true); // tap: instant
+  window.addEventListener('scroll',hide,true); window.addEventListener('resize',hide);
+})();
+
+function renderTriangle(c){ const svg=$('trisvg'); if(!svg||!TAPI) return; const NS='http://www.w3.org/2000/svg';
+  const m=c.members, n=m.length; svg.innerHTML='';
+  const cx=110, cy= n<=3?84:80, Rr= n<=3?50:58, R= n<=3?19:16;
+  const pos=[]; for(let i=0;i<n;i++){ const a=-Math.PI/2 + i*2*Math.PI/n; pos.push([cx+Rr*Math.cos(a), cy+Rr*Math.sin(a)]); }
+  const TA=curTAPI();
+  const el=(t,a)=>{ const e=document.createElementNS(NS,t); for(const k in a) e.setAttribute(k,a[k]); return e; };
+  const fname=(i)=> m[i].finalName||m[i].baseName;
+  const tlabel=(t)=> TABBR[t]||t.toUpperCase();
+  // the attacking type of member a that hits member b hardest (the "why" behind an arrow)
+  const winType=(a,b)=>{ let best=null,bm=0; for(const at of m[a].finalTypes){ const e=TA.eff(at,m[b].finalTypes); if(e>bm){ bm=e; best=at; } } return {type:best,mult:bm}; };
+  const beats=(i,j)=> winType(i,j).mult>=2;
+  const perfect = c.score.tri>=100;
+  let cycle=null;
+  if(perfect){ const vis=new Array(n).fill(false); vis[0]=true; const path=[0];
+    const go=(p)=>{ if(path.length===n) return beats(p,0); for(let x=1;x<n;x++){ if(!vis[x]&&beats(p,x)){ vis[x]=true; path.push(x); if(go(x)) return true; path.pop(); vis[x]=false; } } return false; };
+    if(go(0)) cycle=path; }
+  const hintEl=$('trihint');
+  const EXPLAIN = perfect
+    ? 'Closed loop: each member is <b>super-effective against the next</b>, so the trio covers one another. Hover a node or arrow for the matchup.'
+    : (n===2 ? 'These two have no super-effective matchup against each other. Hover a node for its types & matchups.'
+             : 'No closed win-loop here. Greyed arrows are the partial matchups that do exist. Hover a node or arrow for detail.');
+  const setHint=(html)=>{ if(hintEl) hintEl.innerHTML = html || EXPLAIN; };
+  setHint();
+  svg.insertAdjacentHTML('beforeend','<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f4c13a"/></marker><marker id="ahg" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5a6149"/></marker></defs>');
+  const elabels=[]; // collect edge "why" labels; drawn last (on top) with a pill, pushed clear of node text
+  const arrow=(a,b,active)=>{ const [x1,y1]=pos[a],[x2,y2]=pos[b]; const dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L;
+    const w=winType(a,b);
+    const ln=el('line',{x1:x1+ux*R,y1:y1+uy*R,x2:x2-ux*(R+8),y2:y2-uy*(R+8),stroke:active?'#f4c13a':'#5a6149','stroke-width':active?3.2:1.6,'marker-end':active?'url(#ah)':'url(#ahg)','data-arrow':'1'});
+    if(!active) ln.setAttribute('opacity','.45');
+    const detail=`<b>${fname(a)}</b> hits <b>${fname(b)}</b> with <b style="color:${TCOL[w.type]}">${w.type||'—'} ×${w.mult}</b> (${m[b].finalTypes.join('/')})`;
+    ln.appendChild(el('title',{})).textContent=`${fname(a)}'s ${w.type} is ${w.mult}x vs ${fname(b)} (${m[b].finalTypes.join('/')})`;
+    ln.addEventListener('mouseenter',()=>{ setHint('▸ '+detail); ln.setAttribute('stroke-width',active?4.6:2.8); ln.setAttribute('opacity','1'); });
+    ln.addEventListener('mouseleave',()=>{ setHint(); ln.setAttribute('stroke-width',active?3.2:1.6); if(!active) ln.setAttribute('opacity','.45'); });
+    svg.appendChild(ln);
+    if(w.type) elabels.push({ mx:(x1+x2)/2, my:(y1+y2)/2, txt:tlabel(w.type)+' ×'+w.mult, color:TCOL[w.type]||'#fff' });
+  };
+  if(cycle){ for(let i=0;i<n;i++) arrow(cycle[i], cycle[(i+1)%n], true); }
+  else { for(let i=0;i<n;i++)for(let j=0;j<n;j++) if(i!==j && beats(i,j)) arrow(i,j,false); }
+  for(let i=0;i<n;i++){ const [x,y]=pos[i]; const tc=TCOL[m[i].finalTypes[0]]||'#888';
+    const g=el('g',{'data-node':i});
+    g.appendChild(el('circle',{cx:x,cy:y,r:R,fill:'#0f380f',stroke:tc,'stroke-width':3}));
+    const im=el('image',{href:sprUrl(m[i].finalDex),x:x-R*0.85,y:y-R*0.85,width:R*1.7,height:R*1.7,style:'image-rendering:pixelated'}); g.appendChild(im); // final-form sprite to match the final-form name/type labels & matchup arrows
+    if(n<=3){ const tx=el('text',{x,y:y+R+10,'text-anchor':'middle',class:'trinode'}); tx.textContent=(fname(i)).slice(0,10); g.appendChild(tx);
+      const ty=el('text',{x,y:y+R+19,'text-anchor':'middle',class:'tritype'});
+      m[i].finalTypes.forEach((t,ti)=>{ const ts=el('tspan',{fill:TCOL[t]||'#555'}); ts.textContent=(ti?' · ':'')+tlabel(t); ty.appendChild(ts); }); g.appendChild(ty); }
+    const bt=[],ls=[]; for(let j=0;j<n;j++){ if(j===i)continue; if(beats(i,j)) bt.push(fname(j)); if(beats(j,i)) ls.push(fname(j)); }
+    const nd=`<b>${fname(i)}</b> — ${m[i].finalTypes.map(t=>`<b style="color:${TCOL[t]}">${t}</b>`).join('/')}. ${bt.length?'Beats '+bt.join(', ')+'. ':''}${ls.length?'Loses to '+ls.join(', ')+'.':''}`;
+    g.appendChild(el('title',{})).textContent=`${fname(i)} — ${m[i].finalTypes.join('/')}. ${bt.length?'Beats '+bt.join(', ')+'. ':''}${ls.length?'Loses to '+ls.join(', ')+'.':''}`;
+    const circ=g.firstChild;
+    g.addEventListener('mouseenter',()=>{ setHint('▸ '+nd); circ.setAttribute('stroke-width',5); });
+    g.addEventListener('mouseleave',()=>{ setHint(); circ.setAttribute('stroke-width',3); });
+    svg.appendChild(g);
+  }
+  // edge "why" labels last: push each outward from the centre so it clears the node name/type text, on a pill
+  for(const Lb of elabels){ const dx=Lb.mx-cx, dy=Lb.my-cy, d=Math.hypot(dx,dy)||1; const px=Lb.mx+dx/d*12, py=Lb.my+dy/d*12;
+    const wpx=Lb.txt.length*4.0+6;
+    svg.appendChild(el('rect',{x:px-wpx/2,y:py-6,width:wpx,height:12,rx:3,fill:'#0f380f','fill-opacity':.86}));
+    const lab=el('text',{x:px,y:py+0.5,'text-anchor':'middle','dominant-baseline':'central',class:'triedge',fill:Lb.color}); lab.textContent=Lb.txt; svg.appendChild(lab); }
+  const lb=el('text',{x:cx,y:12,'text-anchor':'middle','font-size':10,'font-weight':700,'font-family':'ui-sans-serif,sans-serif',class:perfect?'tri-perfect':'tri-none'});
+  lb.textContent = perfect?(n===3?'PERFECT TRIANGLE ✓':'PERFECT '+n+'-CYCLE ✓'):(n===2?'no mutual matchup':'no clean cycle'); svg.appendChild(lb);
+}
+
+// ================= Professor Oak guided walkthrough =================
+const TOUR = __TOUR__;
+// short first-run "essentials" pass; "Show me everything" continues into the full TOUR
+const ESSENTIALS = [
+  { selector:'.brand', oakSays:"Welcome to your Starter Lab! Here are five quick things, then you are off. This is where we build your dream team of starter Pokémon.", side:'bottom', action:'none' },
+  { selector:'#gens', oakSays:"Start here: tap a Generation to choose which region your team is drawn from. Everything else is optional fine-tuning.", side:'right', action:'none' },
+  { selector:'#spin', oakSays:"Then press SPIN and watch me roll the reels to reveal the top-ranked team.", side:'top', action:'none' },
+  { selector:'#smons', oakSays:"There they are! This panel shows your team and every reason it wins, from the type triangle down to each stat.", side:'left', action:'reveal' },
+  { selector:'#mapgrid', oakSays:"And the maps show exactly where to catch each one. That is the whole idea! Tap the ? up top any time for the full tour.", side:'top', action:'none' },
+];
+let tList = TOUR, tEssentials = false;
+let tIdx=-1, tActive=false, tLastFocus=null, tRAF=false, tCurEl=null, tGen=0, tRevealIv=null;
+const OAK_FW=16, OAK_FH=32, OAK_SCALE=3, OAK_CYC={down:[0,3,0,4],up:[1,5,1,6],left:[2,7,2,8],right:[2,7,2,8]};
+let oakTimer=null, oakX=-200, oakY=-200;
+const oakSprEl=()=>document.querySelector('#tour-oak .oakspr');
+function oakFrame(fi,faceRight){ const s=oakSprEl(); if(!s)return; s.style.backgroundPositionX=(-fi*OAK_FW*OAK_SCALE)+'px'; s.style.transform=faceRight?'scaleX(-1)':'none'; }
+function oakWalk(dir){ if(oakTimer) clearInterval(oakTimer); const cyc=OAK_CYC[dir], fr=(dir==='right'); let i=0; oakFrame(cyc[0],fr);
+  if(reduceMotion()){ oakStand(dir); return; } oakTimer=setInterval(()=>{ i=(i+1)%4; oakFrame(cyc[i],fr); },140); }
+function oakStand(dir){ if(oakTimer){clearInterval(oakTimer);oakTimer=null;} const st={down:0,up:1,left:2,right:2}[dir]; oakFrame(st==null?2:st, dir==='right'); }
+function oakMoveTo(x,y,faceRight){ const oak=$('tour-oak'); const goRight=x>oakX; oakX=x; oakY=y;
+  oakWalk(goRight?'right':'left'); oak.style.transform=`translate(${x}px,${y}px)`;
+  clearTimeout(oak._t); oak._t=setTimeout(()=>oakStand(faceRight?'right':'left'), reduceMotion()?0:540); }
+function tResolve(sel, timeout=2600){ return new Promise(res=>{ let el; try{ el=document.querySelector(sel); }catch(e){ return res(null); } if(el) return res(el);
+  const obs=new MutationObserver(()=>{ let e2; try{ e2=document.querySelector(sel); }catch(x){} if(e2){ obs.disconnect(); clearTimeout(tm); res(e2); } });
+  obs.observe(document.body,{childList:true,subtree:true,attributes:true}); const tm=setTimeout(()=>{ obs.disconnect(); res(null); }, timeout); }); }
+function tAfterScroll(){ return new Promise(r=>{ let t; const done=()=>{ clearTimeout(t); window.removeEventListener('scrollend',done); requestAnimationFrame(()=>requestAnimationFrame(r)); };
+  t=setTimeout(done, reduceMotion()?0:340); window.addEventListener('scrollend',done,{once:true}); }); }
+function tEnsureRevealed(){ return new Promise(res=>{ if(revealed) return res();
+  if(tRevealIv) clearInterval(tRevealIv); const t0=Date.now();
+  // wait for the first optimize to produce RESULTS, then reveal (autostart can reach this before data loads)
+  tRevealIv=setInterval(()=>{ if(!revealed && RESULTS.length && !spinning) revealTeam(RESULTS[idx]);
+    if(revealed || Date.now()-t0>6000){ clearInterval(tRevealIv); tRevealIv=null; setTimeout(res,260); } },90); }); }
+function tMoveCut(r,pad=8){ const c=$('tour-cut'); c.style.left=(r.left-pad)+'px'; c.style.top=(r.top-pad)+'px'; c.style.width=(r.width+pad*2)+'px'; c.style.height=(r.height+pad*2)+'px'; }
+function tPlaceBubble(r,side){ const b=$('tour-bubble'); const m=14, bw=b.offsetWidth, bh=b.offsetHeight, W=innerWidth, H=innerHeight;
+  const room={ top:r.top>=bh+m, bottom:H-r.bottom>=bh+m, left:r.left>=bw+m, right:W-r.right>=bw+m };
+  let s=side; if(!room[s]){ const sp={top:r.top,bottom:H-r.bottom,left:r.left,right:W-r.right}; s=Object.keys(sp).sort((a,b)=>sp[b]-sp[a])[0]; } // pick the side with MOST room
+  let x,y,arrow;
+  if(s==='top'){ y=r.top-bh-m; x=r.left+r.width/2-bw/2; arrow='bottom'; }
+  else if(s==='bottom'){ y=r.bottom+m; x=r.left+r.width/2-bw/2; arrow='top'; }
+  else if(s==='left'){ x=r.left-bw-m; y=r.top+r.height/2-bh/2; arrow='right'; }
+  else { x=r.right+m; y=r.top+r.height/2-bh/2; arrow='left'; }
+  x=Math.max(m,Math.min(x,W-bw-m)); y=Math.max(m,Math.min(y,H-bh-m));
+  b.style.left=x+'px'; b.style.top=y+'px'; b.dataset.arrow=arrow;
+  const horiz=(arrow==='top'||arrow==='bottom'); const tc=horiz?(r.left+r.width/2-x):(r.top+r.height/2-y); // keep arrow on the target after clamp
+  b.style.setProperty('--arw', Math.max(12,Math.min(tc,(horiz?bw:bh)-12))+'px');
+  return {side:s}; }
+function tPlaceOak(r,bub){ const m=18, ow=OAK_FW*OAK_SCALE, W=innerWidth, H=innerHeight, oh=OAK_FH*OAK_SCALE;
+  // Oak stands on the side AWAY from the speech bubble so he never hides behind it or covers the target
+  const roomL=(r.left-ow-m>=m) && bub.side!=='left', roomR=(r.right+m<=W-ow-m) && bub.side!=='right';
+  let x,y,faceRight;
+  if(bub.side==='left' && roomR){ x=r.right+m; faceRight=false; }
+  else if(bub.side==='right' && roomL){ x=r.left-ow-m; faceRight=true; }
+  else if(roomL){ x=r.left-ow-m; faceRight=true; }
+  else if(roomR){ x=r.right+m; faceRight=false; }
+  else { // no clear horizontal room away from the bubble: stand above/below the target, opposite the bubble
+    x=Math.max(m,Math.min(r.left+r.width/2-ow/2, W-ow-m)); faceRight=true;
+    const below = (bub.side==='top') || (bub.side!=='bottom' && r.bottom+m<=H-oh-m);
+    y = below ? Math.max(m, Math.min(r.bottom+m, H-oh-m)) : Math.max(m, r.top-oh-m); return oakMoveTo(x,y,faceRight); } // clamp so Oak never renders off the bottom on short/landscape screens
+  y=Math.max(m,Math.min(r.top+r.height/2-oh/2, H-oh-m)); oakMoveTo(x,y,faceRight); }
+async function tShow(dir){ dir=dir||1; const g=++tGen; const step=tList[tIdx]; if(!step) return tEnd();
+  if(step.action==='reveal') await tEnsureRevealed();
+  if(g!==tGen||!tActive) return;
+  const el=await tResolve(step.selector);
+  if(g!==tGen||!tActive) return;
+  const skip=()=>{ const ni=tIdx+dir; if(ni<0||ni>=tList.length) return tEnd(); tIdx=ni; return tShow(dir); };
+  if(!el) return skip();
+  // mobile: switch to the pane that holds this step's target so the tour can point at it
+  if(isMobileView() && el.closest){ const pane=el.closest('[data-view]'); if(pane) setView(pane.getAttribute('data-view')); }
+  // open the Advanced-filters accordion if the step targets something inside it
+  if(el.closest && el.closest('#advfilters') && $('advfilters').hidden){ $('advfilters').hidden=false;
+    $('advtoggle').setAttribute('aria-expanded','true'); const ar=$('advtoggle').querySelector('.advarrow'); if(ar) ar.textContent='▾'; }
+  el.scrollIntoView({behavior:reduceMotion()?'auto':'smooth',block:'center',inline:'center'}); await tAfterScroll();
+  if(g!==tGen||!tActive) return;
+  const r=el.getBoundingClientRect();
+  if(r.width<2 || r.height<2) return skip();   // hidden / collapsed target -> skip in the travel direction
+  tCurEl=el;
+  $('tour-say').innerHTML=step.oakSays; $('tour-prog').textContent=(tIdx+1)+' / '+tList.length;
+  $('tour-live').textContent='Step '+(tIdx+1)+' of '+tList.length+'. '+$('tour-say').textContent;
+  tMoveCut(r); const bub=tPlaceBubble(r, step.side||'bottom'); tPlaceOak(r,bub);
+  $('tour-back').disabled=(tIdx===0); $('tour-next').innerHTML=(tIdx===tList.length-1)?'Done':'Next ▶';
+  if($('tour-full')) $('tour-full').hidden = !tEssentials;
+  try{ $('tour-next').focus(); }catch(e){} }
+function tReposition(){ if(!tActive||!tCurEl) return; const r=tCurEl.getBoundingClientRect(); if(r.width<2&&r.height<2) return; tMoveCut(r); const bub=tPlaceBubble(r,(tList[tIdx]||{}).side||'bottom'); tPlaceOak(r,bub); }
+function tSetInert(on){ for(const c of document.body.children){ if(c.id==='tour'||c.id==='result-live') continue; if(on) c.setAttribute('inert',''); else c.removeAttribute('inert'); } }
+function tStart(list, ess){ if(tActive) return; tActive=true; tGen++; tLastFocus=document.activeElement; tIdx=0; oakX=-200; oakY=-200;
+  tList = list || TOUR; tEssentials = !!ess;
+  if($('dback') && $('dback').classList.contains('open')) closeDetail(); // don't inert/stack over an open modal
+  if($('tour').parentNode!==document.body) document.body.appendChild($('tour')); // hoist out of any inertable wrapper
+  $('tour').hidden=false; tSetInert(true); tShow(1); }
+function tEnd(){ const was=tActive; tActive=false; tGen++;
+  if($('tour')) $('tour').hidden=true; tSetInert(false);
+  if(oakTimer){clearInterval(oakTimer);oakTimer=null;} if(tRevealIv){clearInterval(tRevealIv);tRevealIv=null;}
+  const oak=$('tour-oak'); if(oak&&oak._t){ clearTimeout(oak._t); oak._t=null; }
+  if(was){ try{ localStorage.setItem('sl_tour','done'); }catch(e){} if(tLastFocus&&tLastFocus.focus){ try{tLastFocus.focus();}catch(e){} } } }
+function tNext(){ if(tIdx>=tList.length-1) return tEnd(); tIdx++; tShow(1); }
+function tBack(){ if(tIdx<=0) return; tIdx--; tShow(-1); }
+if($('tour-next')) $('tour-next').onclick=tNext;
+if($('tour-back')) $('tour-back').onclick=tBack;
+if($('tour-skip')) $('tour-skip').onclick=tEnd;
+if($('tour-full')) $('tour-full').onclick=()=>{ tEnd(); tStart(TOUR, false); }; // essentials -> full tour
+if($('starttour')) $('starttour').onclick=(e)=>{ e.stopPropagation(); tStart(TOUR, false); };
+document.addEventListener('keydown',e=>{ if(!tActive)return;
+  const onCtl=e.target&&e.target.closest&&e.target.closest('#tour-bubble button');
+  if(e.key==='Escape'){ e.preventDefault(); tEnd(); }
+  else if(e.key===' '||e.key==='Enter'){ if(onCtl) return; e.preventDefault(); if(e.key==='Enter') tNext(); } // let bubble buttons handle their own Enter/Space
+  else if(e.key==='ArrowRight'){ e.preventDefault(); tNext(); }
+  else if(e.key==='ArrowLeft'){ e.preventDefault(); tBack(); } });
+// focus-trap backstop: if `inert` isn't supported and Tab escapes the tour, pull focus back into the bubble
+document.addEventListener('focusin',e=>{ if(!tActive) return; const tour=$('tour'); if(tour && !tour.contains(e.target)){ const n=$('tour-next')||tour.querySelector('button'); if(n){ try{ n.focus(); }catch(_){} } } });
+addEventListener('scroll',()=>{ if(tRAF)return; tRAF=true; requestAnimationFrame(()=>{ tReposition(); tRAF=false; }); },{passive:true,capture:true});
+addEventListener('resize',()=>{ if(tRAF)return; tRAF=true; requestAnimationFrame(()=>{ tReposition(); tRAF=false; }); });
+// first-time visitors get a SHORT essentials pass automatically (once); re-check the flag when the timer fires
+try{ if(localStorage.getItem('sl_tour')!=='done') setTimeout(()=>{ try{ if(!tActive && localStorage.getItem('sl_tour')!=='done') tStart(ESSENTIALS, true); }catch(e){} }, 1200); }catch(e){}
+
+boot();
+</script>

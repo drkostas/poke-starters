@@ -1,0 +1,3054 @@
+{
+ "sprout_tower": {
+  "name": "Sprout Tower",
+  "type": "building",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 92,
+    "name": "Gastly",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 6,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "tin_tower": {
+  "name": "Bell Tower",
+  "type": "building",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 24,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 92,
+    "name": "Gastly",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "burned_tower": {
+  "name": "Burned Tower",
+  "type": "building",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 109,
+    "name": "Koffing",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 14,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 110,
+    "name": "Weezing",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "rare",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "national_park": {
+  "name": "National Park",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 29,
+    "name": "Nidoran\u2640",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 235,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 32,
+    "name": "Nidoran\u2642",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 235,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 191,
+    "name": "Sunkern",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 235,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 10,
+    "name": "Caterpie",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 13,
+    "name": "Weedle",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 48,
+    "name": "Venonat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "ruins_of_alph": {
+  "name": "Ruins of Alph",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 177,
+    "name": "Natu",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 18,
+    "maxLevel": 24,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 201,
+    "name": "Unown",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 235,
+    "name": "Smeargle",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 22,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "union_cave": {
+  "name": "Union Cave",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 8,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 27,
+    "name": "Sandshrew",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 8,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 21,
+    "maxLevel": 21,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 95,
+    "name": "Onix",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 6,
+    "maxLevel": 23,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "slowpoke_well": {
+  "name": "Slowpoke Well",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 23,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 79,
+    "name": "Slowpoke",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 23,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 79,
+    "name": "Slowpoke",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 23,
+    "maxLevel": 23,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 80,
+    "name": "Slowbro",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 75,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "ilex_forest": {
+  "name": "Ilex Forest",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 10,
+    "name": "Caterpie",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 11,
+    "name": "Metapod",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 13,
+    "name": "Weedle",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 43,
+    "name": "Oddish",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 48,
+    "name": "Venonat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 15,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 14,
+    "name": "Kakuna",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 46,
+    "name": "Paras",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 55,
+    "name": "Golduck",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "mt_mortar": {
+  "name": "Mt. Mortar",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 30,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 17,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 32,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 66,
+    "name": "Machop",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 28,
+    "catchRate": 180,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 67,
+    "name": "Machoke",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 32,
+    "maxLevel": 32,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 31,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 75,
+    "name": "Graveler",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 31,
+    "maxLevel": 31,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 28,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 25,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 119,
+    "name": "Seaking",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 25,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "ice_path": {
+  "name": "Ice Path",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 25,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 220,
+    "name": "Swinub",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 21,
+    "maxLevel": 26,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 225,
+    "name": "Delibird",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 21,
+    "maxLevel": 26,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 124,
+    "name": "Jynx",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 215,
+    "name": "Sneasel",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "whirl_islands": {
+  "name": "Whirl Islands",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 26,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 86,
+    "name": "Seel",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 27,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 98,
+    "name": "Krabby",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 27,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 116,
+    "name": "Horsea",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 24,
+    "maxLevel": 28,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 117,
+    "name": "Seadra",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 75,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "dark_cave": {
+  "name": "Dark Cave",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 23,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 23,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 75,
+    "name": "Graveler",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 202,
+    "name": "Wobbuffet",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 25,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 217,
+    "name": "Ursaring",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 23,
+    "maxLevel": 23,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 216,
+    "name": "Teddiursa",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 2,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 206,
+    "name": "Dunsparce",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "rare",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route29": {
+  "name": "Route 29",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 161,
+    "name": "Sentret",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 187,
+    "name": "Hoppip",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route30": {
+  "name": "Route 30",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 10,
+    "name": "Caterpie",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 13,
+    "name": "Weedle",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 3,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 187,
+    "name": "Hoppip",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route31": {
+  "name": "Route 31",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 10,
+    "name": "Caterpie",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 69,
+    "name": "Bellsprout",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 13,
+    "name": "Weedle",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 92,
+    "name": "Gastly",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 187,
+    "name": "Hoppip",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route32": {
+  "name": "Route 32",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 23,
+    "name": "Ekans",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 69,
+    "name": "Bellsprout",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 187,
+    "name": "Hoppip",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 194,
+    "name": "Wooper",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 195,
+    "name": "Quagsire",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 92,
+    "name": "Gastly",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route33": {
+  "name": "Route 33",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 21,
+    "name": "Spearow",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 187,
+    "name": "Hoppip",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 6,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 23,
+    "name": "Ekans",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 7,
+    "maxLevel": 7,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route34": {
+  "name": "Route 34",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 11,
+    "maxLevel": 11,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 96,
+    "name": "Drowzee",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 209,
+    "name": "Snubbull",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 39,
+    "name": "Jigglypuff",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 170,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 63,
+    "name": "Abra",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 132,
+    "name": "Ditto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 35,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route35": {
+  "name": "Route 35",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 54,
+    "name": "Psyduck",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 58,
+    "name": "Growlithe",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 96,
+    "name": "Drowzee",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 209,
+    "name": "Snubbull",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 39,
+    "name": "Jigglypuff",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 170,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 55,
+    "name": "Golduck",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 75,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 63,
+    "name": "Abra",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 200,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 132,
+    "name": "Ditto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "rare",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 35,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 193,
+    "name": "Yanma",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "rare",
+    "minLevel": 12,
+    "maxLevel": 12,
+    "catchRate": 75,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route36": {
+  "name": "Route 36",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 6,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 69,
+    "name": "Bellsprout",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 5,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 4,
+    "maxLevel": 4,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 58,
+    "name": "Growlithe",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 92,
+    "name": "Gastly",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 5,
+    "maxLevel": 5,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route37": {
+  "name": "Route 37",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 16,
+    "name": "Pidgey",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 58,
+    "name": "Growlithe",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 163,
+    "name": "Hoothoot",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 165,
+    "name": "Ledyba",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 167,
+    "name": "Spinarak",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 234,
+    "name": "Stantler",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 16,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 17,
+    "name": "Pidgeotto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 164,
+    "name": "Noctowl",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 166,
+    "name": "Ledian",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 168,
+    "name": "Ariados",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 90,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route38": {
+  "name": "Route 38",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 52,
+    "name": "Meowth",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 81,
+    "name": "Magnemite",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 17,
+    "name": "Pidgeotto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 128,
+    "name": "Tauros",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 164,
+    "name": "Noctowl",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 241,
+    "name": "Miltank",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route39": {
+  "name": "Route 39",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 52,
+    "name": "Meowth",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 18,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 81,
+    "name": "Magnemite",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 17,
+    "name": "Pidgeotto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 128,
+    "name": "Tauros",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 164,
+    "name": "Noctowl",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 241,
+    "name": "Miltank",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route42": {
+  "name": "Route 42",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 16,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 21,
+    "name": "Spearow",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 23,
+    "name": "Ekans",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 13,
+    "maxLevel": 13,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 41,
+    "name": "Zubat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 14,
+    "maxLevel": 14,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 42,
+    "name": "Golbat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 118,
+    "name": "Goldeen",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 225,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 22,
+    "name": "Fearow",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 24,
+    "name": "Arbok",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 119,
+    "name": "Seaking",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 183,
+    "name": "Marill",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 190,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route43": {
+  "name": "Route 43",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 17,
+    "name": "Pidgeotto",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 20,
+    "name": "Raticate",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 17,
+    "catchRate": 127,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 48,
+    "name": "Venonat",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 17,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 83,
+    "name": "Farfetch'd",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 161,
+    "name": "Sentret",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 162,
+    "name": "Furret",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 17,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 164,
+    "name": "Noctowl",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 16,
+    "maxLevel": 16,
+    "catchRate": 90,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 49,
+    "name": "Venomoth",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 17,
+    "maxLevel": 17,
+    "catchRate": 75,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route44": {
+  "name": "Route 44",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 25,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 69,
+    "name": "Bellsprout",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 22,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 108,
+    "name": "Lickitung",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 22,
+    "maxLevel": 26,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 114,
+    "name": "Tangela",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 23,
+    "catchRate": 45,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 24,
+    "maxLevel": 26,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 25,
+    "maxLevel": 25,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 70,
+    "name": "Weepinbell",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 24,
+    "maxLevel": 24,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route45": {
+  "name": "Route 45",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 23,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 75,
+    "name": "Graveler",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 23,
+    "maxLevel": 27,
+    "catchRate": 120,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 207,
+    "name": "Gligar",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 24,
+    "maxLevel": 24,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 232,
+    "name": "Donphan",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 25,
+    "maxLevel": 30,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 227,
+    "name": "Skarmory",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 27,
+    "maxLevel": 27,
+    "catchRate": 25,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 231,
+    "name": "Phanpy",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route46": {
+  "name": "Route 46",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 19,
+    "name": "Rattata",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 21,
+    "name": "Spearow",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 2,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 74,
+    "name": "Geodude",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 2,
+    "maxLevel": 3,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 231,
+    "name": "Phanpy",
+    "method": "grass",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 2,
+    "maxLevel": 2,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "dragons_den": {
+  "name": "Dragon's Den",
+  "type": "cave",
+  "catchable": [
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 147,
+    "name": "Dratini",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 10,
+    "maxLevel": 10,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "olivine": {
+  "name": "Olivine City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route40": {
+  "name": "Route 40",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "route41": {
+  "name": "Route 41",
+  "type": "route",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 226,
+    "name": "Mantine",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 25,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "new_bark": {
+  "name": "New Bark Town",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "cherrygrove": {
+  "name": "Cherrygrove City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "violet": {
+  "name": "Violet City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "cianwood": {
+  "name": "Cianwood City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 72,
+    "name": "Tentacool",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 190,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 73,
+    "name": "Tentacruel",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 60,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "ecruteak": {
+  "name": "Ecruteak City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 60,
+    "name": "Poliwag",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 15,
+    "maxLevel": 20,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 61,
+    "name": "Poliwhirl",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 20,
+    "maxLevel": 20,
+    "catchRate": 120,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "lake_of_rage": {
+  "name": "Lake of Rage",
+  "type": "water",
+  "catchable": [
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 10,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   },
+   {
+    "dexNumber": 130,
+    "name": "Gyarados",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "uncommon",
+    "minLevel": 15,
+    "maxLevel": 15,
+    "catchRate": 45,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "blackthorn": {
+  "name": "Blackthorn City",
+  "type": "town",
+  "catchable": [
+   {
+    "dexNumber": 129,
+    "name": "Magikarp",
+    "method": "surf",
+    "version": "crystal",
+    "rarityTier": "common",
+    "minLevel": 5,
+    "maxLevel": 15,
+    "catchRate": 255,
+    "catchRateExempt": false
+   }
+  ]
+ },
+ "_meta": {
+  "region": "Johto",
+  "basis": "Pokemon Crystal (Gen 2), pokecrystal ROM disassembly (johto_grass.asm + johto_water.asm); rarity = best morn/day/nite slot chance via grass[30,30,20,10,5,4,1]/water[60,30,10]",
+  "keyedBy": "connectivity node id (see connectivity_johto.json)",
+  "schema": "location -> {name, type, catchable:[{dexNumber, name, method, version, rarityTier, minLevel, maxLevel, catchRate, catchRateExempt}]}",
+  "methods": [
+   "grass",
+   "surf"
+  ],
+  "excluded": [
+   "Mt. Silver / Silver Cave (Kanto-border postgame, not Johto-graph adjacent)"
+  ]
+ }
+}

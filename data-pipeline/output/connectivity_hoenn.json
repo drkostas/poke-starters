@@ -1,0 +1,822 @@
+{
+ "region": "Hoenn",
+ "basis": "pokeemerald region_map_sections.json rectangle adjacency (rook touch/overlap); orphan islands bridged to nearest mainland node.",
+ "nodes": [
+  {
+   "id": "littleroot_town",
+   "name": "Littleroot Town",
+   "type": "town",
+   "x": 0.161,
+   "y": 0.767
+  },
+  {
+   "id": "oldale_town",
+   "name": "Oldale Town",
+   "type": "town",
+   "x": 0.161,
+   "y": 0.633
+  },
+  {
+   "id": "dewford_town",
+   "name": "Dewford Town",
+   "type": "town",
+   "x": 0.109,
+   "y": 0.83
+  },
+  {
+   "id": "lavaridge_town",
+   "name": "Lavaridge Town",
+   "type": "town",
+   "x": 0.196,
+   "y": 0.233
+  },
+  {
+   "id": "fallarbor_town",
+   "name": "Fallarbor Town",
+   "type": "town",
+   "x": 0.125,
+   "y": 0.033
+  },
+  {
+   "id": "verdanturf_town",
+   "name": "Verdanturf Town",
+   "type": "town",
+   "x": 0.161,
+   "y": 0.433
+  },
+  {
+   "id": "pacifidlog_town",
+   "name": "Pacifidlog Town",
+   "type": "town",
+   "x": 0.625,
+   "y": 0.7
+  },
+  {
+   "id": "petalburg_city",
+   "name": "Petalburg City",
+   "type": "town",
+   "x": 0.054,
+   "y": 0.633
+  },
+  {
+   "id": "slateport_city",
+   "name": "Slateport City",
+   "type": "town",
+   "x": 0.304,
+   "y": 0.733
+  },
+  {
+   "id": "mauville_city",
+   "name": "Mauville City",
+   "type": "town",
+   "x": 0.321,
+   "y": 0.433
+  },
+  {
+   "id": "rustboro_city",
+   "name": "Rustboro City",
+   "type": "town",
+   "x": 0.018,
+   "y": 0.4
+  },
+  {
+   "id": "fortree_city",
+   "name": "Fortree City",
+   "type": "town",
+   "x": 0.446,
+   "y": 0.033
+  },
+  {
+   "id": "lilycove_city",
+   "name": "Lilycove City",
+   "type": "town",
+   "x": 0.615,
+   "y": 0.27
+  },
+  {
+   "id": "mossdeep_city",
+   "name": "Mossdeep City",
+   "type": "town",
+   "x": 0.8,
+   "y": 0.377
+  },
+  {
+   "id": "sootopolis_city",
+   "name": "Sootopolis City",
+   "type": "town",
+   "x": 0.7,
+   "y": 0.48
+  },
+  {
+   "id": "ever_grande_city",
+   "name": "Ever Grande City",
+   "type": "town",
+   "x": 0.887,
+   "y": 0.55
+  },
+  {
+   "id": "route101",
+   "name": "Route 101",
+   "type": "route",
+   "x": 0.161,
+   "y": 0.7
+  },
+  {
+   "id": "route102",
+   "name": "Route 102",
+   "type": "route",
+   "x": 0.107,
+   "y": 0.633
+  },
+  {
+   "id": "route103",
+   "name": "Route 103",
+   "type": "route",
+   "x": 0.214,
+   "y": 0.567
+  },
+  {
+   "id": "route104",
+   "name": "Route 104",
+   "type": "route",
+   "x": 0.018,
+   "y": 0.567
+  },
+  {
+   "id": "route105",
+   "name": "Route 105",
+   "type": "route",
+   "x": 0.018,
+   "y": 0.767
+  },
+  {
+   "id": "route106",
+   "name": "Route 106",
+   "type": "route",
+   "x": 0.036,
+   "y": 0.9
+  },
+  {
+   "id": "route107",
+   "name": "Route 107",
+   "type": "route",
+   "x": 0.161,
+   "y": 0.967
+  },
+  {
+   "id": "route108",
+   "name": "Route 108",
+   "type": "route",
+   "x": 0.25,
+   "y": 0.967
+  },
+  {
+   "id": "route109",
+   "name": "Route 109",
+   "type": "route",
+   "x": 0.304,
+   "y": 0.9
+  },
+  {
+   "id": "route110",
+   "name": "Route 110",
+   "type": "route",
+   "x": 0.304,
+   "y": 0.567
+  },
+  {
+   "id": "route111",
+   "name": "Route 111",
+   "type": "route",
+   "x": 0.304,
+   "y": 0.2
+  },
+  {
+   "id": "route112",
+   "name": "Route 112",
+   "type": "route",
+   "x": 0.25,
+   "y": 0.233
+  },
+  {
+   "id": "route113",
+   "name": "Route 113",
+   "type": "route",
+   "x": 0.214,
+   "y": 0.033
+  },
+  {
+   "id": "route114",
+   "name": "Route 114",
+   "type": "route",
+   "x": 0.071,
+   "y": 0.1
+  },
+  {
+   "id": "route115",
+   "name": "Route 115",
+   "type": "route",
+   "x": 0.018,
+   "y": 0.233
+  },
+  {
+   "id": "route116",
+   "name": "Route 116",
+   "type": "route",
+   "x": 0.107,
+   "y": 0.367
+  },
+  {
+   "id": "route117",
+   "name": "Route 117",
+   "type": "route",
+   "x": 0.232,
+   "y": 0.433
+  },
+  {
+   "id": "route118",
+   "name": "Route 118",
+   "type": "route",
+   "x": 0.393,
+   "y": 0.433
+  },
+  {
+   "id": "route119",
+   "name": "Route 119",
+   "type": "route",
+   "x": 0.411,
+   "y": 0.2
+  },
+  {
+   "id": "route120",
+   "name": "Route 120",
+   "type": "route",
+   "x": 0.482,
+   "y": 0.133
+  },
+  {
+   "id": "route121",
+   "name": "Route 121",
+   "type": "route",
+   "x": 0.571,
+   "y": 0.233
+  },
+  {
+   "id": "route122",
+   "name": "Route 122",
+   "type": "route",
+   "x": 0.589,
+   "y": 0.333
+  },
+  {
+   "id": "route123",
+   "name": "Route 123",
+   "type": "route",
+   "x": 0.518,
+   "y": 0.433
+  },
+  {
+   "id": "route124",
+   "name": "Route 124",
+   "type": "route",
+   "x": 0.786,
+   "y": 0.3
+  },
+  {
+   "id": "route125",
+   "name": "Route 125",
+   "type": "route",
+   "x": 0.893,
+   "y": 0.267
+  },
+  {
+   "id": "route126",
+   "name": "Route 126",
+   "type": "route",
+   "x": 0.768,
+   "y": 0.5
+  },
+  {
+   "id": "route127",
+   "name": "Route 127",
+   "type": "route",
+   "x": 0.875,
+   "y": 0.5
+  },
+  {
+   "id": "route128",
+   "name": "Route 128",
+   "type": "route",
+   "x": 0.893,
+   "y": 0.633
+  },
+  {
+   "id": "route129",
+   "name": "Route 129",
+   "type": "route",
+   "x": 0.893,
+   "y": 0.7
+  },
+  {
+   "id": "route130",
+   "name": "Route 130",
+   "type": "route",
+   "x": 0.804,
+   "y": 0.7
+  },
+  {
+   "id": "route131",
+   "name": "Route 131",
+   "type": "route",
+   "x": 0.696,
+   "y": 0.7
+  },
+  {
+   "id": "route132",
+   "name": "Route 132",
+   "type": "route",
+   "x": 0.571,
+   "y": 0.7
+  },
+  {
+   "id": "route133",
+   "name": "Route 133",
+   "type": "route",
+   "x": 0.482,
+   "y": 0.7
+  },
+  {
+   "id": "route134",
+   "name": "Route 134",
+   "type": "route",
+   "x": 0.375,
+   "y": 0.7
+  },
+  {
+   "id": "granite_cave",
+   "name": "Granite Cave",
+   "type": "cave",
+   "x": 0.054,
+   "y": 0.9
+  },
+  {
+   "id": "mt_chimney",
+   "name": "Mt. Chimney",
+   "type": "cave",
+   "x": 0.232,
+   "y": 0.167
+  },
+  {
+   "id": "safari_zone",
+   "name": "Safari Zone",
+   "type": "cave",
+   "x": 0.589,
+   "y": 0.167
+  },
+  {
+   "id": "petalburg_woods",
+   "name": "Petalburg Woods",
+   "type": "cave",
+   "x": 0.018,
+   "y": 0.567
+  },
+  {
+   "id": "rusturf_tunnel",
+   "name": "Rusturf Tunnel",
+   "type": "cave",
+   "x": 0.089,
+   "y": 0.367
+  },
+  {
+   "id": "abandoned_ship",
+   "name": "Abandoned Ship",
+   "type": "cave",
+   "x": 0.232,
+   "y": 0.967
+  },
+  {
+   "id": "new_mauville",
+   "name": "New Mauville",
+   "type": "cave",
+   "x": 0.304,
+   "y": 0.5
+  },
+  {
+   "id": "meteor_falls",
+   "name": "Meteor Falls",
+   "type": "cave",
+   "x": 0.018,
+   "y": 0.233
+  },
+  {
+   "id": "mt_pyre",
+   "name": "Mt. Pyre",
+   "type": "cave",
+   "x": 0.589,
+   "y": 0.3
+  },
+  {
+   "id": "shoal_cave",
+   "name": "Shoal Cave",
+   "type": "cave",
+   "x": 0.875,
+   "y": 0.3
+  },
+  {
+   "id": "seafloor_cavern",
+   "name": "Seafloor Cavern",
+   "type": "cave",
+   "x": 0.875,
+   "y": 0.633
+  },
+  {
+   "id": "victory_road",
+   "name": "Victory Road",
+   "type": "cave",
+   "x": 0.9,
+   "y": 0.6
+  },
+  {
+   "id": "cave_of_origin",
+   "name": "Cave Of Origin",
+   "type": "cave",
+   "x": 0.71,
+   "y": 0.5
+  },
+  {
+   "id": "fiery_path",
+   "name": "Fiery Path",
+   "type": "cave",
+   "x": 0.232,
+   "y": 0.233
+  },
+  {
+   "id": "jagged_pass",
+   "name": "Jagged Pass",
+   "type": "cave",
+   "x": 0.232,
+   "y": 0.233
+  },
+  {
+   "id": "sky_pillar",
+   "name": "Sky Pillar",
+   "type": "cave",
+   "x": 0.696,
+   "y": 0.7
+  }
+ ],
+ "edges": [
+  [
+   "abandoned_ship",
+   "route107"
+  ],
+  [
+   "abandoned_ship",
+   "route108"
+  ],
+  [
+   "cave_of_origin",
+   "route126"
+  ],
+  [
+   "cave_of_origin",
+   "sootopolis_city"
+  ],
+  [
+   "dewford_town",
+   "route106"
+  ],
+  [
+   "dewford_town",
+   "route107"
+  ],
+  [
+   "ever_grande_city",
+   "route128"
+  ],
+  [
+   "ever_grande_city",
+   "victory_road"
+  ],
+  [
+   "fallarbor_town",
+   "route113"
+  ],
+  [
+   "fallarbor_town",
+   "route114"
+  ],
+  [
+   "fiery_path",
+   "jagged_pass"
+  ],
+  [
+   "fiery_path",
+   "lavaridge_town"
+  ],
+  [
+   "fiery_path",
+   "mt_chimney"
+  ],
+  [
+   "fiery_path",
+   "route112"
+  ],
+  [
+   "fortree_city",
+   "route119"
+  ],
+  [
+   "fortree_city",
+   "route120"
+  ],
+  [
+   "granite_cave",
+   "route106"
+  ],
+  [
+   "jagged_pass",
+   "lavaridge_town"
+  ],
+  [
+   "jagged_pass",
+   "mt_chimney"
+  ],
+  [
+   "jagged_pass",
+   "route112"
+  ],
+  [
+   "lavaridge_town",
+   "route112"
+  ],
+  [
+   "lilycove_city",
+   "route121"
+  ],
+  [
+   "lilycove_city",
+   "route124"
+  ],
+  [
+   "littleroot_town",
+   "route101"
+  ],
+  [
+   "mauville_city",
+   "new_mauville"
+  ],
+  [
+   "mauville_city",
+   "route110"
+  ],
+  [
+   "mauville_city",
+   "route111"
+  ],
+  [
+   "mauville_city",
+   "route117"
+  ],
+  [
+   "mauville_city",
+   "route118"
+  ],
+  [
+   "meteor_falls",
+   "route115"
+  ],
+  [
+   "mossdeep_city",
+   "route124"
+  ],
+  [
+   "mossdeep_city",
+   "route125"
+  ],
+  [
+   "mossdeep_city",
+   "route127"
+  ],
+  [
+   "mossdeep_city",
+   "shoal_cave"
+  ],
+  [
+   "mt_chimney",
+   "route112"
+  ],
+  [
+   "mt_pyre",
+   "route121"
+  ],
+  [
+   "mt_pyre",
+   "route122"
+  ],
+  [
+   "new_mauville",
+   "route110"
+  ],
+  [
+   "oldale_town",
+   "route101"
+  ],
+  [
+   "oldale_town",
+   "route102"
+  ],
+  [
+   "oldale_town",
+   "route103"
+  ],
+  [
+   "pacifidlog_town",
+   "route131"
+  ],
+  [
+   "pacifidlog_town",
+   "route132"
+  ],
+  [
+   "petalburg_city",
+   "route102"
+  ],
+  [
+   "petalburg_city",
+   "route104"
+  ],
+  [
+   "petalburg_woods",
+   "route104"
+  ],
+  [
+   "route103",
+   "route110"
+  ],
+  [
+   "route104",
+   "route105"
+  ],
+  [
+   "route104",
+   "rustboro_city"
+  ],
+  [
+   "route105",
+   "route106"
+  ],
+  [
+   "route107",
+   "route108"
+  ],
+  [
+   "route108",
+   "route109"
+  ],
+  [
+   "route109",
+   "slateport_city"
+  ],
+  [
+   "route110",
+   "slateport_city"
+  ],
+  [
+   "route111",
+   "route112"
+  ],
+  [
+   "route111",
+   "route113"
+  ],
+  [
+   "route114",
+   "route115"
+  ],
+  [
+   "route115",
+   "rustboro_city"
+  ],
+  [
+   "route116",
+   "rustboro_city"
+  ],
+  [
+   "route116",
+   "rusturf_tunnel"
+  ],
+  [
+   "route116",
+   "verdanturf_town"
+  ],
+  [
+   "route117",
+   "verdanturf_town"
+  ],
+  [
+   "route118",
+   "route119"
+  ],
+  [
+   "route118",
+   "route123"
+  ],
+  [
+   "route120",
+   "route121"
+  ],
+  [
+   "route121",
+   "route122"
+  ],
+  [
+   "route121",
+   "safari_zone"
+  ],
+  [
+   "route122",
+   "route123"
+  ],
+  [
+   "route124",
+   "route125"
+  ],
+  [
+   "route124",
+   "route126"
+  ],
+  [
+   "route124",
+   "route127"
+  ],
+  [
+   "route124",
+   "shoal_cave"
+  ],
+  [
+   "route125",
+   "shoal_cave"
+  ],
+  [
+   "route126",
+   "route127"
+  ],
+  [
+   "route126",
+   "sootopolis_city"
+  ],
+  [
+   "route127",
+   "route128"
+  ],
+  [
+   "route127",
+   "seafloor_cavern"
+  ],
+  [
+   "route128",
+   "route129"
+  ],
+  [
+   "route128",
+   "route130"
+  ],
+  [
+   "route128",
+   "seafloor_cavern"
+  ],
+  [
+   "route128",
+   "victory_road"
+  ],
+  [
+   "route129",
+   "route130"
+  ],
+  [
+   "route129",
+   "seafloor_cavern"
+  ],
+  [
+   "route130",
+   "route131"
+  ],
+  [
+   "route131",
+   "sky_pillar"
+  ],
+  [
+   "route132",
+   "route133"
+  ],
+  [
+   "route133",
+   "route134"
+  ],
+  [
+   "route134",
+   "slateport_city"
+  ]
+ ]
+}
