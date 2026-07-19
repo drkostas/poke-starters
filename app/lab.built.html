@@ -470,6 +470,12 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
 .introx:hover{opacity:1;}
 .ladder{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;}
 .ladder .rung{flex:none;min-width:0;}
+/* mobile progressive-disclosure toggle (hidden on desktop; the mobile block shows it) */
+.mtoggle{display:none;width:100%;margin-top:3px;background:#0a2a31;border:1px dashed rgba(255,255,255,.22);color:#8fb7c1;font-family:var(--mono);font-size:11px;font-weight:700;padding:6px 8px;border-radius:7px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;}
+.mtoggle:active{transform:translateY(1px);}
+.mtoggle::after{content:" \25B8";}
+#ladder.open .mtoggle::after,#dmx.open .mtoggle::after{content:" \25BE";}
+#ladder .mtoggle{grid-column:1/-1;}
 /* touch targets on small screens */
 /* ============ MOBILE APP-SHELL (<=1000px): segmented panes + sticky action bar + real type scale ============ */
 @media(max-width:1000px){
@@ -511,6 +517,12 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
      leaves a gap on the left — spread them full-width in equal columns instead */
   .scorechips{margin-left:0;width:100%;}
   .scorechips .sc{flex:1;min-width:0;}
+
+  /* progressive disclosure: keep the Team pane short. Show only the active ladder rung and the
+     defensive-profile summary; collapse the rest behind a tap. */
+  .mtoggle{display:block;}
+  #ladder:not(.open) .rung:not(.on){display:none;}
+  #dmx:not(.open) .dmbody{display:none;}
 
   /* gated: hide the empty analysis screen until a team is revealed (kills a screen of blank placeholders) */
   .device:not(.revealed) .screen{display:none;}
@@ -808,6 +820,9 @@ function wireControls(){
     else { hlMembers(key.split(',').filter(Boolean).map(Number)); host.dataset.hlon=key; } }); };
   tapHl($('dmx'),'.dmc[data-weak]','weak');
   tapHl(scw,'.sc[data-hl]','hl');
+  // mobile progressive disclosure: a .mtoggle button expands/collapses its host (#ladder / #dmx)
+  document.addEventListener('click',e=>{ const t=e.target.closest('.mtoggle'); if(!t) return;
+    const host=t.parentElement; const open=host.classList.toggle('open'); t.setAttribute('aria-expanded', open?'true':'false'); });
   $('spin').onclick=()=>{ if(spinning||!RESULTS.length) return; revealTeam(RESULTS[idx]); };
   $('next').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx+1)%RESULTS.length; revealTeam(RESULTS[idx]); };
   $('prev').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx-1+RESULTS.length)%RESULTS.length; revealTeam(RESULTS[idx]); };
@@ -949,11 +964,12 @@ function renderResult(c){ $('rank').textContent='MATCH #'+(idx+1)+' / '+RESULTS.
     t+='Sorted by '+(SORTBY[c.strategy]||SORTBY.any)+'.'; wl.innerHTML=t; }
   sayResult('Match '+(idx+1)+' of '+RESULTS.length+', '+c.strategyLabel+'. '+c.members.map(m=>m.finalName||m.baseName).join(', ')+'. Triangle '+c.score.tri+', coverage '+c.score.cov+'.'); }
 const LADDER_GATE={ triangle:['tri','≥',100], coverage:['cov','≥',80], weakness:['shared','≤',1], fairness:['fair','≥',85] };
-function renderLadder(c){ $('ladder').innerHTML=LADDER.map((s,i)=>{ let cls='rung'; if(i===c.tier)cls+=' on'; else if(i<c.tier)cls+=' passed';
+function renderLadder(c){ const _lopen=$('ladder').classList.contains('open'); $('ladder').innerHTML=LADDER.map((s,i)=>{ let cls='rung'; if(i===c.tier)cls+=' on'; else if(i<c.tier)cls+=' passed';
   const g=LADDER_GATE[s.key]; let note='', tip = i===c.tier?'This strategy’s bar was met — the match landed here':(i<c.tier?'Tried first; this combo missed the bar':'Not reached (an earlier strategy already matched)');
   if(g && i<=c.tier){ const v=c.score[g[0]]; const ok = g[1]==='≥' ? v>=g[2] : v<=g[2];
     note=`<span class="gate ${ok?'ok':'no'}">${g[0]} ${v}${g[1]}${g[2]} ${ok?'✓':'✗'}</span>`; }
-  return `<div class="${cls}" title="${tip}"><span class="n">${i===0?'PRIMARY':'FALLBACK '+i}</span><br>${s.label}${note?'<br>'+note:''}</div>`; }).join(''); }
+  return `<div class="${cls}" title="${tip}"><span class="n">${i===0?'PRIMARY':'FALLBACK '+i}</span><br>${s.label}${note?'<br>'+note:''}</div>`; }).join('')
+    +`<button class="mtoggle" type="button" aria-expanded="${_lopen}">why this order</button>`; }
 function relaxBanner(c){ if(c.tier>maxTierSeen){ maxTierSeen=c.tier; const b=$('banner');
   b.textContent='Relaxing to: '+(LADDER[c.tier]?.label||'best remaining'); b.classList.add('show'); setTimeout(()=>b.classList.remove('show'),1900); } }
 const SL=['HP','AT','DF','SA','SD','SP'];
@@ -1014,12 +1030,14 @@ function renderDefense(c){
   const swTxt = shared.length
     ? `<span class="sw-list bad">! ${shared.map(t=>TABBR[t]).join(' ')}</span>`
     : `<span class="sw-list ok">none — balanced</span>`;
+  const _dopen=$('dmx').classList.contains('open');
   let html=`<div class="lbl"><span>Defensive profile</span>${swTxt}</div>`+
-    `<div class="dmgrid">${cells}</div>`+
+    `<button class="mtoggle" type="button" aria-expanded="${_dopen}">full 18-type matrix</button>`+
+    `<div class="dmbody"><div class="dmgrid">${cells}</div>`+
     `<div class="dmleg"><span><i style="background:#c6102a"></i>shared weak (2+)</span>`+
     `<span><i style="background:rgba(244,193,58,.75)"></i>1 weak</span>`+
     `<span><i style="background:rgba(15,56,15,.34)"></i>resist</span>`+
-    `<span><i style="background:rgba(15,56,15,.62)"></i>immune</span></div>`;
+    `<span><i style="background:rgba(15,56,15,.62)"></i>immune</span></div></div>`;
   if(c.swap){ const s=c.swap;
     const toName=s.toFinalName&&s.toFinalName!==s.toBaseName?`${s.toBaseName} <span class="fn">&rarr;${s.toFinalName}</span>`:s.toBaseName;
     const covTxt=(s.newCov!==c.score.cov)?`, coverage ${c.score.cov}&rarr;${s.newCov}%`:'';
