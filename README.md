@@ -30,6 +30,8 @@
 
 ## What it does
 
+> Inspired by MandJTV's video [Everyone Else's Starter Pokémon](https://www.youtube.com/watch?v=xNzYtLNEZjg): if you didn't live next to the professor, what starter trio could you actually catch near your town? This project turns that question into a search you can run for any base town across Kanto, Johto, and Hoenn.
+
 Pick your regions, types, and power budget on the left. The optimizer searches every legal combination of evolution lines and ranks the results, then a slot machine reveals the top team. The right panel shows **why** that trio wins (a closed type-effectiveness loop, defensive coverage, stat balance), and the maps below show **where to catch** each member on the real in-game Town Maps.
 
 Everything runs in the browser. The heavy search happens on a Web Worker, so the interface stays smooth, and a shareable URL captures your exact settings.
