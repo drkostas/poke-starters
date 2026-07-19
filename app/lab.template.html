@@ -283,6 +283,7 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
 .dmc.weak{background:rgba(244,193,58,.6);color:#4a3600;}
 .dmc.shared{background:#c6102a;color:#fff0ec;box-shadow:0 0 0 1px #7c0d1b inset;}
 .dmc .ct{position:absolute;top:-4px;right:-3px;font-size:7px;font-weight:700;background:#7c0d1b;color:#fff;border-radius:6px;min-width:10px;padding:0 1px;line-height:1.35;}
+.dmc .ct.im{background:#17421b;color:#e4f4b0;}
 /* forced-colors / Windows high-contrast: backgrounds are stripped, so carry weak/resist/immune state on a visible border + a text glyph */
 @media (forced-colors: active){
   .dmc{border:1px solid GrayText;}
@@ -973,7 +974,7 @@ function renderDefense(c){
     let cls='dmc',ct='';
     if(w>=2){ cls+=' shared'; ct=`<span class="ct">${w}</span>`; }
     else if(w===1){ cls+=' weak'; }
-    else if(im>0){ cls+=' immune'; }
+    else if(im>0){ cls+=' immune'; ct=`<span class="ct im">×0</span>`; }
     else if(r>0){ cls+=' resist'; }
     const wm=weakMembers(t);
     // tooltip + hover both name WHICH members are weak, so a red cell explains itself
