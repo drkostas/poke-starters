@@ -505,6 +505,11 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
   /* fluid reel height so SPIN seats above the fold */
   .reel{height:clamp(120px,32vw,168px);}
 
+  /* score chips: on desktop they hug the right (margin-left:auto), but on their own mobile row that
+     leaves a gap on the left — spread them full-width in equal columns instead */
+  .scorechips{margin-left:0;width:100%;}
+  .scorechips .sc{flex:1;min-width:0;}
+
   /* gated: hide the empty analysis screen until a team is revealed (kills a screen of blank placeholders) */
   .device:not(.revealed) .screen{display:none;}
 
@@ -1166,21 +1171,27 @@ function evolveAnimateReels(){ const c=RESULTS[idx]; sfx('evolve'); const rm=red
       {filter:'brightness(1) saturate(1)',transform:'scale(1)'}],{duration:850,easing:'ease-in-out'});
     setTimeout(()=>{ img.src=sprUrl(stageDex(m)); }, 400);
     setTimeout(()=>reel.classList.remove('evoflash'), 880); }); }
-function landInstant(c){ strips().forEach((strip,r)=>{ const m=c.members[r]; strip.style.transition='none'; strip.style.transform='translateY(0)';
-  const reel=strip.closest('.reel'); if(reel) reel.classList.remove('blur'); // clear any lingering spin blur so an instant re-land (e.g. era-switch mid-respin) is sharp
+// center the landed sprite band (cells 0/1/2, sprite = cell 1 at 1.5*CELL from the top) on the reel's
+// ACTUAL height: 0 on the 192px desktop reel, ~-33px on the shrunk mobile reel (which otherwise leaves
+// the sprite sitting low, off the centred payline).
+const reelOffset=(reel)=> reel ? Math.round(reel.clientHeight/2 - 1.5*CELL) : 0;
+function landInstant(c){ strips().forEach((strip,r)=>{ const m=c.members[r]; const reel=strip.closest('.reel'); strip.style.transition='none'; strip.style.transform='translateY('+reelOffset(reel)+'px)';
+  if(reel) reel.classList.remove('blur'); // clear any lingering spin blur so an instant re-land (e.g. era-switch mid-respin) is sharp
   strip.innerHTML=m?`<div class="cell"></div>${cellImg(stageDex(m))}<div class="cell"></div>`:'<div class="cell"></div><div class="cell"><span class="q">?</span></div><div class="cell"></div>'; }); }
 // ---- gated reveal: the team stays face-down until the user SPINs (no pre-show spoiler) ----
 let revealed=false;
 const reduceMotion=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
-function coverReels(){ strips().forEach((strip)=>{ strip.style.transition='none'; strip.style.transform='translateY(0)';
+function coverReels(){ strips().forEach((strip)=>{ strip.style.transition='none'; strip.style.transform='translateY('+reelOffset(strip.closest('.reel'))+'px)';
   strip.innerHTML='<div class="cell"></div><div class="cell facedown"><span class="ball"></span></div><div class="cell"></div>'; }); }
+// keep the landed/covered sprite centred when the reel height changes (orientation / resize)
+let _reelRT; window.addEventListener('resize',()=>{ clearTimeout(_reelRT); _reelRT=setTimeout(()=>{ if(spinning||!DATA) return; if(revealed && RESULTS[idx]) landInstant(RESULTS[idx]); else coverReels(); },160); });
 function spinTo(c, onLand){ clearTimeout(spinTimer); const spinBtn=$('spin'); const wasFocused=document.activeElement===spinBtn; // disabling the focused SPIN would drop focus to <body>
   spinning=true; $('spin').disabled=true; sfx('spin'); const S=strips(); const fast=reduceMotion();
   S.forEach((strip,r)=>{ const m=c.members[r];
     if(!m){ strip.innerHTML='<div class="cell"></div><div class="cell facedown"><span class="ball"></span></div><div class="cell"></div>'; return; }
     const cells=[]; for(let i=0;i<N;i++)cells.push(randDex()); cells[LAND]=stageDex(m);
     strip.innerHTML=cells.map(cellImg).join(''); strip.style.transition='none'; strip.style.transform='translateY(0)'; const reel=strip.closest('.reel'); reel.classList.add('blur'); reel.classList.remove('evoflash');
-    void strip.offsetHeight; const dur=fast?0.3:(1.0+r*0.3); strip.style.transition=`transform ${dur}s cubic-bezier(.12,.62,.2,1)`; strip.style.transform=`translateY(${-((LAND-1)*CELL)}px)`;
+    void strip.offsetHeight; const dur=fast?0.3:(1.0+r*0.3); strip.style.transition=`transform ${dur}s cubic-bezier(.12,.62,.2,1)`; strip.style.transform=`translateY(${-((LAND-1)*CELL) + reelOffset(reel)}px)`;
     setTimeout(()=>reel.classList.remove('blur'),dur*700); });
   const last=Math.max(0,Math.min(size,c.members.length)-1); const total=(fast?0.3:(1.0+last*0.3))*1000;
   spinTimer=setTimeout(()=>{ spinning=false; $('spin').disabled=false; if(wasFocused && document.activeElement===document.body){ try{ spinBtn.focus(); }catch(e){} } sfx('reveal'); if(onLand) onLand(); },total); } // only restore the focus the disable dropped to <body>, never steal focus the user moved
