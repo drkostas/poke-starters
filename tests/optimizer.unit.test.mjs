@@ -9,7 +9,7 @@ import {
   TYPES, LEGENDARY, RARITY_RANK, STRATEGIES, coverageTierThreshold,
   makeTypeApi, buildLines,
   fairness, triangleScore, coverageScore, sharedWeaknesses,
-  bfsReach, catchableDexInReach, bestRarityByDex,
+  bfsReach, catchableDexInReach, bestRarityByDex, UNOBTAINABLE_METHODS,
   optimize,
 } from '../src/engine/optimizer.mjs';
 
@@ -229,6 +229,33 @@ test('RARITY_RANK orders tiers and bestRarityByDex keeps the easiest encounter',
   assert.equal(all[1], RARITY_RANK.common, 'keeps the highest (easiest) rank across nodes');
   const restricted = bestRarityByDex(loc, new Set(['a']));
   assert.equal(restricted[1], RARITY_RANK.rare, 'reach set restricts which nodes count');
+});
+
+test('bfsReach excludes open-water (Surf-gated) nodes', () => {
+  const conn = { nodes: [{ id: 'town' }, { id: 'route', type: 'route' }, { id: 'sea', type: 'water' }],
+    edges: [['town', 'route'], ['route', 'sea']] };
+  const reach = bfsReach(conn, 'town', 5);
+  assert.ok(reach.has('route'), 'a land route is reachable');
+  assert.ok(!reach.has('sea'), 'the open-water node needs Surf, so it is out of a base-town reach');
+});
+
+test('obtainability: reach/pool ignore methods a fresh trainer cannot use', () => {
+  assert.deepEqual([...UNOBTAINABLE_METHODS].sort(), ['fossil', 'super_rod', 'surf', 'trade']);
+  const loc = { a: { catchable: [
+    { dexNumber: 1, method: 'grass' }, { dexNumber: 2, method: 'good_rod' },
+    { dexNumber: 3, method: 'surf' }, { dexNumber: 4, method: 'super_rod' },
+    { dexNumber: 5, method: 'fossil' }, { dexNumber: 6, method: 'trade' }] } };
+  const dex = catchableDexInReach(loc, new Map([['a', 0]]));
+  assert.deepEqual([...dex].sort((x, y) => x - y), [1, 2], 'only grass + good_rod are obtainable near a base town');
+});
+
+test('bestRarityByDex ignores unobtainable-method encounters', () => {
+  const loc = { a: { catchable: [
+    { dexNumber: 7, method: 'trade', rarityTier: 'common' },
+    { dexNumber: 8, method: 'grass', rarityTier: 'rare' }] } };
+  const best = bestRarityByDex(loc, null);
+  assert.ok(!(7 in best), 'a trade-only species contributes no obtainable rarity');
+  assert.equal(best[8], RARITY_RANK.rare);
 });
 
 test('STRATEGIES ladder is well-formed', () => {
