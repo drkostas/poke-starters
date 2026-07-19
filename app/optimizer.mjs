@@ -121,16 +121,26 @@ const commonType = (combo) => {
 export function bfsReach(connectivity, startId, steps){
   const adj = Object.create(null); // prototype-less: a baseTown like "__proto__"/"toString" must key as data, not crash
   for(const [a,b] of connectivity.edges){ (adj[a]??=[]).push(b); (adj[b]??=[]).push(a); }
+  // Surf gate (obtainability): open-water nodes can only be crossed with HM Surf, which a trainer just
+  // starting out near their town does not have — so their reach stops at the shore. Encounters that
+  // themselves need Surf / the Super Rod / a fossil / a trade are filtered separately, by method.
+  const surfGated = Object.create(null);
+  for(const n of (connectivity.nodes||[])) if(n && n.type==='water') surfGated[n.id]=true;
   const seen = new Map([[startId,0]]); const q=[startId];
   while(q.length){ const cur=q.shift(); const d=seen.get(cur); if(d>=steps) continue;
-    for(const nb of (adj[cur]||[])) if(!seen.has(nb)){ seen.set(nb,d+1); q.push(nb); } }
-  return seen; // Map nodeId -> distance
+    for(const nb of (adj[cur]||[])) if(!seen.has(nb) && !surfGated[nb]){ seen.set(nb,d+1); q.push(nb); } }
+  return seen; // Map nodeId -> distance (open-water nodes excluded: they need Surf)
 }
+// Encounter methods a just-starting trainer can't use near their town: Surf (HM), the Super Rod,
+// fossil revival (the tech is far away, e.g. Cinnabar), and trades (need a partner). The old and good
+// rods, grass, gifts, the Safari Zone and Game Corner are all fair game. (Matches the source video.)
+export const UNOBTAINABLE_METHODS = new Set(['surf','super_rod','fossil','trade']);
+const isObtainable = (c)=> !UNOBTAINABLE_METHODS.has(c.method);
 export function catchableDexInReach(locations, reach){
   const dex = new Set();
   for(const nodeId of reach.keys()){
     const loc = locations[nodeId]; if(!loc) continue;
-    for(const c of (loc.catchable||[])) dex.add(c.dexNumber);
+    for(const c of (loc.catchable||[])){ if(isObtainable(c)) dex.add(c.dexNumber); }
   }
   return dex;
 }
@@ -141,7 +151,7 @@ export function bestRarityByDex(locations, reach){
   const best = {};
   for(const [id,loc] of Object.entries(locations)){
     if(id==='_meta') continue; if(reach && !reach.has(id)) continue;
-    for(const c of (loc.catchable||[])){ const r = RARITY_RANK[c.rarityTier] || 1;
+    for(const c of (loc.catchable||[])){ if(!isObtainable(c)) continue; const r = RARITY_RANK[c.rarityTier] || 1;
       if(!(c.dexNumber in best) || r > best[c.dexNumber]) best[c.dexNumber] = r; }
   }
   return best;
