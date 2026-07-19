@@ -170,9 +170,16 @@ function* combinations(arr, k, start=0, prefix=[]){
 // sturdy one) and demote stat-fairness from a dominating term to a light tiebreak everywhere
 // except its own strategy. The weakness tier fires at shared<=1 so it isn't dead code at size 6
 // (where the global minimum shared weakness is 1).
+// The "excellent coverage" bar scales with team size: a 6-member team trivially covers most
+// types, so it must clear a higher bar than a 2-member team to earn the coverage tier. Values
+// track roughly the 85th percentile of achievable coverage per size (measured), so the tier
+// stays reachable at size 2 (coverage tops out near 72) and selective at size 6 (where a fixed
+// cov>=80 gate otherwise passed most teams and swallowed the lower tiers).
+export const coverageTierThreshold = (n = 3) => Math.min(92, 52 + 7 * n);
+
 export const STRATEGIES = [
   { key:'triangle', label:'Perfect type triangle', pass:(s)=> s.tri>=100,   rank:(s)=> s.tri*3 + s.cov*2 - s.shared*12 + s.fair*0.5 },
-  { key:'coverage', label:'Max coverage',          pass:(s)=> s.cov>=80,    rank:(s)=> s.cov*3 - s.shared*10 + s.fair*0.5 },
+  { key:'coverage', label:'Max coverage',          pass:(s)=> s.cov>=coverageTierThreshold(s.n), rank:(s)=> s.cov*3 - s.shared*10 + s.fair*0.5 },
   { key:'weakness', label:'Min shared weakness',   pass:(s)=> s.shared<=1,  rank:(s)=> (100-s.shared*12)*2 + s.cov + s.fair*0.5 },
   { key:'fairness', label:'Max stat-fairness',     pass:(s)=> s.fair>=85,   rank:(s)=> s.fair*3 + s.cov },
   { key:'sametype', label:'Same-type set',         pass:(s)=> s.sameType,   rank:(s)=> s.fair + s.cov - s.shared*6 },
@@ -369,7 +376,7 @@ function compute(data, p){
       const avg=sum/N; let sd=0; for(let d=0;d<N;d++){ const diff=bstArr[ix[d]]-avg; sd+=diff*diff; } sd=Math.sqrt(sd/N);
       let sharedMask=0; for(let a=0;a<N;a++) for(let b=a+1;b<N;b++) sharedMask|=(weakMask[ix[a]]&weakMask[ix[b]]);
       scored.push({ ix: Array.from(ix), s:{
-        fair: Math.max(0, Math.round(100 - sd*1.25)), cov: Math.round(popcount(cov)/nTypes*100),
+        n: N, fair: Math.max(0, Math.round(100 - sd*1.25)), cov: Math.round(popcount(cov)/nTypes*100),
         tri: triFromIdx(ix), shared: popcount(sharedMask), sameType: self!==0, sameEvo,
         avgBst: Math.round(avg), spread: mx-mn } });
       return;

@@ -6,7 +6,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  TYPES, LEGENDARY, RARITY_RANK, STRATEGIES,
+  TYPES, LEGENDARY, RARITY_RANK, STRATEGIES, coverageTierThreshold,
   makeTypeApi, buildLines,
   fairness, triangleScore, coverageScore, sharedWeaknesses,
   bfsReach, catchableDexInReach, bestRarityByDex,
@@ -239,6 +239,21 @@ test('STRATEGIES ladder is well-formed', () => {
     assert.equal(typeof s.rank, 'function');
     assert.equal(typeof s.label, 'string');
   }
+});
+
+test('coverage tier threshold is size-aware (reachable at size 2, selective at size 6)', () => {
+  // grows with team size, so a bigger team must clear a higher coverage bar
+  assert.ok(coverageTierThreshold(2) < coverageTierThreshold(6), 'threshold grows with team size');
+  // reachable at size 2: achievable coverage tops out near 72, so the bar must sit below that
+  assert.ok(coverageTierThreshold(2) <= 72, 'size-2 threshold is reachable');
+  // selective at size 6: a fixed cov>=80 passed most 6-teams, so the bar must be well above 80
+  assert.ok(coverageTierThreshold(6) >= 88, 'size-6 threshold is selective');
+  // the coverage strategy consumes it: identical coverage tiers differently by team size
+  const cov = STRATEGIES.find((s) => s.key === 'coverage');
+  assert.equal(cov.pass({ cov: 68, n: 2 }), true, 'cov 68 is excellent for a 2-team');
+  assert.equal(cov.pass({ cov: 84, n: 6 }), false, 'cov 84 is not "max coverage" for a 6-team');
+  // missing size falls back to a mid default rather than NaN (never silently always-false)
+  assert.equal(cov.pass({ cov: 95 }), true, 'defaults sanely when team size is absent');
 });
 
 // ---------- optimize() integration on a synthetic Pokedex ----------
