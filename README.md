@@ -39,7 +39,7 @@ Everything runs in the browser. The heavy search happens on a Web Worker, so the
 ## How it works
 
 - **The engine** (`src/engine/optimizer.mjs`) scores every eligible trio with bitmask type math, a real directed-Hamiltonian-cycle test for "perfect triangles" (each member is super-effective against the next), defensive coverage, shared-weakness, and stat-fairness. It runs era-aware: a Gen-1-only query uses the authentic 15-type Gen-1 chart, quirks and all.
-- **The maps** are the real Kanto, Johto, and Hoenn Town Maps with ROM-accurate wild-encounter tables and route graphs. A base-town search runs a breadth-first walk over the region graph to show what is reachable within a step budget.
+- **The maps** are the real Kanto, Johto, and Hoenn Town Maps with ROM-accurate wild-encounter tables and route graphs. A base-town search runs a breadth-first walk over the region graph to show what is reachable within a step budget. It also models obtainability the way a trainer just starting out would face it: open-water routes need Surf, and encounters that need the Super Rod, a fossil, or a trade are set aside, so the pool reflects what you could actually catch near that town.
 - **The reveal** is a gated slot machine: nothing is shown until you spin, so the result is never spoiled. You can then walk the ranked list, evolve the whole team a stage at a time, and swap the art between FireRed/LeafGreen and Red/Blue/Yellow sprites.
 - **The build** is a single self-contained `lab.built.html`: `app/build_lab.py` inlines the fonts, the guided-tour data, and the Professor Oak sprite as data URIs. Sprites, maps, and data are fetched at runtime.
 
