@@ -795,6 +795,14 @@ function wireControls(){
   const scw=document.querySelector('.scorechips');
   if(scw){ scw.addEventListener('mouseover',e=>{ const sc=e.target.closest('.sc[data-hl]'); if(sc) hlMembers((sc.dataset.hl||'').split(',').filter(Boolean).map(Number)); });
     scw.addEventListener('mouseout',e=>{ if(e.target.closest('.sc')) hlMembers(null); }); }
+  // touch: tapping a matrix cell / score chip toggles the same member-highlight (hover never fires on touch)
+  const tapHl=(host,sel,attr)=>{ if(!host) return; host.addEventListener('pointerdown',e=>{ if(e.pointerType!=='touch') return;
+    const t=e.target.closest(sel); if(!t){ hlMembers(null); host.dataset.hlon=''; return; }
+    const key=t.dataset[attr]||'';
+    if(host.dataset.hlon===key && key){ hlMembers(null); host.dataset.hlon=''; }
+    else { hlMembers(key.split(',').filter(Boolean).map(Number)); host.dataset.hlon=key; } }); };
+  tapHl($('dmx'),'.dmc[data-weak]','weak');
+  tapHl(scw,'.sc[data-hl]','hl');
   $('spin').onclick=()=>{ if(spinning||!RESULTS.length) return; revealTeam(RESULTS[idx]); };
   $('next').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx+1)%RESULTS.length; revealTeam(RESULTS[idx]); };
   $('prev').onclick=()=>{ if(spinning||!RESULTS.length) return; if(revealed) idx=(idx-1+RESULTS.length)%RESULTS.length; revealTeam(RESULTS[idx]); };
@@ -1399,17 +1407,29 @@ function renderTriangle(c){ const svg=$('trisvg'); if(!svg||!TAPI) return; const
              : 'No closed win-loop here. Greyed arrows are the partial matchups that do exist. Hover a node or arrow for detail.');
   const setHint=(html)=>{ if(hintEl) hintEl.innerHTML = html || EXPLAIN; };
   setHint();
+  // touch: tapping an arrow or node reveals its "why" in the hint (hover is mouse-only). Each
+  // interactive element registers a reset so a fresh tap clears the others; tapping empty space resets.
+  const resetFns=[];
   svg.insertAdjacentHTML('beforeend','<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f4c13a"/></marker><marker id="ahg" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5a6149"/></marker></defs>');
   const elabels=[]; // collect edge "why" labels; drawn last (on top) with a pill, pushed clear of node text
   const arrow=(a,b,active)=>{ const [x1,y1]=pos[a],[x2,y2]=pos[b]; const dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L;
     const w=winType(a,b);
-    const ln=el('line',{x1:x1+ux*R,y1:y1+uy*R,x2:x2-ux*(R+8),y2:y2-uy*(R+8),stroke:active?'#f4c13a':'#5a6149','stroke-width':active?3.2:1.6,'marker-end':active?'url(#ah)':'url(#ahg)','data-arrow':'1'});
+    const gx1=x1+ux*R,gy1=y1+uy*R,gx2=x2-ux*(R+8),gy2=y2-uy*(R+8);
+    const ln=el('line',{x1:gx1,y1:gy1,x2:gx2,y2:gy2,stroke:active?'#f4c13a':'#5a6149','stroke-width':active?3.2:1.6,'marker-end':active?'url(#ah)':'url(#ahg)','data-arrow':'1'});
     if(!active) ln.setAttribute('opacity','.45');
+    ln.style.pointerEvents='none'; // the wide hit-line below carries the interaction
     const detail=`<b>${fname(a)}</b> hits <b>${fname(b)}</b> with <b style="color:${TCOL[w.type]}">${w.type||'—'} ×${w.mult}</b> (${m[b].finalTypes.join('/')})`;
-    ln.appendChild(el('title',{})).textContent=`${fname(a)}'s ${w.type} is ${w.mult}x vs ${fname(b)} (${m[b].finalTypes.join('/')})`;
-    ln.addEventListener('mouseenter',()=>{ setHint('▸ '+detail); ln.setAttribute('stroke-width',active?4.6:2.8); ln.setAttribute('opacity','1'); });
-    ln.addEventListener('mouseleave',()=>{ setHint(); ln.setAttribute('stroke-width',active?3.2:1.6); if(!active) ln.setAttribute('opacity','.45'); });
+    const emph=()=>{ ln.setAttribute('stroke-width',active?4.6:2.8); ln.setAttribute('opacity','1'); };
+    const base=()=>{ ln.setAttribute('stroke-width',active?3.2:1.6); if(!active) ln.setAttribute('opacity','.45'); };
+    resetFns.push(base);
     svg.appendChild(ln);
+    // wide transparent hit-line: a thin arrow is nearly untappable on touch, so give it a real target
+    const hit=el('line',{x1:gx1,y1:gy1,x2:gx2,y2:gy2,stroke:'transparent','stroke-width':14,style:'cursor:pointer'});
+    hit.appendChild(el('title',{})).textContent=`${fname(a)}'s ${w.type} is ${w.mult}x vs ${fname(b)} (${m[b].finalTypes.join('/')})`;
+    hit.addEventListener('mouseenter',()=>{ setHint('▸ '+detail); emph(); });
+    hit.addEventListener('mouseleave',()=>{ setHint(); base(); });
+    hit.addEventListener('click',(ev)=>{ ev.stopPropagation(); resetFns.forEach(f=>f()); setHint('▸ '+detail); emph(); });
+    svg.appendChild(hit);
     if(w.type) elabels.push({ mx:(x1+x2)/2, my:(y1+y2)/2, txt:tlabel(w.type)+' ×'+w.mult, color:TCOL[w.type]||'#fff' });
   };
   if(cycle){ for(let i=0;i<n;i++) arrow(cycle[i], cycle[(i+1)%n], true); }
@@ -1425,8 +1445,13 @@ function renderTriangle(c){ const svg=$('trisvg'); if(!svg||!TAPI) return; const
     const nd=`<b>${fname(i)}</b> — ${m[i].finalTypes.map(t=>`<b style="color:${TCOL[t]}">${t}</b>`).join('/')}. ${bt.length?'Beats '+bt.join(', ')+'. ':''}${ls.length?'Loses to '+ls.join(', ')+'.':''}`;
     g.appendChild(el('title',{})).textContent=`${fname(i)} — ${m[i].finalTypes.join('/')}. ${bt.length?'Beats '+bt.join(', ')+'. ':''}${ls.length?'Loses to '+ls.join(', ')+'.':''}`;
     const circ=g.firstChild;
-    g.addEventListener('mouseenter',()=>{ setHint('▸ '+nd); circ.setAttribute('stroke-width',5); });
-    g.addEventListener('mouseleave',()=>{ setHint(); circ.setAttribute('stroke-width',3); });
+    g.style.cursor='pointer';
+    const emphN=()=>{ circ.setAttribute('stroke-width',5); };
+    const baseN=()=>{ circ.setAttribute('stroke-width',3); };
+    resetFns.push(baseN);
+    g.addEventListener('mouseenter',()=>{ setHint('▸ '+nd); emphN(); });
+    g.addEventListener('mouseleave',()=>{ setHint(); baseN(); });
+    g.addEventListener('click',(ev)=>{ ev.stopPropagation(); resetFns.forEach(f=>f()); setHint('▸ '+nd); emphN(); });
     svg.appendChild(g);
   }
   // edge "why" labels last: push each outward from the centre so it clears the node name/type text, on a pill
@@ -1436,6 +1461,7 @@ function renderTriangle(c){ const svg=$('trisvg'); if(!svg||!TAPI) return; const
     const lab=el('text',{x:px,y:py+0.5,'text-anchor':'middle','dominant-baseline':'central',class:'triedge',fill:Lb.color}); lab.textContent=Lb.txt; svg.appendChild(lab); }
   const lb=el('text',{x:cx,y:12,'text-anchor':'middle','font-size':10,'font-weight':700,'font-family':'ui-sans-serif,sans-serif',class:perfect?'tri-perfect':'tri-none'});
   lb.textContent = perfect?(n===3?'PERFECT TRIANGLE ✓':'PERFECT '+n+'-CYCLE ✓'):(n===2?'no mutual matchup':'no clean cycle'); svg.appendChild(lb);
+  svg.onclick = ()=>{ resetFns.forEach(f=>f()); setHint(); }; // tap empty space clears the tapped "why" (onclick, not addEventListener, so it doesn't stack across re-renders)
 }
 
 // ================= Professor Oak guided walkthrough =================
