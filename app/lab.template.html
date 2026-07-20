@@ -2,11 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23fff' stroke='%23222' stroke-width='2'/%3E%3Cpath d='M1.3 16a14.7 14.7 0 0 1 29.4 0z' fill='%23e3350d'/%3E%3Cpath d='M1 16h30' stroke='%23222' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23fff' stroke='%23222' stroke-width='2'/%3E%3C/svg%3E">
 <title>Starter Lab: Optimizer Demo</title>
-<meta name="description" content="Find the optimal Pokémon starter trio across Gens 1 to 3: perfect type triangles, defensive coverage, and where to catch every member. A single-file vanilla-JS web app.">
+<meta name="description" content="Find the optimal Pokémon starter trio across Gens 1 to 4: perfect type triangles, defensive coverage, and where to catch every member. A single-file vanilla-JS web app.">
 <link rel="canonical" href="https://poke-starters-demo.gkos.dev/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Poké Starters">
-<meta property="og:title" content="Poké Starters — optimal starter trios across Gens 1 to 3">
+<meta property="og:title" content="Poké Starters — optimal starter trios across Gens 1 to 4">
 <meta property="og:description" content="Perfect type triangles, defensive coverage, and real catch maps. Spin the reels to reveal your team.">
 <meta property="og:url" content="https://poke-starters-demo.gkos.dev/">
 <meta property="og:image" content="https://poke-starters-demo.gkos.dev/og.png">
@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="1280">
 <meta property="og:image:alt" content="Poké Starters: a perfect type triangle of Bulbasaur, Charmander and Squirtle over the Game Boy console UI.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Poké Starters — optimal starter trios across Gens 1 to 3">
+<meta name="twitter:title" content="Poké Starters — optimal starter trios across Gens 1 to 4">
 <meta name="twitter:description" content="Perfect type triangles, defensive coverage, and real catch maps. Spin the reels to reveal your team.">
 <meta name="twitter:image" content="https://poke-starters-demo.gkos.dev/og.png">
 <style>
@@ -565,7 +565,7 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
     <div class="panel" data-view="build">
       <p class="ptitle" role="heading" aria-level="2">Parameters<span class="sharebtn" id="sharebtn" title="Copy a link that restores these exact settings">&#8862; Copy link</span></p>
       <!-- essentials: the only things a first-timer needs to touch -->
-      <div class="grp"><label>Generations <span class="v" id="poolv" title="Pok&eacute;mon eligible under the current generations + filters &mdash; the pool the optimizer chooses from">pool 151</span></label><div class="chips" id="gens"></div><div class="hint">Tap one or more &mdash; I = Kanto, II = Johto, III = Hoenn. Combining widens the pool.</div>
+      <div class="grp"><label>Generations <span class="v" id="poolv" title="Pok&eacute;mon eligible under the current generations + filters &mdash; the pool the optimizer chooses from">pool 151</span></label><div class="chips" id="gens"></div><div class="hint">Tap one or more &mdash; I = Kanto, II = Johto, III = Hoenn, IV = Sinnoh. Combining widens the pool.</div>
         <div class="seg" id="crossgen" style="margin-top:7px" title="Cross-gen: force at least one Pok&eacute;mon from EACH selected generation. I + II + III at size 3 gives one Kanto, one Johto and one Hoenn, shown on three maps side by side."><button data-cg="0" class="on">Any mix</button><button data-cg="1">Cross-gen</button></div>
         <div class="hint" id="cghint">Select 2+ generations to build a cross-gen team.</div></div>
       <div class="grp"><label>Strategy <span class="v" title="The single rule the optimizer ranks teams by.">what to optimize for</span></label>
@@ -652,7 +652,7 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
         <div class="lg"><span class="sw" style="background:#9bbc0f"></span> catch location (pulsing)</div>
         <div class="lg"><span class="sw" style="background:#ff2f2f"></span> <span>reachable route &amp; town (within <span id="legendprox">your step limit</span>)</span></div>
         <div class="lg"><img src="__MARKER__" alt="" style="width:11px;height:13px;vertical-align:-2px;margin-right:5px;image-rendering:pixelated"> base town (you are here)</div>
-        <div class="hint" style="color:#7fb7c3;margin-top:4px">Kanto / Johto / Hoenn maps are live. A cross-gen combo shows one map per region, each highlighting the members caught there.</div>
+        <div class="hint" style="color:#7fb7c3;margin-top:4px">Kanto, Johto, Hoenn and Sinnoh maps are live. A cross-gen combo shows onemap per region, each highlighting the members caught there.</div>
       </div>
     </div>
   </div>
@@ -697,7 +697,7 @@ let era='frlg', DATA=null, RESULTS=[], LADDER=[], idx=0, maxTierSeen=0, spinning
 // Gen-1-only view uses the authentic Gen-1 type chart so the matrix/modal match the engine's scoring.
 const gen1OnlyView=()=>{ const g=selGens(); return g.length && g.every(x=>x===1); };
 const curTAPI=()=>(gen1OnlyView() && TAPI_G1) ? TAPI_G1 : TAPI;
-const sprUrl=(dex)=> (era==='rby'&&dex<=151)?`sprites/rby/${dex}.png`:`sprites/frlg/${dex}.png`;
+const sprUrl=(dex)=> (era==='rby'&&dex<=151)?`sprites/rby/${dex}.png`:(dex>386?`sprites/dex/${dex}.png`:`sprites/frlg/${dex}.png`);
 const setReelsMsg=(m)=>{ $('reels').innerHTML=`<div style="padding:46px 12px;width:100%;text-align:center;color:#9bbc0f;font-family:var(--mono);letter-spacing:.1em">${m}</div>`; };
 const sayResult=(t)=>{ const rl=$('result-live'); if(rl) rl.textContent=t; };           // polite screen-reader status for result/pool changes
 const anim=(el,frames,opts)=>{ try{ return el&&el.animate&&el.animate(frames,opts); }catch(e){} };  // no-op where Web Animations API is absent
@@ -713,13 +713,14 @@ async function boot(){
     DATA={pokemon,typeChart,chains,typeChartGen1};
     TAPI=makeTypeApi(typeChart); if(typeChartGen1) TAPI_G1=makeTypeApi(typeChartGen1);
     try{ const load=(r)=>Promise.all([fetch(`data/locations_${r}.json`).then(x=>x.json()),fetch(`data/connectivity_${r}.json`).then(x=>x.json())]).then(([loc,conn])=>({loc,conn})).catch(()=>null);
-      const [kanto,johto,hoenn]=await Promise.all([load('kanto'),load('johto'),load('hoenn')]); // one region 404 must NOT disable the others
+      const [kanto,johto,hoenn,sinnoh]=await Promise.all([load('kanto'),load('johto'),load('hoenn'),load('sinnoh')]); // one region 404 must NOT disable the others
       if(kanto){ REGIONS.kanto=kanto; DATA.locations=kanto.loc; DATA.connectivity=kanto.conn; }
-      if(johto) REGIONS.johto=johto; if(hoenn) REGIONS.hoenn=hoenn; initRegions();
+      if(johto) REGIONS.johto=johto; if(hoenn) REGIONS.hoenn=hoenn; if(sinnoh) REGIONS.sinnoh=sinnoh; initRegions();
       // all AVAILABLE regions' graphs+locations so the optimizer can run base-town BFS in any loaded region
       DATA.regions={}; if(kanto) DATA.regions.kanto={connectivity:kanto.conn,locations:kanto.loc};
       if(johto) DATA.regions.johto={connectivity:johto.conn,locations:johto.loc};
-      if(hoenn) DATA.regions.hoenn={connectivity:hoenn.conn,locations:hoenn.loc}; }catch(err){ console.warn('no location data',err); }
+      if(hoenn) DATA.regions.hoenn={connectivity:hoenn.conn,locations:hoenn.loc};
+      if(sinnoh) DATA.regions.sinnoh={connectivity:sinnoh.conn,locations:sinnoh.loc}; }catch(err){ console.warn('no location data',err); }
     buildControls(); wireControls(); applyHash(); updatePool(); setProximity(curProx());
     if($('result-live') && $('result-live').parentNode!==document.body) document.body.appendChild($('result-live')); // keep the live region out of .wrap so modal/tour inert can't silence it
     try{ worker=new Worker('worker.mjs',{type:'module'}); worker.onmessage=onWorkerMsg; worker.onerror=(er)=>{ useWorker=false; setComputing(false); runOptimizer(pendingSpin); }; worker.postMessage({type:'init', data:DATA}); }catch(err){ useWorker=false; }
@@ -743,7 +744,7 @@ function updateCrossgenState(){ const seg=$('crossgen'); if(!seg) return; const 
   $('cghint').textContent = !multi ? 'Select 2+ generations to build a cross-gen team.'
     : on ? ('Forcing at least one from each: '+names.join(', ')+'. Each shows on its own map.')
          : 'Team can mix any of the selected generations freely.'; }
-const GEN_REGION=[['kanto',1],['johto',2],['hoenn',3]];
+const GEN_REGION=[['kanto',1],['johto',2],['hoenn',3],['sinnoh',4]];
 // the region a base-town option belongs to (drives which region's graph the BFS runs on)
 function baseTownRegion(){ const o=$('basesel')&&$('basesel').selectedOptions[0]; return (o&&o.dataset.region)||'kanto'; }
 // offer base towns from every SELECTED generation's region, grouped by region
@@ -760,7 +761,7 @@ function updateGeoState(){ const sel=$('basesel'), prox=$('prox'); if(!sel||!pro
 
 function buildControls(){
   const gens=$('gens'); gens.innerHTML='';
-  [['I',1],['II',2],['III',3]].forEach(([lab,g],i)=>{ const s=document.createElement('span');
+  [['I',1],['II',2],['III',3],['IV',4]].forEach(([lab,g],i)=>{ const s=document.createElement('span');
     s.className='chip'+(i===0?' on':''); s.dataset.gen=g; s.textContent=lab; s.style.setProperty('--c','#3B4CCA');
     s.tabIndex=0; s.setAttribute('role','button'); s.setAttribute('aria-label','Generation '+g); s.setAttribute('aria-pressed', i===0?'true':'false');
     s.onclick=()=>{ s.classList.toggle('on'); if(!document.querySelector('#gens .chip.on')) s.classList.add('on'); s.setAttribute('aria-pressed', String(s.classList.contains('on'))); updatePool(); runOptimizer(false); }; gens.appendChild(s); });
@@ -1052,17 +1053,17 @@ function clearSide(){ $('smons').innerHTML=''; $('team').innerHTML=''; if($('dmx
 
 // ---- map (region-aware, auto multi-panel: Kanto / Johto / Hoenn) ----
 const REGIONS={};            // region -> {loc, conn, xy:{id:[x,y]}, towns:Set}
-const RNAME={kanto:'Kanto',johto:'Johto',hoenn:'Hoenn'};
-const genRegion={1:'kanto',2:'johto',3:'hoenn'};
+const RNAME={kanto:'Kanto',johto:'Johto',hoenn:'Hoenn',sinnoh:'Sinnoh'};
+const genRegion={1:'kanto',2:'johto',3:'hoenn',4:'sinnoh'};
 const GEN_OF=dex=>{ const p=DATA.pokemon[String(dex)]; return p&&p.generation; };
 const memberRegion=m=>genRegion[GEN_OF(m.baseDex)]||'kanto';  // a member's home-region map
 const STARTERS=new Set([1,4,7,152,155,158,252,255,258]);      // version starters — never wild-catchable
 function initRegions(){ for(const data of Object.values(REGIONS)){ const xy={}, towns=new Set();
     for(const nd of (data.conn&&data.conn.nodes||[])){ if(nd.x!=null) xy[nd.id]=[nd.x,nd.y]; if(nd.type==='town') towns.add(nd.id); }
     data.xy=xy; data.towns=towns; } }
-const MAPS_URL={kanto:'maps/kanto_frlg.png',johto:'maps/johto.png',hoenn:'maps/hoenn.png'};
+const MAPS_URL={kanto:'maps/kanto_frlg.png',johto:'maps/johto.png',hoenn:'maps/hoenn.png',sinnoh:'maps/sinnoh.png'};
 // viewBox height per region so the overlay's aspect matches the map PNG (keeps nodes round, not stretched)
-const VBH={kanto:160,johto:200,hoenn:148.5};
+const VBH={kanto:160,johto:200,hoenn:148.5,sinnoh:257.1};
 const baseVal=()=>$('basesel').value;
 // the base/proximity the CURRENT results were actually computed under (may be relaxed from the controls),
 // so the map's reach + pin match the shown teams. Set in applyResults; fall back to live control values.
@@ -1085,9 +1086,9 @@ function comboPanelRegions(c){ const fb=()=>{ const r=genRegion[Math.max(...selG
   const selR=new Set(selGens().map(g=>genRegion[g]));
   const present=new Set();
   for(const m of c.members){ let caught=false;
-    for(const r of ['kanto','johto','hoenn']){ if(!REGIONS[r]||!selR.has(r)) continue; if(memberCatchNodesIn(r,m).length){ present.add(r); caught=true; } }
+    for(const r of ['kanto','johto','hoenn','sinnoh']){ if(!REGIONS[r]||!selR.has(r)) continue; if(memberCatchNodesIn(r,m).length){ present.add(r); caught=true; } }
     if(!caught){ const hr=memberRegion(m); if(REGIONS[hr]&&selR.has(hr)) present.add(hr); } } // non-wild member -> its home map (for the note)
-  const regs=['kanto','johto','hoenn'].filter(r=>present.has(r));
+  const regs=['kanto','johto','hoenn','sinnoh'].filter(r=>present.has(r));
   return regs.length?regs:fb(); }
 // render one map panel per relevant region (so a cross-gen trio shows up to 3 live maps at once)
 function renderMaps(c){ const grid=$('mapgrid'); if(!grid) return;
@@ -1117,7 +1118,7 @@ function buildPanel(region, c, opts){ const NS='http://www.w3.org/2000/svg';
     ln.setAttribute('class','edge'+(reach&&reach.has(a)&&reach.has(b)?' reach':'')); ge.appendChild(ln); }
   // members to show here: those actually CATCHABLE in this region, plus any homed-here member that is
   // catchable in NO region (so the "not in the wild" note lands on its home map, not a false one elsewhere)
-  const catchableNowhere=(m)=>['kanto','johto','hoenn'].every(r=>!REGIONS[r]||!memberCatchNodesIn(r,m).length);
+  const catchableNowhere=(m)=>['kanto','johto','hoenn','sinnoh'].every(r=>!REGIONS[r]||!memberCatchNodesIn(r,m).length);
   const mine = c ? (node ? c.members : c.members.filter(m=> memberCatchNodesIn(region,m).length || (memberRegion(m)===region && catchableNowhere(m)) )) : [];
   const seen={}; let here=0, total=mine.length; const missing=[];
   for(const m of mine){ const cn=memberCatchNodesIn(region,m); if(!cn.length){ missing.push(m); continue; } here++;
