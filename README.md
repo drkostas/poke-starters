@@ -2,7 +2,7 @@
   <br>
   <h1>Poké Starters</h1>
   <p>
-    Find the optimal Pokémon starter trio across Gens 1 to 3.<br>
+    Find the optimal Pokémon starter trio across Gens 1 to 4.<br>
     Perfect type triangles, defensive coverage, and where to catch every member.<br>
     One page. No build step. No backend.
   </p>
@@ -39,7 +39,7 @@ Everything runs in the browser. The heavy search happens on a Web Worker, so the
 ## How it works
 
 - **The engine** (`src/engine/optimizer.mjs`) scores every eligible trio with bitmask type math, a real directed-Hamiltonian-cycle test for "perfect triangles" (each member is super-effective against the next), defensive coverage, shared-weakness, and stat-fairness. It runs era-aware: a Gen-1-only query uses the authentic 15-type Gen-1 chart, quirks and all.
-- **The maps** are the real Kanto, Johto, and Hoenn Town Maps with ROM-accurate wild-encounter tables and route graphs. A base-town search runs a breadth-first walk over the region graph to show what is reachable within a step budget. It also models obtainability the way a trainer just starting out would face it: open-water routes need Surf, and encounters that need the Super Rod, a fossil, or a trade are set aside, so the pool reflects what you could actually catch near that town.
+- **The maps** are the real Kanto, Johto, and Hoenn Town Maps with ROM-accurate wild-encounter tables and route graphs, plus an original schematic map for Sinnoh (Gen 4). A base-town search runs a breadth-first walk over the region graph to show what is reachable within a step budget. It also models obtainability the way a trainer just starting out would face it: open-water routes need Surf, and encounters that need the Super Rod, a fossil, or a trade are set aside, so the pool reflects what you could actually catch near that town.
 - **The reveal** is a gated slot machine: nothing is shown until you spin, so the result is never spoiled. You can then walk the ranked list, evolve the whole team a stage at a time, and swap the art between FireRed/LeafGreen and Red/Blue/Yellow sprites.
 - **The build** is a single self-contained `lab.built.html`: `app/build_lab.py` inlines the fonts, the guided-tour data, and the Professor Oak sprite as data URIs. Sprites, maps, and data are fetched at runtime.
 
@@ -117,7 +117,7 @@ The interface is built to be operated by keyboard and screen reader, not only a 
 
 ## Data provenance
 
-Wild-encounter tables and route graphs are derived from the Gen 1 to 3 game data (via the pret decompilations); sprites are the authentic game sprites via [PokéAPI](https://pokeapi.co). The type charts are validated cell by cell against PokéAPI. See [`data-pipeline/`](./data-pipeline) for how the assets are generated.
+Kanto, Johto, and Hoenn (Gens 1 to 3) wild-encounter tables and route graphs are derived from the game data via the pret decompilations. Sinnoh (Gen 4) encounters come from [PokéAPI](https://pokeapi.co) (Platinum), with a hand-built route graph and an original schematic map. Sprites are the authentic game sprites via PokéAPI. The type charts are validated cell by cell against PokéAPI. See [`data-pipeline/`](./data-pipeline) for how the assets are generated.
 
 ## Contributing
 

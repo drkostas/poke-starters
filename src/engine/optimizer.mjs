@@ -274,7 +274,7 @@ function compute(data, p){
     // EVERY selected generation's region (not just Kanto's data.locations) — take the best per dex.
     let best;
     if(p.baseTown && geo.locations){ best = bestRarityByDex(geo.locations, reach); }
-    else if(data.regions){ best = {}; const genR = {1:'kanto',2:'johto',3:'hoenn'};
+    else if(data.regions){ best = {}; const genR = {1:'kanto',2:'johto',3:'hoenn',4:'sinnoh'};
       const regs = [...new Set(p.generations.map(g=>genR[g]).filter(Boolean))];
       for(const r of regs){ const R = data.regions[r]; if(!R || !R.locations) continue;
         const b = bestRarityByDex(R.locations, null);
