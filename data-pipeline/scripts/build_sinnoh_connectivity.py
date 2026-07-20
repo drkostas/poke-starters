@@ -2,19 +2,18 @@
 """Build connectivity_sinnoh.json - Sinnoh (Gen 4) route/town graph.
 
 Adjacency is encoded from the Platinum region layout. Coordinates are normalized
-(0..1) and snapped to the real Sinnoh Town Map (app/maps/sinnoh.png): the 15 town
-nodes and 3 lake nodes sit on their map markers, and route/cave nodes are placed
-along the routes between them. type 'water' = Surf-gated (open-sea routes + lake
-interiors), which the optimizer's obtainability model treats as unreachable on
-foot. To re-snap after a map change, read marker positions off the map and update
-the coordinates below. Output: ../../app/data/connectivity_sinnoh.json (compact).
+(0..1) against the real Sinnoh Town Map (app/maps/sinnoh.png): town and lake nodes
+sit on their map markers, and route/cave nodes sit on the road pixels. type 'water'
+= Surf-gated (open-sea routes + lake interiors), treated as unreachable on foot.
+Run route_edges.py afterwards to (re)compute the `edgePaths` that trace the roads;
+this script only emits nodes + edges. Output: ../../app/data/connectivity_sinnoh.json
 """
 import json
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[2] / "app/data/connectivity_sinnoh.json"
 
-# (id, name, type, x, y) - x,y normalized 0..1, snapped to app/maps/sinnoh.png
+# (id, name, type, x, y) - x,y normalized 0..1, on app/maps/sinnoh.png
 NODES = [
     ("twinleaf_town", "Twinleaf Town", "town", 0.25, 0.84),
     ("sandgem_town", "Sandgem Town", "town", 0.3, 0.79),
@@ -31,50 +30,50 @@ NODES = [
     ("snowpoint_city", "Snowpoint City", "town", 0.462, 0.18),
     ("sunyshore_city", "Sunyshore City", "town", 0.879, 0.725),
     ("pokemon_league", "Pokemon League", "town", 0.857, 0.519),
-    ("route201", "Route 201", "route", 0.257, 0.81),
-    ("route202", "Route 202", "route", 0.299, 0.75),
-    ("route203", "Route 203", "route", 0.335, 0.71),
-    ("route204", "Route 204", "route", 0.3, 0.651),
-    ("route205", "Route 205", "route", 0.339, 0.559),
-    ("route206", "Route 206", "route", 0.423, 0.549),
-    ("route207", "Route 207", "route", 0.436, 0.608),
-    ("route208", "Route 208", "route", 0.518, 0.615),
-    ("route209", "Route 209", "route", 0.597, 0.639),
-    ("route210", "Route 210", "route", 0.589, 0.552),
-    ("route211", "Route 211", "route", 0.471, 0.475),
-    ("route212", "Route 212", "route", 0.614, 0.726),
-    ("route213", "Route 213", "route", 0.729, 0.719),
-    ("route214", "Route 214", "route", 0.738, 0.642),
-    ("route215", "Route 215", "route", 0.649, 0.615),
-    ("route216", "Route 216", "route", 0.455, 0.357),
-    ("route217", "Route 217", "route", 0.439, 0.239),
+    ("route201", "Route 201", "route", 0.2635, 0.7958),
+    ("route202", "Route 202", "route", 0.2769, 0.7773),
+    ("route203", "Route 203", "route", 0.3327, 0.71),
+    ("route204", "Route 204", "route", 0.3, 0.6497),
+    ("route205", "Route 205", "route", 0.325, 0.5267),
+    ("route206", "Route 206", "route", 0.4269, 0.5963),
+    ("route207", "Route 207", "route", 0.4404, 0.6241),
+    ("route208", "Route 208", "route", 0.5192, 0.5545),
+    ("route209", "Route 209", "route", 0.6135, 0.6659),
+    ("route210", "Route 210", "route", 0.5192, 0.5545),
+    ("route211", "Route 211", "route", 0.4904, 0.4826),
+    ("route212", "Route 212", "route", 0.6135, 0.6659),
+    ("route213", "Route 213", "route", 0.7635, 0.6636),
+    ("route214", "Route 214", "route", 0.7635, 0.6566),
+    ("route215", "Route 215", "route", 0.6615, 0.6218),
+    ("route216", "Route 216", "route", 0.4731, 0.3689),
+    ("route217", "Route 217", "route", 0.4077, 0.239),
     ("route218", "Route 218", "water", 0.244, 0.68),
     ("route219", "Route 219", "water", 0.19, 0.65),
     ("route221", "Route 221", "water", 0.19, 0.65),
-    ("route222", "Route 222", "route", 0.78, 0.722),
+    ("route222", "Route 222", "route", 0.775, 0.7378),
     ("route223", "Route 223", "water", 0.872, 0.656),
     ("route224", "Route 224", "water", 0.857, 0.519),
-    ("route225", "Route 225", "route", 0.857, 0.519),
-    ("route210s", "Route 210 (S)", "route", 0.641, 0.615),
-    ("oreburgh_gate", "Oreburgh Gate", "cave", 0.373, 0.71),
-    ("oreburgh_mine", "Oreburgh Mine", "cave", 0.418, 0.78),
-    ("ravaged_path", "Ravaged Path", "cave", 0.3, 0.651),
-    ("valley_windworks", "Valley Windworks", "route", 0.246, 0.552),
-    ("eterna_forest", "Eterna Forest", "cave", 0.374, 0.524),
-    ("old_chateau", "Old Chateau", "cave", 0.324, 0.573),
-    ("wayward_cave", "Wayward Cave", "cave", 0.444, 0.483),
-    ("mt_coronet", "Mt. Coronet", "cave", 0.475, 0.566),
-    ("lost_tower", "Lost Tower", "cave", 0.597, 0.639),
-    ("solaceon_ruins", "Solaceon Ruins", "cave", 0.692, 0.651),
-    ("great_marsh", "Great Marsh", "cave", 0.662, 0.858),
-    ("fuego_ironworks", "Fuego Ironworks", "cave", 0.288, 0.607),
+    ("route225", "Route 225", "route", 0.8865, 0.4942),
+    ("route210s", "Route 210 (S)", "route", 0.6135, 0.6659),
+    ("oreburgh_gate", "Oreburgh Gate", "cave", 0.35, 0.71),
+    ("oreburgh_mine", "Oreburgh Mine", "cave", 0.4673, 0.7425),
+    ("ravaged_path", "Ravaged Path", "cave", 0.3, 0.6497),
+    ("valley_windworks", "Valley Windworks", "route", 0.2808, 0.5754),
+    ("eterna_forest", "Eterna Forest", "cave", 0.3423, 0.5035),
+    ("old_chateau", "Old Chateau", "cave", 0.3173, 0.5383),
+    ("wayward_cave", "Wayward Cave", "cave", 0.4904, 0.4826),
+    ("mt_coronet", "Mt. Coronet", "cave", 0.5192, 0.5568),
+    ("lost_tower", "Lost Tower", "cave", 0.6135, 0.6659),
+    ("solaceon_ruins", "Solaceon Ruins", "cave", 0.6981, 0.6311),
+    ("great_marsh", "Great Marsh", "cave", 0.7173, 0.7796),
+    ("fuego_ironworks", "Fuego Ironworks", "cave", 0.3, 0.6473),
     ("lake_verity", "Lake Verity", "water", 0.22, 0.8),
     ("lake_valor", "Lake Valor", "water", 0.732, 0.722),
     ("lake_acuity", "Lake Acuity", "water", 0.4, 0.18),
-    ("victory_road_sinnoh", "Victory Road", "cave", 0.864, 0.588),
-    ("iron_island", "Iron Island", "cave", 0.19, 0.65),
+    ("victory_road_sinnoh", "Victory Road", "cave", 0.8558, 0.5847),
+    ("iron_island", "Iron Island", "cave", 0.1769, 0.6914),
     ("snowpoint_temple", "Snowpoint Temple", "cave", 0.519, 0.14),
-    ("maniac_tunnel", "Maniac Tunnel", "cave", 0.693, 0.697),
+    ("maniac_tunnel", "Maniac Tunnel", "cave", 0.7135, 0.6961),
 ]
 
 EDGES = [
@@ -107,9 +106,12 @@ EDGES = [
 nodes = [{"id": i, "name": n, "type": t, "x": x, "y": y} for (i, n, t, x, y) in NODES]
 out = {
     "_meta": {"region": "Sinnoh",
-              "basis": "Pokemon Platinum Sinnoh Town Map (fan artwork by ICEREG1992/pkmnmap4, used with permission). Town/lake nodes snapped to map markers; route/cave nodes placed along the routes. type 'water' = Surf-gated."},
+              "basis": "Pokemon Platinum Sinnoh Town Map (fan artwork by ICEREG1992/pkmnmap4, used with permission). Town/lake nodes on map markers; route/cave nodes on road pixels; edgePaths (added by route_edges.py) trace the roads. type 'water' = Surf-gated."},
     "nodes": nodes,
     "edges": [list(e) for e in EDGES],
 }
+existing = json.loads(OUT.read_text()) if OUT.exists() else {}
+if "edgePaths" in existing:
+    out["edgePaths"] = existing["edgePaths"]  # preserve routed paths on re-run
 OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print(f"wrote {OUT}  ({len(nodes)} nodes, {len(EDGES)} edges)")

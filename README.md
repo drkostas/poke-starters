@@ -30,7 +30,7 @@
 
 ## What it does
 
-> Inspired by MandJTV's video [Everyone Else's Starter Pokémon](https://www.youtube.com/watch?v=xNzYtLNEZjg): if you didn't live next to the professor, what starter trio could you actually catch near your town? This project turns that question into a search you can run for any base town across Kanto, Johto, and Hoenn.
+> Inspired by MandJTV's video [Everyone Else's Starter Pokémon](https://www.youtube.com/watch?v=xNzYtLNEZjg): if you didn't live next to the professor, what starter trio could you actually catch near your town? This project turns that question into a search you can run for any base town across Kanto, Johto, Hoenn, and Sinnoh.
 
 Pick your regions, types, and power budget on the left. The optimizer searches every legal combination of evolution lines and ranks the results, then a slot machine reveals the top team. The right panel shows **why** that trio wins (a closed type-effectiveness loop, defensive coverage, stat balance), and the maps below show **where to catch** each member on the real in-game Town Maps.
 
@@ -115,10 +115,6 @@ The engine tests assert the scoring invariants and guard that the two engine cop
 
 The interface is built to be operated by keyboard and screen reader, not only a mouse. It uses landmark regions, a single page heading, ARIA state on every control, a live region for results, a real focus-trap on dialogs, and honors `prefers-reduced-motion` and `forced-colors`. Color contrast passes WCAG AA, verified with axe.
 
-## Data provenance
-
-Kanto, Johto, and Hoenn (Gens 1 to 3) wild-encounter tables and route graphs are derived from the game data via the pret decompilations. Sinnoh (Gen 4) encounters come from [PokéAPI](https://pokeapi.co) (Platinum), with a route graph built from the Platinum region layout. The Sinnoh Town Map is fan-made artwork by ICEREG1992 ([pkmnmap4](https://github.com/ICEREG1992/pkmnmap4)), used with permission; the region's node coordinates are snapped to it. Sprites are the authentic game sprites via PokéAPI. The type charts are validated cell by cell against PokéAPI. See [`data-pipeline/`](./data-pipeline) for how the assets are generated.
-
 ## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the setup, the test commands, and the pull-request flow, and the [open issues](https://github.com/drkostas/poke-starters/issues) for a roadmap and good first tasks.
@@ -127,4 +123,4 @@ Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the setu
 
 [MIT](./LICENSE) &copy; 2026 Kostas Georgiou.
 
-> This is a fan-made, non-commercial project. Pokémon, Pokédex, and all names and sprites are trademarks of Nintendo, Game Freak, and The Pokémon Company. This project is not affiliated with or endorsed by them.
+> This is a fan-made, non-commercial project. Pokémon, Pokédex, and all names and sprites are trademarks of Nintendo, Game Freak, and The Pokémon Company. This project is not affiliated with or endorsed by them. The Sinnoh Town Map is fan-made artwork by ICEREG1992 ([pkmnmap4](https://github.com/ICEREG1992/pkmnmap4)), used with permission.
