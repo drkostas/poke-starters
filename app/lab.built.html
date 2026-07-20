@@ -1065,7 +1065,7 @@ function initRegions(){ for(const data of Object.values(REGIONS)){ const xy={}, 
     data.xy=xy; data.towns=towns; } }
 const MAPS_URL={kanto:'maps/kanto_frlg.png',johto:'maps/johto.png',hoenn:'maps/hoenn.png',sinnoh:'maps/sinnoh.png'};
 // viewBox height per region so the overlay's aspect matches the map PNG (keeps nodes round, not stretched)
-const VBH={kanto:160,johto:200,hoenn:148.5,sinnoh:257.1};
+const VBH={kanto:160,johto:200,hoenn:148.5,sinnoh:198.9};
 const baseVal=()=>$('basesel').value;
 // the base/proximity the CURRENT results were actually computed under (may be relaxed from the controls),
 // so the map's reach + pin match the shown teams. Set in applyResults; fall back to live control values.
