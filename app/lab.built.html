@@ -381,7 +381,7 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
 .trihint b{color:#0f380f;}
 .mapsvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
 .mapsvg .gnode{pointer-events:auto;}
-.edge{stroke:#2b5560;stroke-width:2;opacity:.28;fill:none;stroke-linecap:round;transition:stroke .25s,stroke-width .25s,opacity .25s;}
+.edge{stroke:#2b5560;stroke-width:2;opacity:.28;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s,stroke-width .25s,opacity .25s;}
 .edge.reach{stroke:#ff2f2f;stroke-width:5;opacity:.5;}
 .gnode{fill:#0e2a31;stroke:#4d7f8a;stroke-width:1.3;transition:fill .2s,stroke .2s;}
 .gnode.t-town{stroke:#bfe3ea;stroke-width:1.8;}
@@ -679,7 +679,7 @@ button[title],.sbtn[title],.ebtn[title],.chip[title],.seg button[title],.runbtn[
     <div id="tour-live" class="visually-hidden" aria-live="polite"></div>
   </div>
 </div>
-  <p class="foot" role="contentinfo">Real interactive demo: spin the reels, walk the ranked results with Next, and play with every parameter (each one drives its own animation). Sprites are authentic <code>PokeAPI</code> FR-LG / RBY game sprites; the maps are the real in-game Town Maps for Kanto, Johto and Hoenn, with ROM-accurate wild-encounter data and route graphs. Base-town BFS proximity works in any region. Every parameter recomputes live. <a href="https://github.com/drkostas/poke-starters" target="_blank" rel="noopener" style="color:#f4c13a;font-weight:700;white-space:nowrap">&#9733; Open source on GitHub</a> &middot; MIT &middot; a fan project, not affiliated with Nintendo / Game Freak.</p>
+  <p class="foot" role="contentinfo">Real interactive demo: spin the reels, walk the ranked results with Next, and play with every parameter (each one drives its own animation). Sprites are authentic <code>PokeAPI</code> FR-LG / RBY game sprites; the maps are the real in-game Town Maps for Kanto, Johto, Hoenn, and Sinnoh, with ROM-accurate wild-encounter data and route graphs. Base-town BFS proximity works in any region. Every parameter recomputes live. <a href="https://github.com/drkostas/poke-starters" target="_blank" rel="noopener" style="color:#f4c13a;font-weight:700;white-space:nowrap">&#9733; Open source on GitHub</a> &middot; MIT &middot; a fan project, not affiliated with Nintendo / Game Freak.</p>
 </div>
 
 <script type="module">
@@ -1115,9 +1115,13 @@ function buildPanel(region, c, opts){ const NS='http://www.w3.org/2000/svg';
   const ge=wrap.querySelector('.gedges'), gn=wrap.querySelector('.gnodes'), gl=wrap.querySelector('.glabels');
   const node=effBase; let reach=null;
   if(opts.isBase && node && R.conn) reach=bfsReach(R.conn,node,effProx);
+  const EP=R.conn.edgePaths||{};  // waypoints that trace the map's real routes (else straight line)
   for(const [a,b] of (R.conn.edges||[])){ const pa=XY[a],pb=XY[b]; if(!pa||!pb)continue;
-    const ln=document.createElementNS(NS,'line'); ln.setAttribute('x1',pa[0]*240);ln.setAttribute('y1',pa[1]*H);ln.setAttribute('x2',pb[0]*240);ln.setAttribute('y2',pb[1]*H);
-    ln.setAttribute('class','edge'+(reach&&reach.has(a)&&reach.has(b)?' reach':'')); ge.appendChild(ln); }
+    const rc='edge'+(reach&&reach.has(a)&&reach.has(b)?' reach':''); const wp=EP[a+'|'+b]||EP[b+'|'+a];
+    if(wp&&wp.length>1){ const pl=document.createElementNS(NS,'polyline');
+      pl.setAttribute('points',wp.map(p=>(p[0]*240)+','+(p[1]*H)).join(' ')); pl.setAttribute('class',rc); ge.appendChild(pl); }
+    else { const ln=document.createElementNS(NS,'line'); ln.setAttribute('x1',pa[0]*240);ln.setAttribute('y1',pa[1]*H);ln.setAttribute('x2',pb[0]*240);ln.setAttribute('y2',pb[1]*H);
+      ln.setAttribute('class',rc); ge.appendChild(ln); } }
   // members to show here: those actually CATCHABLE in this region, plus any homed-here member that is
   // catchable in NO region (so the "not in the wild" note lands on its home map, not a false one elsewhere)
   const catchableNowhere=(m)=>['kanto','johto','hoenn','sinnoh'].every(r=>!REGIONS[r]||!memberCatchNodesIn(r,m).length);
