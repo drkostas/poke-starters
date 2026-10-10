@@ -1,0 +1,14 @@
+kind: banner
+name: poke-starters
+line: Finds the best trio of starter Pokemon you could catch near your town.
+accent: clay
+diagram:
+- box:
+    text: regions
+- arrow
+- box:
+    text: search
+- arrow
+- box:
+    text: best trio
+    accent: true

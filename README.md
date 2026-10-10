@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="screenshots/banner.png" width="100%" alt="poke-starters">
   <br>
   <h1>Poké Starters</h1>
   <p>
